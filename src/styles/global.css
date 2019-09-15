@@ -17,6 +17,7 @@ body {
 
 .hero_nameImg {
     width: 200px;
+    margin: 0;
 }
 
 .hero_text--tag {
@@ -51,4 +52,50 @@ body {
     margin: 20px 0;
     border-radius: 3px;
     text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.bio-footer {
+    padding-top: 8rem;
+    margin: auto;
+    margin-bottom: 8rem;
+    width: 70%;
+}
+
+.bio-footer-ul {
+    margin-bottom: 1rem;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.bio-footer-li {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.bio-footer-li:not(:last-of-type) {
+    margin-right: 1rem;
+}
+
+.bio-footer-titletext {
+    font-size: .875rem;
+    text-decoration: none;
+    box-shadow: none;
+    font-weight: 700;
+    color: #313131;
+}
+
+.bio-footer-linktext {
+    font-size: .875rem;
+    text-decoration: none;
+    box-shadow: none;
+    color: #313131;
 }

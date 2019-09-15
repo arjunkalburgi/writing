@@ -34,33 +34,35 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
-      }}
-    >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
-      <p>
-        Written by <strong>{author}</strong> who lives and works in Toronto building useful things.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
-      </p>
-    </div>
+    <footer class="bio-footer">
+      <ul class="bio-footer-ul">
+        <li class="bio-footer-li">
+          <a title="about arjun kalburgi" class="bio-footer-titletext" href="https://www.arjunkalburgi.com">About </a>
+        </li>
+        <li class="bio-footer-li">
+          <a title="writing about my projects, lessons, ideas + art."
+            class="bio-footer-titletext" href="https://www.arjunkalburgi.com/writing"> Writing </a>
+        </li>
+      </ul>
+      <ul class="bio-footer-ul">
+        <li class="bio-footer-li">
+          <a class="bio-footer-linktext" title="arjun kalburgi on twitter"
+            href="http://twitter.com/winkerVSbecks"> Twitter </a>
+        </li>
+        <li class="bio-footer-li">
+          <a class="bio-footer-linktext" title="arjun kalburgi on github"
+            href="http://github.com/winkerVSbecks"> Github </a>
+        </li>
+        <li class="bio-footer-li">
+          <a class="bio-footer-linktext" title="arjun kalburgi on CodePen"
+            href="http://codepen.io/winkerVSbecks"> CodePen </a>
+        </li>
+        <li class="bio-footer-li">
+          <a class="bio-footer-linktext" title="email arjun kalburgi" href="mailto:askalburgi@gmail.com">
+            Email </a>
+        </li>
+      </ul>
+    </footer>
   )
 }
 

@@ -27,7 +27,7 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <section class="hero section">
+        <section class="hero section" style={{marginTop: '10vh'}}>
           <img class="hero_nameImg b-lazy" src="https://cdn.jsdelivr.net/gh/askalburgi/styleguide@fcd922db42282219a7ba68996c404f41578c8416/Logo/Main/BlackFull.svg" title="Arjun Kalburgi" />
           <p class="hero_text--tag">learning, finding, designing, developing impact</p>
         </section>
@@ -38,8 +38,8 @@ class Layout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          maxWidth: '100%',
+          padding: `0 ${rhythm(3 / 4)} ${rhythm(1.5)}`,
         }}
       >
         <header>{header}</header>
