@@ -1,39 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Writing]]></title><description><![CDATA[projects, lessons, art + ideas]]></description><link>https://arjunkalburgi.gitlab.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Sep 2019 20:59:06 GMT</lastBuildDate><item><title><![CDATA[Moving my blog to Gatsby]]></title><description><![CDATA[After seeing a shift in the industry from Medium, it’s time I leave as well and host my blog on my own site. This shouldn’t be too bad of a…]]></description><link>https://arjunkalburgi.gitlab.io/moving-my-blog-to-gatsby/</link><guid isPermaLink="false">https://arjunkalburgi.gitlab.io/moving-my-blog-to-gatsby/</guid><pubDate>Sun, 15 Sep 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Writing]]></title><description><![CDATA[projects, lessons, art + ideas]]></description><link>https://arjunkalburgi.gitlab.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Sep 2019 22:05:44 GMT</lastBuildDate><item><title><![CDATA[Moving my blog to Gatsby]]></title><description><![CDATA[After seeing a shift in the industry from Medium, it’s time I leave as well and host my blog on my own site. This shouldn’t be too bad of a…]]></description><link>https://arjunkalburgi.gitlab.io/moving-my-blog-to-gatsby/</link><guid isPermaLink="false">https://arjunkalburgi.gitlab.io/moving-my-blog-to-gatsby/</guid><pubDate>Sun, 15 Sep 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;After seeing a shift in the industry from Medium, it’s time I leave as well and host my blog on my own site.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;This shouldn’t be too bad of a process, I just need to convert my Medium posts to markdown, set up a Gatsby blog, host on Gitlab and copy style from (Varun)[varun.ca/writing] (for now).&lt;/p&gt;
+&lt;p&gt;This shouldn’t be too bad of a process, I just need to convert my Medium posts to markdown, set up a Gatsby blog, host on Github and copy style from &lt;a href=&quot;varun.ca/writing&quot;&gt;Varun&lt;/a&gt; (for now).&lt;/p&gt;
 &lt;h3&gt;Convert to Markdown&lt;/h3&gt;
+&lt;p&gt;Taking the help of &lt;a href=&quot;https://www.gautamdhameja.com/medium-to-markdown-converter/&quot;&gt;this blog post&lt;/a&gt;, I used medium-2-md to export and convert all my Medium posts to markdown. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;medium-2-md convertLocal medium-export/posts -df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This gave me a large list of markdown files that looked like &lt;code class=&quot;language-text&quot;&gt;2017-04-09_Security-Review--UX-of-Canadian-banking-applications-53aa77dd2cf4.md&lt;/code&gt;. &lt;/p&gt;
+&lt;h3&gt;Set Up Gatsby Blog&lt;/h3&gt;
+&lt;p&gt;Gatsby’s got a &lt;a href=&quot;https://github.com/gatsbyjs/gatsby-starter-blog&quot;&gt;blog-starter&lt;/a&gt; repo, which was quick to clone and get up and running.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/writing/static/286c4004a8775a0e187285816f078dbd/b828e/changingbio.png&quot;
+    href=&quot;/writing/static/4b9a73c5743e24d589a770764152e95f/2f950/initdeploy.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 33.170731707317074%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAAA5klEQVQY042QzWqDQBDHfUMfw1POgvgu4kv0Wui1pRXSrMraVeP6kSwxhiqOurt2NRRyKMUfwzDM138YjTFWFEVd18mKioUQnPN5A5rrurqum6ZpWdZuxbZtwzAAQJWllP8NK010OChNSinGGCHkeZ7jOFvENbVZrAq/3VIKoWyEfhxgBFj8AAMs9Ctd192btU8cPz2/sMsl8P0oivwQ70Pytg+8kARJHsY0OuYopl9Zob5TlmVVVWmatm27DGfZ8eP9tYfhrDid2PVG25k0PGkm0kzpbcq/OblOVSf+OHvejHzgnvkB4HKEEUglC90AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 59.12499999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABOUlEQVQoz52SsU7DMBCG+4rwAgzwAAxIDCDYoGzd2KrsgCoYi1KpVRmylglFDFVUlKaJiWO7dez4yjWmUVNVCPiGkxP50/26c4MJImXOOVNKFSV4YIxRSgkhSZKkaVqs0VoDmGkY+v677781cs2WawAAaxzHjuO4bs/zvJfh8HU0qi4YY7A+dB7PTk8uL44bUlkZKpll2XO3Ox6P8UMZUAVoXWzK9+327eHB0f5eTbY1X8wzEnOWRTGZpiJKmVjITXkw6F+d3zRbd1vyCm1gQmXE1fo/WCq56/aum61O56keuzzleR58hOEsWQ2MfIOjWtYxUOyQpdLBjEZ0LnENJTj/Ta0Mgyn0jthK6yCcRTEu6RPBtkIIG7veWe/uPCFCmeXPbMsWfAo8S7nENf1dtgs3AP/p/EtQ/gJxM68BTBrn7gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;changingbio&quot;
-        title=&quot;changingbio&quot;
-        src=&quot;/writing/static/286c4004a8775a0e187285816f078dbd/b9e4f/changingbio.png&quot;
-        srcset=&quot;/writing/static/286c4004a8775a0e187285816f078dbd/cf440/changingbio.png 148w,
-/writing/static/286c4004a8775a0e187285816f078dbd/d2d38/changingbio.png 295w,
-/writing/static/286c4004a8775a0e187285816f078dbd/b9e4f/changingbio.png 590w,
-/writing/static/286c4004a8775a0e187285816f078dbd/f9b6a/changingbio.png 885w,
-/writing/static/286c4004a8775a0e187285816f078dbd/2d849/changingbio.png 1180w,
-/writing/static/286c4004a8775a0e187285816f078dbd/b828e/changingbio.png 1230w&quot;
+        alt=&quot;initdeploy&quot;
+        title=&quot;initdeploy&quot;
+        src=&quot;/writing/static/4b9a73c5743e24d589a770764152e95f/b9e4f/initdeploy.png&quot;
+        srcset=&quot;/writing/static/4b9a73c5743e24d589a770764152e95f/cf440/initdeploy.png 148w,
+/writing/static/4b9a73c5743e24d589a770764152e95f/d2d38/initdeploy.png 295w,
+/writing/static/4b9a73c5743e24d589a770764152e95f/b9e4f/initdeploy.png 590w,
+/writing/static/4b9a73c5743e24d589a770764152e95f/f9b6a/initdeploy.png 885w,
+/writing/static/4b9a73c5743e24d589a770764152e95f/2d849/initdeploy.png 1180w,
+/writing/static/4b9a73c5743e24d589a770764152e95f/2f950/initdeploy.png 1600w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to use Modals in Ionic v4]]></title><description><![CDATA[After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev. This should be easy, but the…]]></description><link>https://arjunkalburgi.gitlab.io/how-to-use-modals-in-ionic-v4/</link><guid isPermaLink="false">https://arjunkalburgi.gitlab.io/how-to-use-modals-in-ionic-v4/</guid><pubDate>Fri, 16 Aug 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Then using some bash scripts to format my markdown posts to the file structure Gatsby expects. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; *.md &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;/blog/&lt;span class=&quot;token variable&quot;&gt;$f&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$f&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;/blog/&lt;span class=&quot;token variable&quot;&gt;$f&lt;/span&gt;/index.md &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# make the new directory&lt;/span&gt;
+
+$ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; *.md &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$d&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${d&lt;span class=&quot;token operator&quot;&gt;#&lt;/span&gt;*_}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# remove the date from the beginning of the directory name&lt;/span&gt;
+
+$ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; *.md &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$d&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${d&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt;-*.md}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# remove the &apos;.md&apos; from the end of the directory name&lt;/span&gt;
+
+$ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; * &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$d&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${d&lt;span class=&quot;token operator&quot;&gt;,,&lt;/span&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# lower case all characters&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Going from &lt;code class=&quot;language-text&quot;&gt;2017-04-09_Security-Review--UX-of-Canadian-banking-applications-53aa77dd2cf4.md&lt;/code&gt;, to &lt;code class=&quot;language-text&quot;&gt;security-review--ux-of-canadian-banking-applications&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;This helps because now the url for my posts will look like: &lt;code class=&quot;language-text&quot;&gt;www.arjunkalburgi.com/writing/security-review--ux-of-canadian-banking-applications&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now my blog is ready to go 😃. Thank you to my bff &lt;a href=&quot;https://twitter.com/afontaine_ca&quot;&gt;Andrew Fontaine&lt;/a&gt; for helping me out with this part.&lt;/p&gt;
+&lt;h3&gt;Host on Github Pages&lt;/h3&gt;
+&lt;p&gt;Thanks to Gatsby’s &lt;a href=&quot;https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/&quot;&gt;gh-pages hosting tutorial&lt;/a&gt; I was able to get this done pretty easily. Just needed to make a repo in github, set the &lt;code class=&quot;language-text&quot;&gt;origin&lt;/code&gt; in my local repo, follow the tutorial and then run &lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt; . And I’m up!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to use Modals in Ionic v4]]></title><description><![CDATA[After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev. This should be easy, but the…]]></description><link>https://arjunkalburgi.gitlab.io/how-to-use-modals-in-ionic-v4/</link><guid isPermaLink="false">https://arjunkalburgi.gitlab.io/how-to-use-modals-in-ionic-v4/</guid><pubDate>Fri, 16 Aug 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This should be easy, but the documentation for it is a little lacking. I’ve &lt;a href=&quot;https://github.com/ionic-team/ionic/pull/17944#issuecomment-522067671&quot;&gt;asked&lt;/a&gt; them to update it but just in case they don’t I’m writing this for your sanity.&lt;/p&gt;
