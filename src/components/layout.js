@@ -11,44 +11,26 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
+        <section class="hero section">
+          <img class="hero_nameImg b-lazy" src="https://cdn.jsdelivr.net/gh/askalburgi/styleguide@fcd922db42282219a7ba68996c404f41578c8416/Logo/Main/BlackFull.svg" title="Arjun Kalburgi" />
+          <p class="hero_text--tag">learning, finding, designing, developing impact</p>
+          <p class="hero_text--intro">
+            My blog is for me to share my projects, lessons, art + ideas.
+          </p>
+          <ul class="hero_Links">
+            <li><a class="hero_button" href="https://www.arjunkalburgi.com" title="Main">ABOUT</a></li>
+            <li><a href="https://twitter.com/arjunkalburgi"><span class="fab fa-twitter"></span></a></li>
+            <li><a href="https://github.com/arjunkalburgi"><span class="fab fa-github"></span></a></li>
+            <li><a href="mailto:me@arjunkalburgi.com"><span class="far fa-envelope"></span></a></li>
+          </ul>
+        </section>
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
+        <section class="hero section">
+          <img class="hero_nameImg b-lazy" src="https://cdn.jsdelivr.net/gh/askalburgi/styleguide@fcd922db42282219a7ba68996c404f41578c8416/Logo/Main/BlackFull.svg" title="Arjun Kalburgi" />
+          <p class="hero_text--tag">learning, finding, designing, developing impact</p>
+        </section>
       )
     }
     return (

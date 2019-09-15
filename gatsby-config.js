@@ -3,7 +3,7 @@ module.exports = {
     title: `Writing`,
     author: `Arjun Kalburgi`,
     description: `projects, lessons, art + ideas`,
-    siteUrl: `https://arjunkalburgi.gitlab.io`,
+    siteUrl: `https://www.arjunkalburgi.com/writing`,
     social: {
       twitter: `arjunkalburgi`,
     },
