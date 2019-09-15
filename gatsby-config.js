@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Writing`,
+    author: `Arjun Kalburgi`,
+    description: `projects, lessons, art + ideas`,
+    siteUrl: `https://arjunkalburgi.gitlab.io`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `arjunkalburgi`,
     },
   },
   plugins: [
@@ -42,9 +42,11 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+
         ],
       },
     },
+    'gatsby-plugin-draft',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
