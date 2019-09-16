@@ -6,33 +6,8 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-
-import { rhythm } from "../utils/typography"
 
 const Bio = () => {
-  const data = useStaticQuery(graphql`
-    query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      site {
-        siteMetadata {
-          author
-          social {
-            twitter
-          }
-        }
-      }
-    }
-  `)
-
-  const { author, social } = data.site.siteMetadata
   return (
     <footer class="bio-footer">
       <ul class="bio-footer-ul">
@@ -46,20 +21,16 @@ const Bio = () => {
       </ul>
       <ul class="bio-footer-ul">
         <li class="bio-footer-li">
-          <a class="bio-footer-linktext" title="arjun kalburgi on twitter"
-            href="http://twitter.com/winkerVSbecks"> Twitter </a>
+          <a class="bio-footer-linktext" title="arjun kalburgi on twitter" href="http://twitter.com/winkerVSbecks">Twitter</a>
         </li>
         <li class="bio-footer-li">
-          <a class="bio-footer-linktext" title="arjun kalburgi on github"
-            href="http://github.com/winkerVSbecks"> Github </a>
+          <a class="bio-footer-linktext" title="arjun kalburgi on github" href="http://github.com/winkerVSbecks">Github</a>
         </li>
         <li class="bio-footer-li">
-          <a class="bio-footer-linktext" title="arjun kalburgi on CodePen"
-            href="http://codepen.io/winkerVSbecks"> CodePen </a>
+          <a class="bio-footer-linktext" title="arjun kalburgi on CodePen" href="http://codepen.io/winkerVSbecks">CodePen</a>
         </li>
         <li class="bio-footer-li">
-          <a class="bio-footer-linktext" title="email arjun kalburgi" href="mailto:askalburgi@gmail.com">
-            Email </a>
+          <a class="bio-footer-linktext" title="email arjun kalburgi" href="mailto:askalburgi@gmail.com">Email</a>
         </li>
       </ul>
     </footer>

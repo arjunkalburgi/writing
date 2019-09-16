@@ -34,7 +34,7 @@ This gave me a large list of markdown files that looked like `2017-04-09_Securit
 
 Gatsby's got a [blog-starter](https://github.com/gatsbyjs/gatsby-starter-blog) repo, which was quick to clone and get up and running.
 
-<img src="./initdeploy.png" alt="initdeploy" style="zoom:25%;" />
+<img src="./initdeploy.png" alt="initdeploy" style="zoom: 50%;" />
 
 
 
@@ -71,7 +71,7 @@ siteMetadata: {
 
 Ta-da!
 
-<img src="/Users/smilinknight/projects/Arjun stuff/blog/content/blog/moving-my-blog-to-gatsby/changingbio.png" alt="Ta-da!" style="zoom:25%;" />
+<img src="./changingbio.png" alt="Ta-da!" style="zoom:25%;" />
 
 
 

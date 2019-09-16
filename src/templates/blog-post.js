@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,7 +10,6 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -18,36 +17,22 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article>
-          <header>
-            <h1
-              style={{
-                marginTop: rhythm(1),
-                marginBottom: 0,
-              }}
-            >
-              {post.frontmatter.title}
-            </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-          </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr
+        <header class="post">
+          <h1 class="post-name">{post.frontmatter.title}</h1>
+          <p
             style={{
+              ...scale(-1 / 5),
+              display: `block`,
               marginBottom: rhythm(1),
             }}
-          />
-          <footer>
-            <Bio />
-          </footer>
-        </article>
+          >
+            {post.frontmatter.date}
+          </p>
+        </header>
+        <section class="post" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <footer>
+          <Bio />
+        </footer>
       </Layout>
     )
   }

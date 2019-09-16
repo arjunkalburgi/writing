@@ -1,18 +1,17 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
     if (location.pathname === rootPath) {
       header = (
         <section class="hero section">
-          <img class="hero_nameImg b-lazy" src="https://cdn.jsdelivr.net/gh/askalburgi/styleguide@fcd922db42282219a7ba68996c404f41578c8416/Logo/Main/BlackFull.svg" title="Arjun Kalburgi" />
+          <img class="hero_nameImg b-lazy" alt="Arjun Kalburgi to the right of a sharp leaf" src="https://cdn.jsdelivr.net/gh/askalburgi/styleguide@fcd922db42282219a7ba68996c404f41578c8416/Logo/Main/BlackFull.svg" title="Arjun Kalburgi" />
           <p class="hero_text--tag">learning, finding, designing, developing impact</p>
           <p class="hero_text--intro">
             My blog is for me to share my projects, lessons, art + ideas.
@@ -28,7 +27,7 @@ class Layout extends React.Component {
     } else {
       header = (
         <section class="hero section" style={{marginTop: '10vh'}}>
-          <img class="hero_nameImg b-lazy" src="https://cdn.jsdelivr.net/gh/askalburgi/styleguide@fcd922db42282219a7ba68996c404f41578c8416/Logo/Main/BlackFull.svg" title="Arjun Kalburgi" />
+          <img class="hero_nameImg b-lazy" alt="Arjun Kalburgi to the right of a sharp leaf" src="https://cdn.jsdelivr.net/gh/askalburgi/styleguide@fcd922db42282219a7ba68996c404f41578c8416/Logo/Main/BlackFull.svg" title="Arjun Kalburgi" />
           <p class="hero_text--tag">learning, finding, designing, developing impact</p>
         </section>
       )
