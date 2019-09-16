@@ -40,13 +40,18 @@ Gatsby's got a [blog-starter](https://github.com/gatsbyjs/gatsby-starter-blog) r
 Then using some bash scripts to format my markdown posts to the file structure Gatsby expects. 
 
 ```bash
-$ for f in *.md ; do mkdir -p ../blog/$f ; cp $f ../blog/$f/index.md ; done # make the new directory
 
-$ for d in *.md ; do mv $d ${d#*_} ; done # remove the date from the beginning of the directory name
+# make the new directory
+$ for f in *.md ; do mkdir -p ../blog/$f ; cp $f ../blog/$f/index.md ; done 
 
-$ for d in *.md ; do mv $d ${d%-*.md} ; done # remove the '.md' from the end of the directory name
+# remove the date from the beginning of the directory name
+$ for d in *.md ; do mv $d ${d#*_} ; done 
 
-$ for d in * ; do mv $d ${d,,} ; done # lower case all characters
+# remove the '.md' from the end of the directory name
+$ for d in *.md ; do mv $d ${d%-*.md} ; done 
+
+# lower case all characters`
+$ for d in * ; do mv $d ${d,,} ; done 
 ```
 
 Going from `2017-04-09_Security-Review--UX-of-Canadian-banking-applications-53aa77dd2cf4.md`, to `security-review--ux-of-canadian-banking-applications`. 

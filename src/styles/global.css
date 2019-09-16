@@ -11,6 +11,12 @@ body {
     margin: 25vh auto 15vh;
 }
 
+@media screen and (max-width: 40em) {
+    .section {
+        width: 90%; 
+    }
+}
+
 .hero>* {
     /* width: 50%; */
 }
@@ -145,6 +151,13 @@ body {
 .post {
     width: 50%; 
     margin: 0 35% 0 15%;
+}
+
+@media screen and (max-width: 40em) {
+    .post {
+        width: 90%;
+        margin: 0 35% 0 5%;
+    }
 }
 
 .post h1,
