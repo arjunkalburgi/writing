@@ -6,7 +6,6 @@ description: >-
 date: '2019-09-15T17:03:42.159Z'
 categories: []
 keywords: []
-draft: true
 slug: /writing/moving-my-blog-to-gatsby
 ---
 
@@ -56,25 +55,6 @@ This helps because now the url for my posts will look like: `www.arjunkalburgi.c
 
 
 
-Finally, I need to fix up the bio settings that the starter had. Most of that information was kept in the `gatsby-config.js` so I quickly edited it as well as changed the `profile-pic.jpg` file 
-
-```json
-siteMetadata: {
-    title: `Writing`,
-    author: `Arjun Kalburgi`,
-    description: `projects, lessons, art + ideas`,
-    siteUrl: `https://www.arjunkalburgi.com/writing`,
-    social: {
-      twitter: `arjunkalburgi`,
-    },
-```
-
-Ta-da!
-
-<img src="./changingbio.png" alt="Ta-da!" style="zoom:25%;" />
-
-
-
 Now my blog is ready to go 😃. Thank you to my bff [Andrew Fontaine](https://twitter.com/afontaine_ca) for helping me out with this part.
 
 
@@ -91,7 +71,9 @@ Without CI, every time I push to Github I'll need to run this command. This is o
 
 Honestly I could spend all day doing this, but for now I just want something quick. I'll use a lot of the CSS I already have from my [website](www.arjunkalburgi.com). But for the blog posts, for now I'll just copy what Varun's got on [his site](varun.ca/writing), it's gorgeous.
 
+Despite the simplicity of this task, it was actually quite time consuming to style the blog. Based on my commit history, it was the markdown posts that took forever to style. For some reason, Gatsby does not have this built into their default style for their starter package I used, making me wish I knew to use a theme'd starter from the beginning (there's no way to change your theme afterwards.) 
 
+<img src="./result.png" alt="image-20190915215432021" style="zoom:50%;" />
 
 
 
@@ -99,5 +81,4 @@ Honestly I could spend all day doing this, but for now I just want something qui
 
 Pretty happy with the public facing results, but on the internal there's a couple things I lose. 
 
-One is that I don't have the nice editor Medium provides. I installed [Typora](https://typora.io/) to fix this (using it right now). It lets me past images into the markdown files and helps me out with presenting my images as well. 
-
+One is that I don't have the nice editor Medium provides. I installed [Typora](https://typora.io/) to fix this (using it right now). It lets me paste images into the markdown files and helps me out with presenting my images as well. 
