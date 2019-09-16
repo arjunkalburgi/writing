@@ -4,6 +4,7 @@ description: >-
   Coming off two degrees in Computer Engineering and UI Design, I’m ready to get
   a job where I can work on useful products in a lean product…
 date: ''
+draft: true
 categories: []
 keywords: []
 slug: ''

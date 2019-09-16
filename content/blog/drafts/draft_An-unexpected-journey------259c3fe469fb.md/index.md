@@ -2,6 +2,7 @@
 title: "An unexpected journey \U0001F1EE\U0001F1F8"
 description: 'The story of my 2017 Iceland trip, how I got there and what I learned'
 date: ''
+draft: true
 categories: []
 keywords: []
 slug: ''
