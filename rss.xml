@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Writing]]></title><description><![CDATA[projects, lessons, art + ideas]]></description><link>https://www.arjunkalburgi.com/writing</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 16 Sep 2019 00:24:04 GMT</lastBuildDate><item><title><![CDATA[Moving my blog to Gatsby]]></title><description><![CDATA[After seeing a shift in the industry from Medium, it’s time I leave as well and host my blog on my own site. This shouldn’t be too bad of a…]]></description><link>https://www.arjunkalburgi.com/writing/moving-my-blog-to-gatsby/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/moving-my-blog-to-gatsby/</guid><pubDate>Sun, 15 Sep 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Writing]]></title><description><![CDATA[projects, lessons, art + ideas]]></description><link>https://www.arjunkalburgi.com/writing</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 16 Sep 2019 02:03:32 GMT</lastBuildDate><item><title><![CDATA[Moving my blog to Gatsby]]></title><description><![CDATA[After seeing a shift in the industry from Medium, it’s time I leave as well and host my blog on my own site. This shouldn’t be too bad of a…]]></description><link>https://www.arjunkalburgi.com/writing/moving-my-blog-to-gatsby/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/moving-my-blog-to-gatsby/</guid><pubDate>Sun, 15 Sep 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;After seeing a shift in the industry from Medium, it’s time I leave as well and host my blog on my own site.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This shouldn’t be too bad of a process, I just need to convert my Medium posts to markdown, set up a Gatsby blog, host on Github and do some styling.&lt;/p&gt;
@@ -8,7 +8,14 @@
 &lt;p&gt;This gave me a large list of markdown files that looked like &lt;code class=&quot;language-text&quot;&gt;2017-04-09_Security-Review--UX-of-Canadian-banking-applications-53aa77dd2cf4.md&lt;/code&gt;. &lt;/p&gt;
 &lt;h3&gt;Set Up Gatsby Blog&lt;/h3&gt;
 &lt;p&gt;Gatsby’s got a &lt;a href=&quot;https://github.com/gatsbyjs/gatsby-starter-blog&quot;&gt;blog-starter&lt;/a&gt; repo, which was quick to clone and get up and running.&lt;/p&gt;
-&lt;img src=&quot;./initdeploy.png&quot; alt=&quot;initdeploy&quot; style=&quot;zoom:25%;&quot; /&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/writing/static/4b88b012f4bf7635b0334df5de5a0280/b9e4f/initdeploy.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 59.152542372881356%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABSElEQVQoz42SvU7DMBCA84QsPAADEg8ASCxIsFAxwIoYu5SNqGNp2aAsdC0DVVMJhubXTpz6J3accolFaKog+HSxZZ8++XK2RWjIuUhTIqXMK5RSnHNCUoxxFEVJksBWnSoKHQT+3Fk4jmMJRdYlRfkV5eh5Xq93NxgMJpPXl+fx23Rq9gGtNYz3dv/k+Ojs9NDicluOMR4NH95nM5VrIXOeKSlVQ+52bw/293Z2G7Ih45ySmK5SP8J+TCEoF5vyePx0cd65urHb5Fx/IOavqtPKWuA3tSnKyMPRY+fy2rb7bXIml64XRigMIwNCqK58kxaZS7Xw4iWmIgMEAFPdM9Mas2yR4c5cL0AIbgqjCsbYptx+ssmzTM7dROTrPwE5MY2s3FKHpwC3RZjIdVHznW0EPJJ0q+z/Y2H6yVXCJGIS/0SGG8tf4gsMdKyMEWeK+wAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;initdeploy&quot; title=&quot;initdeploy&quot; src=&quot;/writing/static/4b88b012f4bf7635b0334df5de5a0280/b9e4f/initdeploy.png&quot; srcset=&quot;/writing/static/4b88b012f4bf7635b0334df5de5a0280/cf440/initdeploy.png 148w,
+/writing/static/4b88b012f4bf7635b0334df5de5a0280/d2d38/initdeploy.png 295w,
+/writing/static/4b88b012f4bf7635b0334df5de5a0280/b9e4f/initdeploy.png 590w&quot; sizes=&quot;(max-width: 590px) 100vw, 590px&quot; loading=&quot;lazy&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;p&gt;Then using some bash scripts to format my markdown posts to the file structure Gatsby expects. &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; *.md &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;/blog/&lt;span class=&quot;token variable&quot;&gt;$f&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$f&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;/blog/&lt;span class=&quot;token variable&quot;&gt;$f&lt;/span&gt;/index.md &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# make the new directory&lt;/span&gt;
 
@@ -19,26 +26,27 @@ $ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&q
 $ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; * &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$d&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${d&lt;span class=&quot;token operator&quot;&gt;,,&lt;/span&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# lower case all characters&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Going from &lt;code class=&quot;language-text&quot;&gt;2017-04-09_Security-Review--UX-of-Canadian-banking-applications-53aa77dd2cf4.md&lt;/code&gt;, to &lt;code class=&quot;language-text&quot;&gt;security-review--ux-of-canadian-banking-applications&lt;/code&gt;. &lt;/p&gt;
 &lt;p&gt;This helps because now the url for my posts will look like: &lt;code class=&quot;language-text&quot;&gt;www.arjunkalburgi.com/writing/security-review--ux-of-canadian-banking-applications&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Finally, I need to fix up the bio settings that the starter had. Most of that information was kept in the &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt; so I quickly edited it as well as changed the &lt;code class=&quot;language-text&quot;&gt;profile-pic.jpg&lt;/code&gt; file &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;siteMetadata&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; `Writing`&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    author&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; `Arjun Kalburgi`&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    description&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; `projects&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; lessons&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; art + ideas`&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    siteUrl&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; `https&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token comment&quot;&gt;//www.arjunkalburgi.com/writing`,&lt;/span&gt;
-    social&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      twitter&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; `arjunkalburgi`&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ta-da!&lt;/p&gt;
-&lt;img src=&quot;/Users/smilinknight/projects/Arjun stuff/blog/content/blog/moving-my-blog-to-gatsby/changingbio.png&quot; alt=&quot;Ta-da!&quot; style=&quot;zoom:25%;&quot; /&gt;
 &lt;p&gt;Now my blog is ready to go 😃. Thank you to my bff &lt;a href=&quot;https://twitter.com/afontaine_ca&quot;&gt;Andrew Fontaine&lt;/a&gt; for helping me out with this part.&lt;/p&gt;
 &lt;h3&gt;Host on Github Pages&lt;/h3&gt;
 &lt;p&gt;Thanks to Gatsby’s &lt;a href=&quot;https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/&quot;&gt;gh-pages hosting tutorial&lt;/a&gt; I was able to get this done pretty easily. Just needed to make a repo in github, set the &lt;code class=&quot;language-text&quot;&gt;origin&lt;/code&gt; in my local repo, follow the tutorial and then run &lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt; . And I’m up!&lt;/p&gt;
 &lt;p&gt;Without CI, every time I push to Github I’ll need to run this command. This is okay for now but I’ll probably look to change this later. &lt;/p&gt;
 &lt;h3&gt;Styling&lt;/h3&gt;
 &lt;p&gt;Honestly I could spend all day doing this, but for now I just want something quick. I’ll use a lot of the CSS I already have from my &lt;a href=&quot;www.arjunkalburgi.com&quot;&gt;website&lt;/a&gt;. But for the blog posts, for now I’ll just copy what Varun’s got on &lt;a href=&quot;varun.ca/writing&quot;&gt;his site&lt;/a&gt;, it’s gorgeous.&lt;/p&gt;
+&lt;p&gt;Despite the simplicity of this task, it was actually quite time consuming to style the blog. Based on my commit history, it was the markdown posts that took forever to style. For some reason, Gatsby does not have this built into their default style for their starter package I used, making me wish I knew to use a theme’d starter from the beginning (there’s no way to change your theme afterwards.) &lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/writing/static/7e1166eff48865b4d86d1c8057391413/82b63/result.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 59.10714285714286%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABHklEQVQoz5WSWY6DMBBEuf8dEfAJEatXFlPjamLEZFCSsVSyMc2jesnmeYZzDkopzN5jic/ruiKEgG3b5PxOjCHDWotlWZDhssZpQt08MIyjBBL635Xt+44kY6xAtdbimg64rjGfJMDjK8DHlCnCKIL5fF0pPgFe705g2APKskSe5yiKAlVVyd40zfE+pv8KuPvJCVzDBqUVxlg/Nogyxoh4Nz1LwcJ/dJgu2CmCtNIC4Pmus3fO/jjkPgwD6rrGY+iwxRKE7RidpDROX9WQe9u26CO09TFdb+Hs0Rw6p5g+Z+7rlJ13UkcTa6XUhCnK2AhZ5lN+9r9cvnUoDZhGmcVjHwVIWXe4pMM70K1DAiTtvkfXdaI0k0nXYb9rzg+Kya6P7vDBxgAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;image-20190915215432021&quot; title=&quot;image-20190915215432021&quot; src=&quot;/writing/static/7e1166eff48865b4d86d1c8057391413/b9e4f/result.png&quot; srcset=&quot;/writing/static/7e1166eff48865b4d86d1c8057391413/cf440/result.png 148w,
+/writing/static/7e1166eff48865b4d86d1c8057391413/d2d38/result.png 295w,
+/writing/static/7e1166eff48865b4d86d1c8057391413/b9e4f/result.png 590w,
+/writing/static/7e1166eff48865b4d86d1c8057391413/f9b6a/result.png 885w,
+/writing/static/7e1166eff48865b4d86d1c8057391413/2d849/result.png 1180w,
+/writing/static/7e1166eff48865b4d86d1c8057391413/82b63/result.png 3360w&quot; sizes=&quot;(max-width: 590px) 100vw, 590px&quot; loading=&quot;lazy&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;h3&gt;Results&lt;/h3&gt;
 &lt;p&gt;Pretty happy with the public facing results, but on the internal there’s a couple things I lose. &lt;/p&gt;
-&lt;p&gt;One is that I don’t have the nice editor Medium provides. I installed &lt;a href=&quot;https://typora.io/&quot;&gt;Typora&lt;/a&gt; to fix this (using it right now). It lets me past images into the markdown files and helps me out with presenting my images as well. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to use Modals in Ionic v4]]></title><description><![CDATA[After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev. This should be easy, but the…]]></description><link>https://www.arjunkalburgi.com/writing/how-to-use-modals-in-ionic-v4/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/how-to-use-modals-in-ionic-v4/</guid><pubDate>Fri, 16 Aug 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;One is that I don’t have the nice editor Medium provides. I installed &lt;a href=&quot;https://typora.io/&quot;&gt;Typora&lt;/a&gt; to fix this (using it right now). It lets me paste images into the markdown files and helps me out with presenting my images as well. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to use Modals in Ionic v4]]></title><description><![CDATA[After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev. This should be easy, but the…]]></description><link>https://www.arjunkalburgi.com/writing/how-to-use-modals-in-ionic-v4/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/how-to-use-modals-in-ionic-v4/</guid><pubDate>Fri, 16 Aug 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This should be easy, but the documentation for it is a little lacking. I’ve &lt;a href=&quot;https://github.com/ionic-team/ionic/pull/17944#issuecomment-522067671&quot;&gt;asked&lt;/a&gt; them to update it but just in case they don’t I’m writing this for your sanity.&lt;/p&gt;
@@ -50,53 +58,60 @@ $ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&q
 &lt;p&gt;Very basic, just run &lt;code class=&quot;language-text&quot;&gt;ionic g page modal&lt;/code&gt; using Ionic CLI just like you would for any other new page.&lt;/p&gt;
 &lt;h4&gt;Fixing the Routing&lt;/h4&gt;
 &lt;p&gt;Since modal pages aren’t part of your app navigation, you must remove the automatic entry for this page from your &lt;code class=&quot;language-text&quot;&gt;app-routing-module.ts&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;const routes: Routes = [&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; { path: &amp;#39;&amp;#39;, redirectTo: &amp;#39;home&amp;#39;, pathMatch: &amp;#39;full&amp;#39; },  
- ...  
- {̵ ̵p̵a̵t̵h̵:̵ ̵&amp;#39;̵m̵o̵d̵a̵l̵&amp;#39;̵,̵ ̵  
-   l̵o̵a̵d̵C̵h̵i̵l̵d̵r̵e̵n̵:̵ ̵&amp;#39;̵.̵/̵m̵o̵d̵a̵l̵/̵m̵o̵d̵a̵l̵.̵m̵o̵d̵u̵l̵e̵#̵M̵o̵d̵a̵l̵P̵a̵g̵e̵M̵o̵d̵u̵l̵e̵&amp;#39;̵ ̵}̵&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;];&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const routes: Routes = [
+     { path: &amp;#39;&amp;#39;, redirectTo: &amp;#39;home&amp;#39;, pathMatch: &amp;#39;full&amp;#39; },  
+     ...  
+     {̵ ̵p̵a̵t̵h̵:̵ ̵&amp;#39;̵m̵o̵d̵a̵l̵&amp;#39;̵,̵ ̵  
+       l̵o̵a̵d̵C̵h̵i̵l̵d̵r̵e̵n̵:̵ ̵&amp;#39;̵.̵/̵m̵o̵d̵a̵l̵/̵m̵o̵d̵a̵l̵.̵m̵o̵d̵u̵l̵e̵#̵M̵o̵d̵a̵l̵P̵a̵g̵e̵M̵o̵d̵u̵l̵e̵&amp;#39;̵ ̵}̵
+];&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4&gt;Fix the Modal’s Module&lt;/h4&gt;
 &lt;p&gt;This part is neccessary to solve the issue.&lt;/p&gt;
-&lt;p&gt;@NgModule({&lt;br&gt;
-declarations: [ &lt;strong&gt;ModalPage&lt;/strong&gt; ],&lt;br&gt;
-imports: [ … ],&lt;br&gt;
-entryComponents: [ &lt;strong&gt;ModalPage&lt;/strong&gt; ],&lt;br&gt;
-exports: [ **ModalPage ]&lt;br&gt;
-**})&lt;br&gt;
-export class ModalPageModule {}&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@NgModule({  
+     declarations: \[ **ModalPage** \],  
+     imports: \[ ... \],  
+     entryComponents: \[ **ModalPage** \],  
+     exports: \[ **ModalPage \]  
+**})  
+export class ModalPageModule {}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The documentation does not show to include the page in &lt;code class=&quot;language-text&quot;&gt;entryComponents&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;exports&lt;/code&gt;.&lt;/p&gt;
 &lt;h4&gt;Declare the Modal for Use&lt;/h4&gt;
 &lt;p&gt;Now that the modal’s module is ready, import it into the page you want to use it in.&lt;/p&gt;
-&lt;p&gt;@NgModule({&lt;br&gt;
-declarations: [ HomePage, &lt;strong&gt;ModalPage&lt;/strong&gt; ],&lt;br&gt;
-imports: [ … ],&lt;br&gt;
-entryComponents: [ &lt;strong&gt;ModalPage&lt;/strong&gt; ],})&lt;br&gt;
-export class HomePageModule {}&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@NgModule({  
+     declarations: \[ HomePage, **ModalPage** \],  
+     imports: \[ ... \],  
+     entryComponents: \[ **ModalPage** \],})  
+export class HomePageModule {}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The documentation does not show either of these! This is a big part of how the issue happens. Including the &lt;code class=&quot;language-text&quot;&gt;ModalPage&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;imports&lt;/code&gt; is what creates the problem (and is what I thought to do).&lt;/p&gt;
 &lt;h4&gt;Create the Modal&lt;/h4&gt;
 &lt;p&gt;The following is exactly how the documentation explains, I’m just including it here for completion’s sake.&lt;/p&gt;
-&lt;p&gt;import { ModalController } from ‘@ionic/angular’;&lt;/p&gt;
-&lt;p&gt;export class &lt;strong&gt;HomePage&lt;/strong&gt; {&lt;/p&gt;
-&lt;p&gt;  constructor(private modalCtrl: ModalController) { }&lt;/p&gt;
-&lt;p&gt;  async openModal() {&lt;br&gt;
-const loadAmount = await &lt;em&gt;this&lt;/em&gt;.modalCtrl.create({&lt;br&gt;
-component: &lt;strong&gt;ModalPage&lt;/strong&gt;&lt;br&gt;
-});&lt;br&gt;
-await loadAmount.present();&lt;br&gt;
-}&lt;/p&gt;
-&lt;p&gt;}&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import { ModalController } from &amp;#39;@ionic/angular&amp;#39;;
+
+export class **HomePage** {
+
+  constructor(private modalCtrl: ModalController) { }
+
+  async openModal() {  
+    const loadAmount = await _this_.modalCtrl.create({  
+      component: **ModalPage**  
+    });  
+    await loadAmount.present();  
+  }
+
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4&gt;Dismiss the Modal&lt;/h4&gt;
-&lt;p&gt;import { ModalController } from ‘@ionic/angular’;&lt;/p&gt;
-&lt;p&gt;export class &lt;strong&gt;ModalPage&lt;/strong&gt; {&lt;/p&gt;
-&lt;p&gt;  constructor(private modalCtrl: ModalController) { }&lt;/p&gt;
-&lt;p&gt;  async close() {&lt;br&gt;
-await &lt;em&gt;this&lt;/em&gt;.modalCtrl.dismiss();&lt;br&gt;
-}&lt;/p&gt;
-&lt;p&gt;}&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import { ModalController } from &amp;#39;@ionic/angular&amp;#39;;
+
+export class **ModalPage** {
+
+  constructor(private modalCtrl: ModalController) { }
+
+  async close() {  
+    await _this_.modalCtrl.dismiss();  
+  }
+
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;Just like that, everything should be working perfectly. I was so relieved when I implemented these steps. Thank you to &lt;a href=&quot;https://medium.com/u/706b6e4cb229&quot;&gt;Christian Francia&lt;/a&gt; for providing this solution in a &lt;a href=&quot;https://github.com/ionic-team/ionic/issues/17939#issuecomment-479550015&quot;&gt;Github issue&lt;/a&gt;, hopefully this blog post will have a little better SEO and will be easier to find 😃&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/0*BRl1d1tVOedELWmT.jpeg&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Learning About Time, After 3 Weeks Off]]></title><description><![CDATA[I’ve taken 3 weeks off before, I went to India for that long just 5 months ago — but the context around that trip and my most recent one…]]></description><link>https://www.arjunkalburgi.com/writing/learning-about-time--after-3-weeks-off/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/learning-about-time--after-3-weeks-off/</guid><pubDate>Mon, 05 Aug 2019 19:12:31 GMT</pubDate><content:encoded>&lt;p&gt;I’ve taken 3 weeks off before, I went to India for that long just 5 months ago — but the context around that trip and my most recent one were very different. Because now I have a job where I work until I burn out — I’m learning how to not do that.&lt;/p&gt;
+&lt;p&gt;Just like that, everything should be working perfectly. I was so relieved when I implemented these steps. Thank you to &lt;a href=&quot;https://medium.com/u/706b6e4cb229&quot;&gt;Christian Francia&lt;/a&gt; for providing this solution in a &lt;a href=&quot;https://github.com/ionic-team/ionic/issues/17939#issuecomment-479550015&quot;&gt;Github issue&lt;/a&gt;, hopefully this blog post will have a little better SEO and will be easier to find 😃&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Learning About Time, After 3 Weeks Off]]></title><description><![CDATA[I’ve taken 3 weeks off before, I went to India for that long just 5 months ago — but the context around that trip and my most recent one…]]></description><link>https://www.arjunkalburgi.com/writing/learning-about-time--after-3-weeks-off/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/learning-about-time--after-3-weeks-off/</guid><pubDate>Mon, 05 Aug 2019 19:12:31 GMT</pubDate><content:encoded>&lt;p&gt;I’ve taken 3 weeks off before, I went to India for that long just 5 months ago — but the context around that trip and my most recent one were very different. Because now I have a job where I work until I burn out — I’m learning how to not do that.&lt;/p&gt;
 &lt;p&gt;This recent trip started in New York with a half-week with my cousins, where we walked all day and everywhere.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/0*o_GXcdRRPC2oFaRa&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Then continued for a week with some more family, where we were such a big group we could only manage to visit one or two tourist attractions per day.&lt;/p&gt;
