@@ -38,6 +38,14 @@ body {
     margin: 0 0 0 15px;
 }
 
+.hero_link-icon {
+    font-family: "Lato";
+    font-size: 16px;
+    color: #313131;
+    line-height: 1.3;
+    box-shadow: none;
+}
+
 .hero_button {
     background: #12A962;
     color:#fff;

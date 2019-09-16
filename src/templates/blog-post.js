@@ -17,8 +17,8 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <header class="post">
-          <h1 class="post-name">{post.frontmatter.title}</h1>
+        <header className="post">
+          <h1 className="post-name">{post.frontmatter.title}</h1>
           <p
             style={{
               ...scale(-1 / 5),
@@ -29,7 +29,7 @@ class BlogPostTemplate extends React.Component {
             {post.frontmatter.date}
           </p>
         </header>
-        <section class="post" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section className="post" dangerouslySetInnerHTML={{ __html: post.html }} />
         <footer>
           <Bio />
         </footer>

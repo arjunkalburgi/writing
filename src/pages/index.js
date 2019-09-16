@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
                     marginBottom: rhythm(1 / 4),
                   }}
                 >
-                  <Link class="blog-link" to={node.fields.slug}>
+                  <Link className="blog-link" to={node.fields.slug}>
                     {title}
                   </Link>
                 </h3>
