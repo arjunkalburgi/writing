@@ -4,9 +4,6 @@ description: >-
   After taking much too long to figure this out myself, I’m writing a blog post
   about it to help the next dev.
 date: '2019-08-16T17:03:42.159Z'
-categories: []
-keywords: []
-slug: /writing/how-to-use-modals-in-ionic-v4
 ---
 
 > After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev.
