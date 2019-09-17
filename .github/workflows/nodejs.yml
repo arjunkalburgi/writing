@@ -16,12 +16,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 8.x
-    - name: set account identity 
+    - name: npm install & deploy
       run: |
         git config --global user.email "askalburgi@gamil.com"
         git config --global user.name "Arjun Kalburgi"
-    - name: npm install & deploy
-      run: |
         npm install
         npm run deploy --if-present
       env:
