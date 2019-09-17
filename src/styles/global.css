@@ -15,6 +15,10 @@ body {
     .section {
         width: 90%; 
     }
+
+    .section.posts {
+        width: 100%;
+    }
 }
 
 .hero>* {
@@ -34,6 +38,7 @@ body {
 .hero_Links {
     position: absolute;
     padding-left: 0px;
+    margin-left: 0px;
 }
 
 .hero_Links li {
@@ -121,7 +126,16 @@ body {
 
 
 
+.blog-article {
+    padding: 1em;
+    margin: 0.5em;
+}
 
+@media screen and (max-width: 40em) {
+    .blog-article {
+        padding: 1em 0.5em;
+    }
+}
 
 .blog-link {
     box-shadow: none; 
