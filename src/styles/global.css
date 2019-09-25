@@ -131,6 +131,10 @@ body {
     margin: 0.5em;
 }
 
+.blog-article:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 40em) {
     .blog-article {
         padding: 1em 0.5em;
