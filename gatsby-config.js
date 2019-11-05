@@ -76,6 +76,20 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve:"@weknow/gatsby-remark-codepen",
+            options: {
+              theme: "light",
+              height: 350
+            }
+          }
+        ]
+      }
+    }
   ],
   pathPrefix: "/writing",
 }
