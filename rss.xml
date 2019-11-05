@@ -1,121 +1,241 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Writing]]></title><description><![CDATA[projects, lessons, art + ideas]]></description><link>https://www.arjunkalburgi.com/writing</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 25 Sep 2019 19:24:13 GMT</lastBuildDate><item><title><![CDATA[Custom Input Behaviour for Numbers]]></title><description><![CDATA[After accomplishing this twice now on two different occasions, I want to note it down for future reference. I think this is pretty core…]]></description><link>https://www.arjunkalburgi.com/writing/custom-input-behaviour-for-numbers/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/custom-input-behaviour-for-numbers/</guid><pubDate>Wed, 25 Sep 2019 15:20:33 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Writing]]></title><description><![CDATA[projects, lessons, art + ideas]]></description><link>https://www.arjunkalburgi.com/writing</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Nov 2019 23:49:00 GMT</lastBuildDate><item><title><![CDATA[Creating a "Swipe-to-Confirm" Component]]></title><description><![CDATA[The Amazon app features a Slide-to-Confirm element inspired by Apple's "Swipe to Unlock". Surprisingly, a similar component is nowhere on…]]></description><link>https://www.arjunkalburgi.com/writing/creating-a-slide-to-confirm-component/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/creating-a-slide-to-confirm-component/</guid><pubDate>Tue, 05 Nov 2019 15:20:33 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;The Amazon app features a Slide-to-Confirm element inspired by Apple&apos;s &quot;Swipe to Unlock&quot;. Surprisingly, a similar component is nowhere on the internet, so I&apos;ll need to create it myself.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Designers can use Slide-to-Confirm as a tool to help their users feel more secure (than a button that can be accidentally tapped) and more accomplished (takes more work to slide across the screen). Amazon uses it in their &quot;Buy Now&quot; flow to prevent accidental purchases. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Users/smilinknight/projects/Arjun stuff/blog/content/blog/creating-a-slide-to-confirm-component/amazon2.png&quot; alt=&quot;amazon2&quot; style=&quot;zoom: 28%;&quot; /&gt;&lt;img src=&quot;/Users/smilinknight/projects/Arjun stuff/blog/content/blog/creating-a-slide-to-confirm-component/amazon3.jpeg&quot; alt=&quot;amazon3&quot; style=&quot;zoom:14.4%;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The UX of this component is great! Showing green and changing the message as you swipe brings out the security and accomplishment feelings. Unfortunately, it&apos;s also highly custom.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Looking for similar&apos;s online&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The only similar Javascript-based components I could find online were this &lt;a href=&quot;https://codepen.io/bennettfeely/pen/jyGeJ&quot;&gt;codepen&lt;/a&gt;, this &lt;a href=&quot;https://www.davidbcalhoun.com/2011/implementing-iphones-slider-unlock-with-input-typerange/&quot;&gt;blog&lt;/a&gt;, and this &lt;a href=&quot;https://github.com/agentS/react-native-slider-button&quot;&gt;React Native library&lt;/a&gt;; none of which really come close to the functionality I&apos;m looking for. Android and iOS devs had something closer but I&apos;m looking for a Javascript and CSS solution. They all use the &lt;code&gt;&amp;#x3C;input type=&apos;range&apos;&lt;/code&gt; element, so let&apos;s start with that.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Browser support for Thumb Range&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Using the blog to help kickstart my progress, I made a codepen and quickly figured out some interesting things. The blog only supports Firefox when applying CSS to the &lt;code&gt;&amp;#x3C;input type=&apos;range&apos;&lt;/code&gt; element using &lt;code&gt;input::-moz-range-thumb&lt;/code&gt;. I needed to include &lt;code&gt;input::-webkit-slider-thumb&lt;/code&gt; for support on Safari and Chrome, the platforms I&apos;m developing for.&lt;/p&gt;
+&lt;p&gt;Also strange is that Chrome required a &lt;code&gt;margin-bottom: -7px&lt;/code&gt; in order to center the slider vertically.&lt;/p&gt;
+&lt;p&gt;Progress on the component here:
+&lt;a href=&quot;https://codepen.io/arjunkalburgi/pen/dyyJMKO&quot;&gt;&lt;div&gt;&lt;iframe 
+        height=&apos;350&apos; 
+        scrolling=&apos;no&apos; 
+        src=&apos;//codepen.io/arjunkalburgi/embed/preview/dyyJMKO/?height=350&amp;theme-id=light&amp;default-tab=html,result&apos; 
+        frameborder=&apos;no&apos; 
+        allowtransparency=&apos;true&apos; 
+        allowfullscreen=&apos;true&apos; 
+        style=&apos;width: 100%;&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A new idea&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Turning my attention to how I&apos;ll solve changing the track message and colour as you swipe got me looking at something new: draggable components. &lt;/p&gt;
+&lt;p&gt;What if I was able to use some drag-and-drop JavaScript to make my slider?&lt;/p&gt;
+&lt;p&gt;Staring with &lt;a href=&quot;https://www.kirupa.com/html5/drag.htm&quot;&gt;this drag tutorial from Kirupa&lt;/a&gt;, I first modified it to only drag horizontally and then to not drag over the container width.&lt;/p&gt;
+&lt;p&gt;Progress here:
+&lt;a href=&quot;https://codepen.io/arjunkalburgi/pen/GRRyjzZ&quot;&gt;&lt;div&gt;&lt;iframe 
+        height=&apos;350&apos; 
+        scrolling=&apos;no&apos; 
+        src=&apos;//codepen.io/arjunkalburgi/embed/preview/GRRyjzZ/?height=350&amp;theme-id=light&amp;default-tab=html,result&apos; 
+        frameborder=&apos;no&apos; 
+        allowtransparency=&apos;true&apos; 
+        allowfullscreen=&apos;true&apos; 
+        style=&apos;width: 100%;&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Is the new idea feasable?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If the new idea could actually work, then I&apos;ll be able to put elements on both sides of the slide item that will show and hide as I move the slide item. &lt;/p&gt;
+&lt;p&gt;I was able to create this functionality with blue and green bars. The most difficult part about this was honestly figuring out the logic of the HTML elements. I decided that having two tracks on top of each other with &lt;code&gt;position: absolute&lt;/code&gt; and a high &lt;code&gt;z-index&lt;/code&gt; for the item worked best: &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-&lt;div&quot; data-meta=&quot;id=&amp;#x22;outerContainer&amp;#x22;&gt;&quot;&gt;&amp;#x3C;div id=&quot;outerContainer&quot;&gt;
+  &amp;#x3C;div id=&quot;container&quot;&gt;
+    &amp;#x3C;div id=&quot;item&quot;&gt;&amp;#x3C;/div&gt;
+  &amp;#x3C;/div&gt;
+  &amp;#x3C;div id=&quot;container&quot;&gt;
+    &amp;#x3C;div id=&quot;green&quot;&gt;&amp;#x3C;/div&gt;
+    &amp;#x3C;div id=&quot;blue&quot;&gt;&amp;#x3C;/div&gt;
+  &amp;#x3C;/div&gt;
+&amp;#x3C;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The bars move by changing their width in JS along with the drag of the item.&lt;/p&gt;
+&lt;p&gt;Progress here:
+&lt;a href=&quot;https://codepen.io/arjunkalburgi/pen/rNNpWdX&quot;&gt;&lt;div&gt;&lt;iframe 
+        height=&apos;350&apos; 
+        scrolling=&apos;no&apos; 
+        src=&apos;//codepen.io/arjunkalburgi/embed/preview/rNNpWdX/?height=350&amp;theme-id=light&amp;default-tab=html,result&apos; 
+        frameborder=&apos;no&apos; 
+        allowtransparency=&apos;true&apos; 
+        allowfullscreen=&apos;true&apos; 
+        style=&apos;width: 100%;&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Text in the Bars&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now to have text within the bars so that sliding reveals/conseals the text. I quickly made an inner div with the text and made it fit to the grandparent: &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#bar_inner {
+    // center the text
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  // 
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However this made both text&apos;s appear on top of each other. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Users/smilinknight/projects/Arjun%20stuff/blog/content/blog/creating-a-slide-to-confirm-component/brokentext.png&quot; alt=&quot;brokentext&quot;&gt;&lt;/p&gt;
+&lt;p&gt;And adding  &lt;code&gt;overflow: hidden&lt;/code&gt; to the parent bar&apos;s does nothing (because the parent is not absolute as well). I&apos;m actually really stuck here... 🤔&lt;/p&gt;
+&lt;p&gt;In the end I went with not the most elegant solution, but I think with a CSS transition it can be okay. I used JS to switch the &lt;code&gt;z-index&lt;/code&gt; of the bars, so that the text essentially switches places and is covered by the other bar. &lt;/p&gt;
+&lt;p&gt;See it here:
+&lt;a href=&quot;https://codepen.io/arjunkalburgi/pen/poopRzX&quot;&gt;&lt;div&gt;&lt;iframe 
+        height=&apos;350&apos; 
+        scrolling=&apos;no&apos; 
+        src=&apos;//codepen.io/arjunkalburgi/embed/preview/poopRzX/?height=350&amp;theme-id=light&amp;default-tab=html,result&apos; 
+        frameborder=&apos;no&apos; 
+        allowtransparency=&apos;true&apos; 
+        allowfullscreen=&apos;true&apos; 
+        style=&apos;width: 100%;&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Confirm alert, and fallback&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now that I have my meat set up, I need to add the potatoes. I need to trigger an event once the slider reaches the end and if the slider doesn&apos;t reach the end, it should fallback to the beginning. &lt;/p&gt;
+&lt;p&gt;Both potatoes were pretty easy, just needed to have some logic in the &lt;code&gt;dragEnd&lt;/code&gt; function&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// in dragEnd(e)
+if (currentX &amp;#x3C; dragWidth) {
+  setTranslate(0, dragItem);
+} else {
+  alert(&quot;Confirmed!&quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I&apos;ve added an animation on fallback and wrapped the alert in a function for the CodePen:
+&lt;a href=&quot;https://codepen.io/arjunkalburgi/pen/BaaJYbx&quot;&gt;&lt;div&gt;&lt;iframe 
+        height=&apos;350&apos; 
+        scrolling=&apos;no&apos; 
+        src=&apos;//codepen.io/arjunkalburgi/embed/preview/BaaJYbx/?height=350&amp;theme-id=light&amp;default-tab=html,result&apos; 
+        frameborder=&apos;no&apos; 
+        allowtransparency=&apos;true&apos; 
+        allowfullscreen=&apos;true&apos; 
+        style=&apos;width: 100%;&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Finalizing&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To finish it off, I cleaned up my code using BEM CSS, and removed some of the unnecessary things like the coloured bars(*) and styled the dragItem. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(*) Since the &lt;code&gt;overflow: hidden&lt;/code&gt; didn&apos;t work, it&apos;s better to go with an opacity change for the text and changing the background colour of the bar instead of keeping two different ones. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/arjunkalburgi/pen/QWWamxW&quot;&gt;&lt;div&gt;&lt;iframe 
+        height=&apos;350&apos; 
+        scrolling=&apos;no&apos; 
+        src=&apos;//codepen.io/arjunkalburgi/embed/preview/QWWamxW/?height=350&amp;theme-id=light&amp;default-tab=html,result&apos; 
+        frameborder=&apos;no&apos; 
+        allowtransparency=&apos;true&apos; 
+        allowfullscreen=&apos;true&apos; 
+        style=&apos;width: 100%;&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Users/smilinknight/projects/Arjun%20stuff/blog/content/blog/creating-a-slide-to-confirm-component/final.gif&quot; alt=&quot;final&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Converting to Angular&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now that I have the component in JS, I need it in Angular. This was simple enough overall, but had an annoying time making it work due to some scope bugs. After taking the weekend off and then running the code locally, I was able to figure them all out and have it all working. &lt;/p&gt;
+&lt;p&gt;I put the final version in CodePen here:
+&lt;a href=&quot;https://codepen.io/arjunkalburgi/pen/xxxpzPx&quot;&gt;&lt;div&gt;&lt;iframe 
+        height=&apos;350&apos; 
+        scrolling=&apos;no&apos; 
+        src=&apos;//codepen.io/arjunkalburgi/embed/preview/xxxpzPx/?height=350&amp;theme-id=light&amp;default-tab=html,result&apos; 
+        frameborder=&apos;no&apos; 
+        allowtransparency=&apos;true&apos; 
+        allowfullscreen=&apos;true&apos; 
+        style=&apos;width: 100%;&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I&apos;d like to go a step further and create a github repo and NPM library for this component, but maybe that&apos;ll be for another day! &lt;/p&gt;
+&lt;p&gt;Thanks for reading! &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.arjunkalburgi.com/assets/Graphics/Backgrounds/leaves-white.jpg&quot; alt=&quot;some leaves to end with&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Custom Input Behaviour for Numbers]]></title><description><![CDATA[After accomplishing this twice now on two different occasions, I want to note it down for future reference. I think this is pretty core…]]></description><link>https://www.arjunkalburgi.com/writing/custom-input-behaviour-for-numbers/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/custom-input-behaviour-for-numbers/</guid><pubDate>Wed, 25 Sep 2019 15:20:33 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;After accomplishing this twice now on two different occasions, I want to note it down for future reference. I think this is pretty core functionality for number inputs.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;When you type into a currency field, the field should adapt and reflect your text input. The experience is much cleaner if you’re only ever typing numbers. &lt;/p&gt;
+&lt;p&gt;When you type into a currency field, the field should adapt and reflect your text input. The experience is much cleaner if you&apos;re only ever typing numbers. &lt;/p&gt;
 &lt;p&gt;Thus this: &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// First, remove any &apos;$&apos; or decimals.&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; val &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; input&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;$&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;.&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; vallen &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; val&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// First, remove any &apos;$&apos; or decimals.
+let val = input.toString().replace(&apos;$&apos;, &apos;&apos;).replace(&apos;.&apos;, &apos;&apos;);
+let vallen = val.length
 
-&lt;span class=&quot;token comment&quot;&gt;// Ensure it is a number&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;parseFloat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;val&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+// Ensure it is a number
+if (parseFloat(val)) {
   
-   &lt;span class=&quot;token comment&quot;&gt;// Add a 0 for edge case to ensure: &quot;$0.04&quot;&lt;/span&gt;
-   &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vallen &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; val &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;0&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; val&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+   // Add a 0 for edge case to ensure: &quot;$0.04&quot;
+   if (vallen &amp;#x3C; 2) { val = &apos;0&apos; + val; }
   
-   &lt;span class=&quot;token comment&quot;&gt;// Add the decimal to the correct place&lt;/span&gt;
-   &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; output &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; val&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; vallen &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;.&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; val&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;vallen &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; vallen&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+   // Add the decimal to the correct place
+   let output = val.substr(0, vallen - 2) + &apos;.&apos; + val.substr(vallen - 2, vallen);
 
-   &lt;span class=&quot;token comment&quot;&gt;// Clean up float and add back &apos;$&apos;&lt;/span&gt;
-   output &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;$&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;parseFloat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;output&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toFixed&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now that I’m writing this, it seems like the line for the fourth comment is redundant. Why am I adding a decimal and then cleaning up the float value? Shouldn’t &lt;code class=&quot;language-text&quot;&gt;parseFloat(output).toFixed(2)&lt;/code&gt; do all the right work? &lt;/p&gt;
-&lt;p&gt;But that step is required to ensure the differences between &lt;code class=&quot;language-text&quot;&gt;&amp;#39;0.04&amp;#39;&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;0.40&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;4.00&lt;/code&gt; are all taken care of. :smile: &lt;/p&gt;
-&lt;p&gt;It’s actually the final line where the redundancy comes. I use &lt;code class=&quot;language-text&quot;&gt;parseFloat&lt;/code&gt; for the case of &lt;code class=&quot;language-text&quot;&gt;00.040&lt;/code&gt; where there maybe extra zeros present. And  &lt;code class=&quot;language-text&quot;&gt;toFixed(2)&lt;/code&gt; is for the case when &lt;code class=&quot;language-text&quot;&gt;6.00&lt;/code&gt; simplifies to &lt;code class=&quot;language-text&quot;&gt;6&lt;/code&gt;. &lt;/p&gt;
+   // Clean up float and add back &apos;$&apos;
+   output = &apos;$&apos; + parseFloat(output).toFixed(2).toString();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that I&apos;m writing this, it seems like the line for the fourth comment is redundant. Why am I adding a decimal and then cleaning up the float value? Shouldn&apos;t &lt;code&gt;parseFloat(output).toFixed(2)&lt;/code&gt; do all the right work? &lt;/p&gt;
+&lt;p&gt;But that step is required to ensure the differences between &lt;code&gt;&apos;0.04&apos;&lt;/code&gt; and &lt;code&gt;0.40&lt;/code&gt; and &lt;code&gt;4.00&lt;/code&gt; are all taken care of. :smile: &lt;/p&gt;
+&lt;p&gt;It&apos;s actually the final line where the redundancy comes. I use &lt;code&gt;parseFloat&lt;/code&gt; for the case of &lt;code&gt;00.040&lt;/code&gt; where there maybe extra zeros present. And  &lt;code&gt;toFixed(2)&lt;/code&gt; is for the case when &lt;code&gt;6.00&lt;/code&gt; simplifies to &lt;code&gt;6&lt;/code&gt;. &lt;/p&gt;
 &lt;p&gt;And it all works: &lt;/p&gt;
-&lt;img src=&quot;/writing/f89c343ee9b6878ab67f71bea8d3c728/numberinput.gif&quot; alt=&quot;Number input gif showing how it works&quot; style=&quot;zoom:50%;&quot;&gt;
-&lt;p&gt;If there’s a more efficient way to do this please let me know :D &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://arjunkalburgi.github.io/assets/Graphics/Backgrounds/leaves-white.jpg&quot; alt=&quot;leaves&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Moving my blog to Gatsby]]></title><description><![CDATA[After seeing a shift in the industry from Medium, it’s time I leave as well and host my blog on my own site. This shouldn’t be too bad of a…]]></description><link>https://www.arjunkalburgi.com/writing/moving-my-blog-to-gatsby/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/moving-my-blog-to-gatsby/</guid><pubDate>Sun, 15 Sep 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;After seeing a shift in the industry from Medium, it’s time I leave as well and host my blog on my own site.&lt;/p&gt;
+&lt;img src=&quot;./numberinput.gif&quot; alt=&quot;Number input gif showing how it works&quot; style=&quot;zoom:50%;&quot; /&gt;
+&lt;p&gt;If there&apos;s a more efficient way to do this please let me know :D &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://arjunkalburgi.github.io/assets/Graphics/Backgrounds/leaves-white.jpg&quot; alt=&quot;leaves&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Moving my blog to Gatsby]]></title><description><![CDATA[After seeing a shift in the industry from Medium, it's time I leave as well and host my blog on my own site. This shouldn't be too bad of a…]]></description><link>https://www.arjunkalburgi.com/writing/moving-my-blog-to-gatsby/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/moving-my-blog-to-gatsby/</guid><pubDate>Sun, 15 Sep 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;After seeing a shift in the industry from Medium, it&apos;s time I leave as well and host my blog on my own site.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;This shouldn’t be too bad of a process, I just need to convert my Medium posts to markdown, set up a Gatsby blog, host on Github and do some styling.&lt;/p&gt;
+&lt;p&gt;This shouldn&apos;t be too bad of a process, I just need to convert my Medium posts to markdown, set up a Gatsby blog, host on Github and do some styling.&lt;/p&gt;
 &lt;h3&gt;Convert to Markdown&lt;/h3&gt;
 &lt;p&gt;Taking the help of &lt;a href=&quot;https://www.gautamdhameja.com/medium-to-markdown-converter/&quot;&gt;this blog post&lt;/a&gt;, I used medium-2-md to export and convert all my Medium posts to markdown. &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;medium-2-md convertLocal medium-export/posts -df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This gave me a large list of markdown files that looked like &lt;code class=&quot;language-text&quot;&gt;2017-04-09_Security-Review--UX-of-Canadian-banking-applications-53aa77dd2cf4.md&lt;/code&gt;. &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;medium-2-md convertLocal medium-export/posts -df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This gave me a large list of markdown files that looked like &lt;code&gt;2017-04-09_Security-Review--UX-of-Canadian-banking-applications-53aa77dd2cf4.md&lt;/code&gt;. &lt;/p&gt;
 &lt;h3&gt;Set Up Gatsby Blog&lt;/h3&gt;
-&lt;p&gt;Gatsby’s got a &lt;a href=&quot;https://github.com/gatsbyjs/gatsby-starter-blog&quot;&gt;blog-starter&lt;/a&gt; repo, which was quick to clone and get up and running.&lt;/p&gt;
-&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;&gt;
-      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/writing/static/4b88b012f4bf7635b0334df5de5a0280/b9e4f/initdeploy.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
-    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 59.152542372881356%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABSElEQVQoz42SvU7DMBCA84QsPAADEg8ASCxIsFAxwIoYu5SNqGNp2aAsdC0DVVMJhubXTpz6J3accolFaKog+HSxZZ8++XK2RWjIuUhTIqXMK5RSnHNCUoxxFEVJksBWnSoKHQT+3Fk4jmMJRdYlRfkV5eh5Xq93NxgMJpPXl+fx23Rq9gGtNYz3dv/k+Ojs9NDicluOMR4NH95nM5VrIXOeKSlVQ+52bw/293Z2G7Ih45ySmK5SP8J+TCEoF5vyePx0cd65urHb5Fx/IOavqtPKWuA3tSnKyMPRY+fy2rb7bXIml64XRigMIwNCqK58kxaZS7Xw4iWmIgMEAFPdM9Mas2yR4c5cL0AIbgqjCsbYptx+ssmzTM7dROTrPwE5MY2s3FKHpwC3RZjIdVHznW0EPJJ0q+z/Y2H6yVXCJGIS/0SGG8tf4gsMdKyMEWeK+wAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
-  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;initdeploy&quot; title=&quot;initdeploy&quot; src=&quot;/writing/static/4b88b012f4bf7635b0334df5de5a0280/b9e4f/initdeploy.png&quot; srcset=&quot;/writing/static/4b88b012f4bf7635b0334df5de5a0280/cf440/initdeploy.png 148w,
-/writing/static/4b88b012f4bf7635b0334df5de5a0280/d2d38/initdeploy.png 295w,
-/writing/static/4b88b012f4bf7635b0334df5de5a0280/b9e4f/initdeploy.png 590w&quot; sizes=&quot;(max-width: 590px) 100vw, 590px&quot; loading=&quot;lazy&quot;&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
+&lt;p&gt;Gatsby&apos;s got a &lt;a href=&quot;https://github.com/gatsbyjs/gatsby-starter-blog&quot;&gt;blog-starter&lt;/a&gt; repo, which was quick to clone and get up and running.&lt;/p&gt;
+&lt;img src=&quot;./initdeploy.png&quot; alt=&quot;initdeploy&quot; style=&quot;zoom: 50%;&quot; /&gt;
 &lt;p&gt;Then using some bash scripts to format my markdown posts to the file structure Gatsby expects. &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# make the new directory&lt;/span&gt;
-$ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; *.md &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;/blog/&lt;span class=&quot;token variable&quot;&gt;$f&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$f&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;/blog/&lt;span class=&quot;token variable&quot;&gt;$f&lt;/span&gt;/index.md &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt; 
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# make the new directory
+$ for f in *.md ; do mkdir -p ../blog/$f ; cp $f ../blog/$f/index.md ; done 
 
-&lt;span class=&quot;token comment&quot;&gt;# remove the date from the beginning of the directory name&lt;/span&gt;
-$ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; *.md &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$d&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${d&lt;span class=&quot;token operator&quot;&gt;#&lt;/span&gt;*_}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt; 
+# remove the date from the beginning of the directory name
+$ for d in *.md ; do mv $d ${d#*_} ; done 
 
-&lt;span class=&quot;token comment&quot;&gt;# remove the &apos;.md&apos; from the end of the directory name&lt;/span&gt;
-$ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; *.md &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$d&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${d&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt;-*.md}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt; 
+# remove the &apos;.md&apos; from the end of the directory name
+$ for d in *.md ; do mv $d ${d%-*.md} ; done 
 
-&lt;span class=&quot;token comment&quot;&gt;# lower case all characters`&lt;/span&gt;
-$ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; * &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$d&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;${d&lt;span class=&quot;token operator&quot;&gt;,,&lt;/span&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Going from &lt;code class=&quot;language-text&quot;&gt;2017-04-09_Security-Review--UX-of-Canadian-banking-applications-53aa77dd2cf4.md&lt;/code&gt;, to &lt;code class=&quot;language-text&quot;&gt;security-review--ux-of-canadian-banking-applications&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;This helps because now the url for my posts will look like: &lt;code class=&quot;language-text&quot;&gt;www.arjunkalburgi.com/writing/security-review--ux-of-canadian-banking-applications&lt;/code&gt;&lt;/p&gt;
+# lower case all characters`
+$ for d in * ; do mv $d ${d,,} ; done 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Going from &lt;code&gt;2017-04-09_Security-Review--UX-of-Canadian-banking-applications-53aa77dd2cf4.md&lt;/code&gt;, to &lt;code&gt;security-review--ux-of-canadian-banking-applications&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;This helps because now the url for my posts will look like: &lt;code&gt;www.arjunkalburgi.com/writing/security-review--ux-of-canadian-banking-applications&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Now my blog is ready to go 😃. Thank you to my bff &lt;a href=&quot;https://twitter.com/afontaine_ca&quot;&gt;Andrew Fontaine&lt;/a&gt; for helping me out with this part.&lt;/p&gt;
 &lt;h3&gt;Host on Github Pages&lt;/h3&gt;
-&lt;p&gt;Thanks to Gatsby’s &lt;a href=&quot;https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/&quot;&gt;gh-pages hosting tutorial&lt;/a&gt; I was able to get this done pretty easily. Just needed to make a repo in github, set the &lt;code class=&quot;language-text&quot;&gt;origin&lt;/code&gt; in my local repo, follow the tutorial and then run &lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt; . And I’m up!&lt;/p&gt;
-&lt;p&gt;Without CI, every time I push to Github I’ll need to run this command. This is okay for now but I’ll probably look to change this later. &lt;/p&gt;
+&lt;p&gt;Thanks to Gatsby&apos;s &lt;a href=&quot;https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/&quot;&gt;gh-pages hosting tutorial&lt;/a&gt; I was able to get this done pretty easily. Just needed to make a repo in github, set the &lt;code&gt;origin&lt;/code&gt; in my local repo, follow the tutorial and then run &lt;code&gt;npm run deploy&lt;/code&gt; . And I&apos;m up!&lt;/p&gt;
+&lt;p&gt;Without CI, every time I push to Github I&apos;ll need to run this command. This is okay for now but I&apos;ll probably look to change this later. &lt;/p&gt;
 &lt;h3&gt;Styling&lt;/h3&gt;
-&lt;p&gt;Honestly I could spend all day doing this, but for now I just want something quick. I’ll use a lot of the CSS I already have from my &lt;a href=&quot;www.arjunkalburgi.com&quot;&gt;website&lt;/a&gt;. But for the blog posts, for now I’ll just copy what Varun’s got on &lt;a href=&quot;varun.ca/writing&quot;&gt;his site&lt;/a&gt;, it’s gorgeous.&lt;/p&gt;
-&lt;p&gt;Despite the simplicity of this task, it was actually quite time consuming to style the blog. Based on my commit history, it was the markdown posts that took forever to style. For some reason, Gatsby does not have this built into their default style for their starter package I used, making me wish I knew to use a theme’d starter from the beginning (there’s no way to change your theme afterwards.) &lt;/p&gt;
-&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;&gt;
-      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/writing/static/7e1166eff48865b4d86d1c8057391413/82b63/result.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
-    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 59.10714285714286%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABHklEQVQoz5WSWY6DMBBEuf8dEfAJEatXFlPjamLEZFCSsVSyMc2jesnmeYZzDkopzN5jic/ruiKEgG3b5PxOjCHDWotlWZDhssZpQt08MIyjBBL635Xt+44kY6xAtdbimg64rjGfJMDjK8DHlCnCKIL5fF0pPgFe705g2APKskSe5yiKAlVVyd40zfE+pv8KuPvJCVzDBqUVxlg/Nogyxoh4Nz1LwcJ/dJgu2CmCtNIC4Pmus3fO/jjkPgwD6rrGY+iwxRKE7RidpDROX9WQe9u26CO09TFdb+Hs0Rw6p5g+Z+7rlJ13UkcTa6XUhCnK2AhZ5lN+9r9cvnUoDZhGmcVjHwVIWXe4pMM70K1DAiTtvkfXdaI0k0nXYb9rzg+Kya6P7vDBxgAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
-  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;image-20190915215432021&quot; title=&quot;image-20190915215432021&quot; src=&quot;/writing/static/7e1166eff48865b4d86d1c8057391413/b9e4f/result.png&quot; srcset=&quot;/writing/static/7e1166eff48865b4d86d1c8057391413/cf440/result.png 148w,
-/writing/static/7e1166eff48865b4d86d1c8057391413/d2d38/result.png 295w,
-/writing/static/7e1166eff48865b4d86d1c8057391413/b9e4f/result.png 590w,
-/writing/static/7e1166eff48865b4d86d1c8057391413/f9b6a/result.png 885w,
-/writing/static/7e1166eff48865b4d86d1c8057391413/2d849/result.png 1180w,
-/writing/static/7e1166eff48865b4d86d1c8057391413/82b63/result.png 3360w&quot; sizes=&quot;(max-width: 590px) 100vw, 590px&quot; loading=&quot;lazy&quot;&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;
+&lt;p&gt;Honestly I could spend all day doing this, but for now I just want something quick. I&apos;ll use a lot of the CSS I already have from my &lt;a href=&quot;www.arjunkalburgi.com&quot;&gt;website&lt;/a&gt;. But for the blog posts, for now I&apos;ll just copy what Varun&apos;s got on &lt;a href=&quot;varun.ca/writing&quot;&gt;his site&lt;/a&gt;, it&apos;s gorgeous.&lt;/p&gt;
+&lt;p&gt;Despite the simplicity of this task, it was actually quite time consuming to style the blog. Based on my commit history, it was the markdown posts that took forever to style. For some reason, Gatsby does not have this built into their default style for their starter package I used, making me wish I knew to use a theme&apos;d starter from the beginning (there&apos;s no way to change your theme afterwards.) &lt;/p&gt;
+&lt;img src=&quot;./result.png&quot; alt=&quot;image-20190915215432021&quot; style=&quot;zoom:50%;&quot; /&gt;
 &lt;h3&gt;Results&lt;/h3&gt;
-&lt;p&gt;Pretty happy with the public facing results, but on the internal there’s a couple things I lose. &lt;/p&gt;
-&lt;p&gt;One is that I don’t have the nice editor Medium provides. I installed &lt;a href=&quot;https://typora.io/&quot;&gt;Typora&lt;/a&gt; to fix this (using it right now). It lets me paste images into the markdown files and helps me out with presenting my images as well. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to use Modals in Ionic v4]]></title><description><![CDATA[After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev. This should be easy, but the…]]></description><link>https://www.arjunkalburgi.com/writing/How-to-use-Modals-in-Ionic-v4/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/How-to-use-Modals-in-Ionic-v4/</guid><pubDate>Fri, 16 Aug 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;Pretty happy with the public facing results, but on the internal there&apos;s a couple things I lose. &lt;/p&gt;
+&lt;p&gt;One is that I don&apos;t have the nice editor Medium provides. I installed &lt;a href=&quot;https://typora.io/&quot;&gt;Typora&lt;/a&gt; to fix this (using it right now). It lets me paste images into the markdown files and helps me out with presenting my images as well. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to use Modals in Ionic v4]]></title><description><![CDATA[After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev. This should be easy, but the…]]></description><link>https://www.arjunkalburgi.com/writing/How-to-use-Modals-in-Ionic-v4/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/How-to-use-Modals-in-Ionic-v4/</guid><pubDate>Fri, 16 Aug 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This should be easy, but the documentation for it is a little lacking. I’ve &lt;a href=&quot;https://github.com/ionic-team/ionic/pull/17944#issuecomment-522067671&quot;&gt;asked&lt;/a&gt; them to update it but just in case they don’t I’m writing this for your sanity.&lt;/p&gt;
 &lt;h3&gt;Issue&lt;/h3&gt;
 &lt;p&gt;Originally my issue was that the modal was activating too early, before the button-press to activate the modal. When I would navigate to the page that the modal should be accessed on, it would show the modal as a full page instead of the page I’ve navigated to.&lt;/p&gt;
-&lt;p&gt;This solution will also help solve the &lt;code class=&quot;language-text&quot;&gt;ERROR ERROR: &amp;quot;Uncaught (in promise): overlay does not exist&amp;quot;&lt;/code&gt; when trying to dismiss the modal. Another issue that I saw people having when trying to find a solution.&lt;/p&gt;
+&lt;p&gt;This solution will also help solve the &lt;code&gt;ERROR ERROR: &quot;Uncaught (in promise): overlay does not exist&quot;&lt;/code&gt; when trying to dismiss the modal. Another issue that I saw people having when trying to find a solution.&lt;/p&gt;
 &lt;h3&gt;Solution&lt;/h3&gt;
 &lt;h4&gt;Creating a Modal Page&lt;/h4&gt;
-&lt;p&gt;Very basic, just run &lt;code class=&quot;language-text&quot;&gt;ionic g page modal&lt;/code&gt; using Ionic CLI just like you would for any other new page.&lt;/p&gt;
+&lt;p&gt;Very basic, just run &lt;code&gt;ionic g page modal&lt;/code&gt; using Ionic CLI just like you would for any other new page.&lt;/p&gt;
 &lt;h4&gt;Fixing the Routing&lt;/h4&gt;
-&lt;p&gt;Since modal pages aren’t part of your app navigation, you must remove the automatic entry for this page from your &lt;code class=&quot;language-text&quot;&gt;app-routing-module.ts&lt;/code&gt; file.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const routes: Routes = [
-     { path: &amp;#39;&amp;#39;, redirectTo: &amp;#39;home&amp;#39;, pathMatch: &amp;#39;full&amp;#39; },  
+&lt;p&gt;Since modal pages aren’t part of your app navigation, you must remove the automatic entry for this page from your &lt;code&gt;app-routing-module.ts&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const routes: Routes = [
+     { path: &apos;&apos;, redirectTo: &apos;home&apos;, pathMatch: &apos;full&apos; },  
      ...  
-     {̵ ̵p̵a̵t̵h̵:̵ ̵&amp;#39;̵m̵o̵d̵a̵l̵&amp;#39;̵,̵ ̵  
-       l̵o̵a̵d̵C̵h̵i̵l̵d̵r̵e̵n̵:̵ ̵&amp;#39;̵.̵/̵m̵o̵d̵a̵l̵/̵m̵o̵d̵a̵l̵.̵m̵o̵d̵u̵l̵e̵#̵M̵o̵d̵a̵l̵P̵a̵g̵e̵M̵o̵d̵u̵l̵e̵&amp;#39;̵ ̵}̵
-];&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+     {̵ ̵p̵a̵t̵h̵:̵ ̵&apos;̵m̵o̵d̵a̵l̵&apos;̵,̵ ̵  
+       l̵o̵a̵d̵C̵h̵i̵l̵d̵r̵e̵n̵:̵ ̵&apos;̵.̵/̵m̵o̵d̵a̵l̵/̵m̵o̵d̵a̵l̵.̵m̵o̵d̵u̵l̵e̵#̵M̵o̵d̵a̵l̵P̵a̵g̵e̵M̵o̵d̵u̵l̵e̵&apos;̵ ̵}̵
+];
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h4&gt;Fix the Modal’s Module&lt;/h4&gt;
 &lt;p&gt;This part is neccessary to solve the issue.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@NgModule({  
+&lt;pre&gt;&lt;code&gt;@NgModule({  
      declarations: \[ **ModalPage** \],  
      imports: \[ ... \],  
      entryComponents: \[ **ModalPage** \],  
      exports: \[ **ModalPage \]  
 **})  
-export class ModalPageModule {}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The documentation does not show to include the page in &lt;code class=&quot;language-text&quot;&gt;entryComponents&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;exports&lt;/code&gt;.&lt;/p&gt;
+export class ModalPageModule {}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The documentation does not show to include the page in &lt;code&gt;entryComponents&lt;/code&gt; or &lt;code&gt;exports&lt;/code&gt;.&lt;/p&gt;
 &lt;h4&gt;Declare the Modal for Use&lt;/h4&gt;
 &lt;p&gt;Now that the modal’s module is ready, import it into the page you want to use it in.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@NgModule({  
+&lt;pre&gt;&lt;code&gt;@NgModule({  
      declarations: \[ HomePage, **ModalPage** \],  
      imports: \[ ... \],  
      entryComponents: \[ **ModalPage** \],})  
-export class HomePageModule {}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The documentation does not show either of these! This is a big part of how the issue happens. Including the &lt;code class=&quot;language-text&quot;&gt;ModalPage&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;imports&lt;/code&gt; is what creates the problem (and is what I thought to do).&lt;/p&gt;
+export class HomePageModule {}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The documentation does not show either of these! This is a big part of how the issue happens. Including the &lt;code&gt;ModalPage&lt;/code&gt; in &lt;code&gt;imports&lt;/code&gt; is what creates the problem (and is what I thought to do).&lt;/p&gt;
 &lt;h4&gt;Create the Modal&lt;/h4&gt;
 &lt;p&gt;The following is exactly how the documentation explains, I’m just including it here for completion’s sake.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import { ModalController } from &amp;#39;@ionic/angular&amp;#39;;
+&lt;pre&gt;&lt;code&gt;import { ModalController } from &apos;@ionic/angular&apos;;
 
 export class **HomePage** {
 
@@ -128,9 +248,10 @@ export class **HomePage** {
     await loadAmount.present();  
   }
 
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h4&gt;Dismiss the Modal&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import { ModalController } from &amp;#39;@ionic/angular&amp;#39;;
+&lt;pre&gt;&lt;code&gt;import { ModalController } from &apos;@ionic/angular&apos;;
 
 export class **ModalPage** {
 
@@ -140,7 +261,8 @@ export class **ModalPage** {
     await _this_.modalCtrl.dismiss();  
   }
 
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;Just like that, everything should be working perfectly. I was so relieved when I implemented these steps. Thank you to &lt;a href=&quot;https://medium.com/u/706b6e4cb229&quot;&gt;Christian Francia&lt;/a&gt; for providing this solution in a &lt;a href=&quot;https://github.com/ionic-team/ionic/issues/17939#issuecomment-479550015&quot;&gt;Github issue&lt;/a&gt;, hopefully this blog post will have a little better SEO and will be easier to find 😃&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Learning About Time, After 3 Weeks Off]]></title><description><![CDATA[I’ve taken 3 weeks off before, I went to India for that long just 5 months ago — but the context around that trip and my most recent one…]]></description><link>https://www.arjunkalburgi.com/writing/Learning-About-Time--After-3-Weeks-Off/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/Learning-About-Time--After-3-Weeks-Off/</guid><pubDate>Mon, 05 Aug 2019 19:12:31 GMT</pubDate><content:encoded>&lt;p&gt;I’ve taken 3 weeks off before, I went to India for that long just 5 months ago — but the context around that trip and my most recent one were very different. Because now I have a job where I work until I burn out — I’m learning how to not do that.&lt;/p&gt;
 &lt;p&gt;This recent trip started in New York with a half-week with my cousins, where we walked all day and everywhere.&lt;/p&gt;
@@ -164,7 +286,7 @@ export class **ModalPage** {
 &lt;p&gt;2. Ask a question about it &lt;/p&gt;
 &lt;p&gt;3. Find someone to answer it&lt;/p&gt;
 &lt;p&gt;4. Ask them the question via Twitter/Email/over coffee/etc. &lt;/p&gt;
-&lt;p&gt;5. Make them your mentor (ask them if they’ll meet with you and if you can approach them for future questions)&lt;/p&gt;
+&lt;p&gt;5. Make them your mentor (ask them if they&apos;ll meet with you and if you can approach them for future questions)&lt;/p&gt;
 &lt;p&gt;6. Repeat&lt;br&gt;
 6a. Contact the previous mentors every so often for coffee/questions/life updates&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Mentorship is key to this game.&lt;/strong&gt;&lt;/p&gt;
@@ -190,8 +312,8 @@ Wish I knew the Infinite Job Search Game back in 2013&lt;/p&gt;
 &lt;h3&gt;Andriod Emulator and iOS Simulator&lt;/h3&gt;
 &lt;p&gt;Before I could get to coding I had to set up the Android and iOS devices on my machine. Fortunately I had ones set up for previous projects, I just needed to launch them like so:&lt;/p&gt;
 &lt;p&gt;$ flutter emulators&lt;br&gt;
-$ flutter emulators —launch Pixel_2_XL_API_28&lt;br&gt;
-$ flutter emulators —launch iOS Simulator&lt;br&gt;
+$ flutter emulators --launch Pixel_2_XL_API_28&lt;br&gt;
+$ flutter emulators --launch iOS Simulator&lt;br&gt;
 $ flutter run -d all&lt;/p&gt;
 &lt;p&gt;This runs the starter app on both!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*NriZDJE1wntOJXn0xB8j-w.png&quot;&gt;&lt;/p&gt;
@@ -238,9 +360,11 @@ changedListener: _onSelectionChanged,&lt;br&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;It seems like I’ve settled into a learning process. As with &lt;a href=&quot;https://medium.com/arjunkalburgi/viewing-vue-with-theradlist-8851502ab709&quot;&gt;learning Vue.js&lt;/a&gt; and &lt;a href=&quot;https://medium.com/arjunkalburgi/arty-notes-sketch-noting-my-thoughts-e29f142a9eb4&quot;&gt;learning sketch-noting&lt;/a&gt;, I started with content.&lt;/p&gt;
 &lt;p&gt;In this case it was this &lt;a href=&quot;https://css-tricks.com/snippets/css/complete-guide-grid/&quot;&gt;article&lt;/a&gt; on CSS Tricks, it went over the basics of CSS Grid and how to use it.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;.container {&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;.item {  grid-column-start: &amp;lt;number&amp;gt;;  grid-column-end: &amp;lt;number&amp;gt;;  grid-row-start: &amp;lt;number&amp;gt;;  grid-row-end: &amp;lt;number&amp;gt;; }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;With this much alone I was able to begin using the Grid for what I needed. I didn’t need to go over &lt;code class=&quot;language-text&quot;&gt;grid-template-areas&lt;/code&gt;, grid gaps and item alignments. Although they would be really useful.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.container {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;.item {  grid-column-start: &amp;#x3C;number&gt;;  grid-column-end: &amp;#x3C;number&gt;;  grid-row-start: &amp;#x3C;number&gt;;  grid-row-end: &amp;#x3C;number&gt;; }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With this much alone I was able to begin using the Grid for what I needed. I didn’t need to go over &lt;code&gt;grid-template-areas&lt;/code&gt;, grid gaps and item alignments. Although they would be really useful.&lt;/p&gt;
 &lt;p&gt;Instead I needed this CodePen found in the article:&lt;/p&gt;
 &lt;p&gt;I began working in my own CodePen and didn’t define my grid properly so I went to an example to see how they had done it.&lt;/p&gt;
 &lt;p&gt;Once I figured it out I went on to finish recreating the layout. That became v1, which you can see here:&lt;/p&gt;
@@ -248,7 +372,7 @@ changedListener: _onSelectionChanged,&lt;br&gt;
 &lt;p&gt;Next I needed to animate the images like on my Portfolio. I copied over the Javascript and attached the necessary Javascript files (jQuery and &lt;a href=&quot;https://tgomilar.github.io/paroller.js/&quot;&gt;Paroller&lt;/a&gt;) to make the parallax effect.&lt;/p&gt;
 &lt;p&gt;This became v2 which is here:&lt;/p&gt;
 &lt;p&gt;Finally, I needed to make it responsive just like on my website. This is the real reason I wanted to update using CSS Grid. In the current version, I have additional HTML tags which I hide and show for mobile and desktop. I no longer wanted that extra HTML and CSS.&lt;/p&gt;
-&lt;p&gt;I began with removing the &lt;code class=&quot;language-text&quot;&gt;display: grid&lt;/code&gt; from the container and then followed through adjusting all the other elements.&lt;/p&gt;
+&lt;p&gt;I began with removing the &lt;code&gt;display: grid&lt;/code&gt; from the container and then followed through adjusting all the other elements.&lt;/p&gt;
 &lt;p&gt;And just like that. We have our completely old website with a brand new grid layout system. And by golly was that easy and pumpkin pie. The grid system is awesome for sure.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/askalburgi/askalburgi.github.io/commit/00260e1192b41bc0e772f8c899e5ce8bae3d4ef2&quot;&gt;This is the commit&lt;/a&gt; where I make the move to the Grid System. In the HTML, I’m able to reduce 40 lines of code and in the CSS, I’m able to reduce ~11 lines.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/400/1*ErpqfbqYAI0nxy1UXajRcQ.png&quot;&gt;
@@ -401,18 +525,18 @@ Git commits tracking my incremental progress&lt;/p&gt;
 &lt;h4&gt;More Components&lt;/h4&gt;
 &lt;p&gt;It’s possible more components might be helpful, especially the for UI. For example each filter in the Filter Component can be its own component, this would mean more component-oriented CSS, helpful for designers and developers both.&lt;/p&gt;
 &lt;h4&gt;Component Efficiency&lt;/h4&gt;
-&lt;p&gt;Inner-component structure is another way to improve your app. I updated how the filter-props (props that control the list filters) were passed into the List Component, yielding a much more readable approach that’s also good for performance. (the &lt;code class=&quot;language-text&quot;&gt;watch&lt;/code&gt; function is slow)&lt;/p&gt;
+&lt;p&gt;Inner-component structure is another way to improve your app. I updated how the filter-props (props that control the list filters) were passed into the List Component, yielding a much more readable approach that’s also good for performance. (the &lt;code&gt;watch&lt;/code&gt; function is slow)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/600/1*j5_TYqnW1RSfIW9R_7WiWw.png&quot;&gt;
 &lt;img src=&quot;https://cdn-images-1.medium.com/max/600/1*WDLgd9EwIyG0jQELpGQV5Q.png&quot; alt=&quot;Updating List Component to take in 1 prop for all the filters&quot;&gt;
 Updating List Component to take in 1 prop for all the filters&lt;/p&gt;
 &lt;h4&gt;Arrow Function Quirkiness&lt;/h4&gt;
 &lt;p&gt;Took me quite a while to figure out why my watch function wasn’t working when trying to watch for when the user toggles the “Deep Dive” view.&lt;/p&gt;
 &lt;p&gt;watch: {&lt;br&gt;
-expand: (newVal, oldVal)=&gt;{ this.expanded = (newVal==“large”) }&lt;br&gt;
+expand: (newVal, oldVal)=&gt;{ this.expanded = (newVal==&quot;large&quot;) }&lt;br&gt;
 }&lt;/p&gt;
-&lt;p&gt;According to &lt;a href=&quot;https://stackoverflow.com/a/40557674&quot;&gt;StackOverflow&lt;/a&gt;, it’s simply because arrow functions (&lt;code class=&quot;language-text&quot;&gt;()=&amp;gt;{}&lt;/code&gt;) don’t take in bindings for &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt;. In other words, &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt; doesn’t work inside them! Just reverting back to regular function syntax fixed the problem. A good lesson.&lt;/p&gt;
+&lt;p&gt;According to &lt;a href=&quot;https://stackoverflow.com/a/40557674&quot;&gt;StackOverflow&lt;/a&gt;, it’s simply because arrow functions (&lt;code&gt;()=&gt;{}&lt;/code&gt;) don’t take in bindings for &lt;code&gt;this&lt;/code&gt;. In other words, &lt;code&gt;this&lt;/code&gt; doesn’t work inside them! Just reverting back to regular function syntax fixed the problem. A good lesson.&lt;/p&gt;
 &lt;p&gt;watch: {&lt;br&gt;
-expand(newVal, oldVal) { this.expanded = (newVal==“large”) }&lt;br&gt;
+expand(newVal, oldVal) { this.expanded = (newVal==&quot;large&quot;) }&lt;br&gt;
 }&lt;/p&gt;
 &lt;h4&gt;Single File Components&lt;/h4&gt;
 &lt;p&gt;Something I’d love to get to are &lt;a href=&quot;https://vuejs.org/v2/guide/single-file-components.html&quot;&gt;Vue’s Single File Components&lt;/a&gt;, making Vue projects further like Angular and React with separation of concerns.&lt;/p&gt;
@@ -473,18 +597,18 @@ TheRadList with data from Sheety&lt;/p&gt;
 &lt;p&gt;var template;&lt;br&gt;
 $(document).ready(function () {&lt;br&gt;
 $.getJSON(&lt;br&gt;
-’&lt;a href=&quot;https://api.sheety.co/c1471c68-f293-46d9-ab4c-ca5e24e6e24e&amp;#x27;&quot;&gt;https://api.sheety.co/c1471c68-f293-46d9-ab4c-ca5e24e6e24e’&lt;/a&gt;,&lt;br&gt;
+&apos;&lt;a href=&quot;https://api.sheety.co/c1471c68-f293-46d9-ab4c-ca5e24e6e24e&amp;#x27;&quot;&gt;https://api.sheety.co/c1471c68-f293-46d9-ab4c-ca5e24e6e24e&apos;&lt;/a&gt;,&lt;br&gt;
 function (data) {&lt;br&gt;
-template = Handlebars.compile($(‘#item-template’).html())&lt;br&gt;
-$(‘#list-places’).html(template(data))&lt;br&gt;
+template = Handlebars.compile($(&apos;#item-template&apos;).html())&lt;br&gt;
+$(&apos;#list-places&apos;).html(template(data))&lt;br&gt;
 })&lt;br&gt;
 })&lt;/p&gt;
-&lt;p&gt;It uses Handlebars to load the data into the specific &lt;code class=&quot;language-text&quot;&gt;#item-template&lt;/code&gt; I made and then into the &lt;code class=&quot;language-text&quot;&gt;div&lt;/code&gt; I need.&lt;/p&gt;
+&lt;p&gt;It uses Handlebars to load the data into the specific &lt;code&gt;#item-template&lt;/code&gt; I made and then into the &lt;code&gt;div&lt;/code&gt; I need.&lt;/p&gt;
 &lt;h3&gt;Other Things&lt;/h3&gt;
 &lt;h4&gt;The Filters&lt;/h4&gt;
 &lt;p&gt;Unfortunately Sheety doesn’t have any endpoint logic, so I can’t retrieve specific objects or filter using the API. So instead I save the data into a variable and do simple list filter operations. Unfortunately none of the filter data is present at the moment so they all return an empty list.&lt;/p&gt;
 &lt;h4&gt;Nested Objects&lt;/h4&gt;
-&lt;p&gt;I did another project with Sheety where I needed to my data to have some nested objects and/or lists within the object. Sheety’s CSV style is obviously not suited for this. My solution was to create more Google Spreadsheets for the inner-data and use a &lt;code class=&quot;language-text&quot;&gt;primary_id&lt;/code&gt; to link all the data together. Then combine objects in JS &lt;code class=&quot;language-text&quot;&gt;onLoad&lt;/code&gt;. Who ever thought Database class would come in handy?&lt;/p&gt;
+&lt;p&gt;I did another project with Sheety where I needed to my data to have some nested objects and/or lists within the object. Sheety’s CSV style is obviously not suited for this. My solution was to create more Google Spreadsheets for the inner-data and use a &lt;code&gt;primary_id&lt;/code&gt; to link all the data together. Then combine objects in JS &lt;code&gt;onLoad&lt;/code&gt;. Who ever thought Database class would come in handy?&lt;/p&gt;
 &lt;h4&gt;Updating Data&lt;/h4&gt;
 &lt;p&gt;After the Spreadsheet is updated, Google/Sheety take some time for the changes to be reflected. Sometimes it’s instant but sometimes it takes a couple minutes. I don’t recommend using it for chat apps 😂&lt;/p&gt;
 &lt;h3&gt;The Results&lt;/h3&gt;
@@ -510,14 +634,14 @@ $(‘#list-places’).html(template(data))&lt;br&gt;
 &lt;p&gt;There’s a github repository called the &lt;a href=&quot;https://github.com/sahat/hackathon-starter&quot;&gt;Hackathon Starter&lt;/a&gt; that we used to quick start the application. It’s just a simple boilerplate Node.js app designed to be as versatile as possible.&lt;/p&gt;
 &lt;p&gt;I cleaned out most of the app and built my own view using &lt;a href=&quot;http://html5up.net&quot;&gt;HTML5UP&lt;/a&gt;’s &lt;a href=&quot;https://html5up.net/forty&quot;&gt;Forty&lt;/a&gt; template that would become the view of our app.&lt;/p&gt;
 &lt;h4&gt;Implementing the API&lt;/h4&gt;
-&lt;p&gt;Next I used &lt;code class=&quot;language-text&quot;&gt;axios&lt;/code&gt; to call the API my group-mates prepared for the front-end and created a new router for the application to take in a userId from the URL.&lt;/p&gt;
+&lt;p&gt;Next I used &lt;code&gt;axios&lt;/code&gt; to call the API my group-mates prepared for the front-end and created a new router for the application to take in a userId from the URL.&lt;/p&gt;
 &lt;p&gt;Inputting the userId from the URL just made sense for this project since CBC Radio Canada doesn’t actually have accounts, so user data is actually stored through browser cache. Using a router was better than creating a “log in” page since the real CBC Radio Canada wouldn’t have a log in anyway.&lt;/p&gt;
 &lt;h4&gt;Fixing the Design&lt;/h4&gt;
 &lt;p&gt;HTML5UP’s Forty is a great template, but it didn’t follow Radio Canada’s mandatory accessibility guidelines. I put a bit of my CSS and design skills to work fixing these issues.&lt;/p&gt;
 &lt;p&gt;First I fixed the text size, good accessibility should have text size above 12px.&lt;/p&gt;
 &lt;p&gt;Then I fixed the colour contrast of the white text on the image content tiles by changing the colours to values that have acceptable contrast.&lt;/p&gt;
-&lt;p&gt;I also made sure that text was not &lt;code class=&quot;language-text&quot;&gt;uppercase&lt;/code&gt; . Uppercase text is harder to read and screen readers will read this text as shouting. A poor experience.&lt;/p&gt;
-&lt;p&gt;Lastly I added an animation to only show descriptions on hover, this was so that you could better see the images in the background. Accessibility guidelines state that all hidden text should still be readable by screen readers, so I found a way to create the animation without using &lt;code class=&quot;language-text&quot;&gt;display: none&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;I also made sure that text was not &lt;code&gt;uppercase&lt;/code&gt; . Uppercase text is harder to read and screen readers will read this text as shouting. A poor experience.&lt;/p&gt;
+&lt;p&gt;Lastly I added an animation to only show descriptions on hover, this was so that you could better see the images in the background. Accessibility guidelines state that all hidden text should still be readable by screen readers, so I found a way to create the animation without using &lt;code&gt;display: none&lt;/code&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/CBCRCHackathon2018/engaging-imagery-website&quot;&gt;View all code on Github&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -577,46 +701,47 @@ if&lt;/strong&gt; (&lt;strong&gt;it&lt;/strong&gt;) {&lt;br&gt;
 &lt;strong&gt;this&lt;/strong&gt;.mainProgress.&lt;em&gt;visibility&lt;/em&gt; = View.&lt;em&gt;GONE&lt;/em&gt; }&lt;br&gt;
 &lt;strong&gt;}&lt;/strong&gt;,onError = &lt;strong&gt;{}&lt;/strong&gt;)&lt;br&gt;
 .&lt;em&gt;addTo&lt;/em&gt;(&lt;strong&gt;compositeDisposable&lt;/strong&gt;)&lt;/p&gt;
-&lt;p&gt;These together allow me to toggle the ProgressBar view (that was set up in activity_main) simply by calling &lt;code class=&quot;language-text&quot;&gt;Injector.setProgressBar(**true**)&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;Injector.setProgressBar(**false**)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;These together allow me to toggle the ProgressBar view (that was set up in activity_main) simply by calling &lt;code&gt;Injector.setProgressBar(**true**)&lt;/code&gt; and &lt;code&gt;Injector.setProgressBar(**false**)&lt;/code&gt;.&lt;/p&gt;
 &lt;h4&gt;Second, the Animation&lt;/h4&gt;
 &lt;p&gt;Here’s the fun part. I used &lt;a href=&quot;https://shapeshifter.design/&quot;&gt;Shape Shifter&lt;/a&gt; to make the animation, this is what I made:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*TOT7NQcg-4VcfbAynbk7vA.gif&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Shape Shifter allows you to export the animation as an &lt;code class=&quot;language-text&quot;&gt;animated-vector&lt;/code&gt; , made just for Android.&lt;/p&gt;
-&lt;p&gt;I found that breaking that &lt;code class=&quot;language-text&quot;&gt;animated-vector&lt;/code&gt; into four separate files worked best. The first is the main file, make sure your ProgressBar uses this.&lt;/p&gt;
+&lt;p&gt;Shape Shifter allows you to export the animation as an &lt;code&gt;animated-vector&lt;/code&gt; , made just for Android.&lt;/p&gt;
+&lt;p&gt;I found that breaking that &lt;code&gt;animated-vector&lt;/code&gt; into four separate files worked best. The first is the main file, make sure your ProgressBar uses this.&lt;/p&gt;
 &lt;p&gt;&amp;#x3C;&lt;strong&gt;animated-vector&lt;/strong&gt;&lt;br&gt;
-android:drawable=”&lt;strong&gt;@drawable/your_vector_file&lt;/strong&gt;“&gt;  &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;**target**  
-    android:name=&amp;quot;group1&amp;quot;  
-    android:animation=&amp;quot;**@anim/your\_first\_animation\_file**&amp;quot; /&amp;gt;  
+android:drawable=&quot;&lt;strong&gt;@drawable/your_vector_file&lt;/strong&gt;&quot;&gt;  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#x3C;**target**  
+    android:name=&quot;group1&quot;  
+    android:animation=&quot;**@anim/your\_first\_animation\_file**&quot; /&gt;  
 
-&amp;lt;**target**  
-    android:name=&amp;quot;group2&amp;quot;  
-    android:animation=&amp;quot;**@anim/your\_second\_animation\_file**&amp;quot; /&amp;gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&amp;#x3C;**target**  
+    android:name=&quot;group2&quot;  
+    android:animation=&quot;**@anim/your\_second\_animation\_file**&quot; /&gt;  
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&amp;#x3C;/&lt;strong&gt;animated-vector&lt;/strong&gt;&gt;&lt;/p&gt;
-&lt;p&gt;The vector file, taken from the &lt;code class=&quot;language-text&quot;&gt;&amp;lt;vector&amp;gt;&lt;/code&gt; section of the &lt;code class=&quot;language-text&quot;&gt;animated-vector&lt;/code&gt; :&lt;/p&gt;
-&lt;p&gt;&amp;#x3C;&lt;strong&gt;vector&lt;/strong&gt; android:name=“vector”&lt;br&gt;
-android:viewportWidth=“1024”&lt;br&gt;
-android:viewportHeight=“1024”&gt;&lt;br&gt;
-&amp;#x3C;&lt;strong&gt;group&lt;/strong&gt; … /&gt;&lt;br&gt;
-&amp;#x3C;&lt;strong&gt;group&lt;/strong&gt; … /&gt;&lt;br&gt;
+&lt;p&gt;The vector file, taken from the &lt;code&gt;&amp;#x3C;vector&gt;&lt;/code&gt; section of the &lt;code&gt;animated-vector&lt;/code&gt; :&lt;/p&gt;
+&lt;p&gt;&amp;#x3C;&lt;strong&gt;vector&lt;/strong&gt; android:name=&quot;vector&quot;&lt;br&gt;
+android:viewportWidth=&quot;1024&quot;&lt;br&gt;
+android:viewportHeight=&quot;1024&quot;&gt;&lt;br&gt;
+&amp;#x3C;&lt;strong&gt;group&lt;/strong&gt; ... /&gt;&lt;br&gt;
+&amp;#x3C;&lt;strong&gt;group&lt;/strong&gt; ... /&gt;&lt;br&gt;
 &amp;#x3C;/&lt;strong&gt;vector&lt;/strong&gt;&gt;&lt;/p&gt;
-&lt;p&gt;And the two animation files taken from the &lt;code class=&quot;language-text&quot;&gt;&amp;lt;target&amp;gt;&lt;/code&gt; sections and placed under &lt;code class=&quot;language-text&quot;&gt;res/anim/&lt;/code&gt; . They’ll look like this:&lt;/p&gt;
+&lt;p&gt;And the two animation files taken from the &lt;code&gt;&amp;#x3C;target&gt;&lt;/code&gt; sections and placed under &lt;code&gt;res/anim/&lt;/code&gt; . They’ll look like this:&lt;/p&gt;
 &lt;p&gt;&amp;#x3C;&lt;strong&gt;set&lt;/strong&gt;&gt;&lt;br&gt;
-&amp;#x3C;&lt;strong&gt;objectAnimator&lt;/strong&gt; … /&gt;&lt;br&gt;
-&amp;#x3C;&lt;strong&gt;objectAnimator&lt;/strong&gt; … /&gt;&lt;br&gt;
-&amp;#x3C;&lt;strong&gt;objectAnimator&lt;/strong&gt; … /&gt;&lt;br&gt;
-&amp;#x3C;&lt;strong&gt;objectAnimator&lt;/strong&gt; … /&gt;&lt;br&gt;
+&amp;#x3C;&lt;strong&gt;objectAnimator&lt;/strong&gt; ... /&gt;&lt;br&gt;
+&amp;#x3C;&lt;strong&gt;objectAnimator&lt;/strong&gt; ... /&gt;&lt;br&gt;
+&amp;#x3C;&lt;strong&gt;objectAnimator&lt;/strong&gt; ... /&gt;&lt;br&gt;
+&amp;#x3C;&lt;strong&gt;objectAnimator&lt;/strong&gt; ... /&gt;&lt;br&gt;
 &amp;#x3C;/&lt;strong&gt;set&lt;/strong&gt;&gt;&lt;/p&gt;
 &lt;h4&gt;Third, Making it Work&lt;/h4&gt;
 &lt;p&gt;This was all great, but it didn’t exactly work. The animation wouldn’t repeat itself after it completed. Took a while but finally got it working by doing the following:&lt;/p&gt;
-&lt;p&gt;Change &lt;code class=&quot;language-text&quot;&gt;ProgressBar&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;ImageView&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Change &lt;code&gt;ProgressBar&lt;/code&gt; to &lt;code&gt;ImageView&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&amp;#x3C;&lt;strong&gt;ImageView&lt;/strong&gt;&lt;br&gt;
-android:contentDescription=“@string/loading”&lt;br&gt;
-android:id=”@+id/progress_bar”&lt;br&gt;
-android:layout_width=“200dp”&lt;br&gt;
-android:layout_height=“200dp”&lt;br&gt;
-android:layout_gravity=“center” /&gt;&lt;/p&gt;
-&lt;p&gt;Initialize the animation including &lt;code class=&quot;language-text&quot;&gt;registerAnimationCallback&lt;/code&gt; to force the looping of the animation.&lt;/p&gt;
+android:contentDescription=&quot;@string/loading&quot;&lt;br&gt;
+android:id=&quot;@+id/progress_bar&quot;&lt;br&gt;
+android:layout_width=&quot;200dp&quot;&lt;br&gt;
+android:layout_height=&quot;200dp&quot;&lt;br&gt;
+android:layout_gravity=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Initialize the animation including &lt;code&gt;registerAnimationCallback&lt;/code&gt; to force the looping of the animation.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;val&lt;/strong&gt; avd = AnimatedVectorDrawableCompat.create(&lt;em&gt;applicationContext&lt;/em&gt;,&lt;br&gt;
 R.drawable.&lt;em&gt;your\&lt;/em&gt;vector_file&lt;em&gt;)&lt;br&gt;
 findViewById&lt;ImageView&gt;(R.id.&lt;/em&gt;progress_bar&lt;em&gt;).&lt;/em&gt;apply_ &lt;strong&gt;{&lt;/strong&gt; setImageDrawable(avd)&lt;br&gt;
@@ -626,7 +751,7 @@ findViewById&lt;ImageView&gt;(R.id.&lt;/em&gt;progress_bar&lt;em&gt;).&lt;/em&gt
 avd.start()&lt;br&gt;
 }&lt;br&gt;
 })&lt;/p&gt;
-&lt;p&gt;To top it off, I added &lt;code class=&quot;language-text&quot;&gt;start()&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;stop()&lt;/code&gt; to my &lt;code class=&quot;language-text&quot;&gt;_subscribeBy_&lt;/code&gt; method just to be nice:&lt;/p&gt;
+&lt;p&gt;To top it off, I added &lt;code&gt;start()&lt;/code&gt; and &lt;code&gt;stop()&lt;/code&gt; to my &lt;code&gt;_subscribeBy_&lt;/code&gt; method just to be nice:&lt;/p&gt;
 &lt;p&gt;Injector.&lt;strong&gt;progressBar&lt;/strong&gt;.&lt;em&gt;subscribeBy&lt;/em&gt;(&lt;br&gt;
 onNext = &lt;strong&gt;{&lt;br&gt;
 if&lt;/strong&gt; (&lt;strong&gt;it&lt;/strong&gt;) {&lt;br&gt;
@@ -678,7 +803,7 @@ if&lt;/strong&gt; (&lt;strong&gt;it&lt;/strong&gt;) {&lt;br&gt;
 &lt;h4&gt;BEM&lt;/h4&gt;
 &lt;p&gt;Another positive of Ionic Framework is that it uses basic HTML and CSS, allowing me to try BEM, the CSS classification methodology. (&lt;a href=&quot;https://medium.com/arjunkalburgi/using-the-bem-methodology-for-my-css-classifications-a35172f90a04&quot;&gt;I write about BEM and my experience with it here.&lt;/a&gt;)&lt;/p&gt;
 &lt;h4&gt;chart.js&lt;/h4&gt;
-&lt;p&gt;I specifically wanted the doughnut chart to be animated. I want to start animating more of my apps because I realize how powerful animations can be. I used &lt;a href=&quot;https://www.chartjs.org/&quot;&gt;chart.js&lt;/a&gt; because it comes pre-built with animations. The updated function is as follows: &lt;code class=&quot;language-text&quot;&gt;this.doughnutChart.update();&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I specifically wanted the doughnut chart to be animated. I want to start animating more of my apps because I realize how powerful animations can be. I used &lt;a href=&quot;https://www.chartjs.org/&quot;&gt;chart.js&lt;/a&gt; because it comes pre-built with animations. The updated function is as follows: &lt;code&gt;this.doughnutChart.update();&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/askalburgi/Stressful-Tasks&quot;&gt;View all the code on Github&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -720,39 +845,39 @@ The Colours section for example&lt;/p&gt;
 &lt;p&gt;I did it quite hastily, but I’m impressed with myself how painless and quick it was to do this.&lt;/p&gt;
 &lt;p&gt;I’m definitely going to be adding more and more to my Style Guide website, and be making more of these for other websites and styles I work on!&lt;/p&gt;
 &lt;p&gt;See the quick CSS work here:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Animating SVG with GreenSock 🧦]]></title><description><![CDATA[The next chapter in my quest to learn more about animating SVG on the web. Previously, I used SVG’s  tag to animate a new Slackify logo I…]]></description><link>https://www.arjunkalburgi.com/writing/Animating-SVG-with-GreenSock/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/Animating-SVG-with-GreenSock/</guid><pubDate>Tue, 20 Nov 2018 06:53:23 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Animating SVG with GreenSock 🧦]]></title><description><![CDATA[The next chapter in my quest to learn more about animating SVG on the web. Previously, I used SVG’s animate tag to animate a new Slackify…]]></description><link>https://www.arjunkalburgi.com/writing/Animating-SVG-with-GreenSock/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/Animating-SVG-with-GreenSock/</guid><pubDate>Tue, 20 Nov 2018 06:53:23 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;The next chapter in my quest to learn more about animating SVG on the web.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Previously, I used SVG’s &lt;code class=&quot;language-text&quot;&gt;animate&lt;/code&gt; tag to animate a new Slackify logo I was working on. Here I did the same thing but with the &lt;a href=&quot;https://greensock.com/&quot;&gt;GreenSock Animation Platform (GSAP, GreenSock)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Previously, I used SVG’s &lt;code&gt;animate&lt;/code&gt; tag to animate a new Slackify logo I was working on. Here I did the same thing but with the &lt;a href=&quot;https://greensock.com/&quot;&gt;GreenSock Animation Platform (GSAP, GreenSock)&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Although I could have done the animation entirely in CSS, the purpose of this experiment was to see how I could animate using the multiple SVG’s I had created previously.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*AtJwk7_cpzGFJI6nZkMsjg.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;This is the same screenshot of my Figma design asset from before. There are 4 paths here that I want to animate to each other with an easing between them.&lt;/p&gt;
-&lt;p&gt;With SVG’s &lt;code class=&quot;language-text&quot;&gt;animate&lt;/code&gt; the preferred effect was not achieved, though mostly the basic motion was.&lt;/p&gt;
-&lt;p&gt;At first I had a lot of trouble trying to adapt my SVG’s because GSAP isn’t perfectly meant to be used to manipulate the &lt;code class=&quot;language-text&quot;&gt;d&lt;/code&gt; path of SVG elements. However, I eventually figured out how to do it after a bunch of Google searches.&lt;/p&gt;
+&lt;p&gt;With SVG’s &lt;code&gt;animate&lt;/code&gt; the preferred effect was not achieved, though mostly the basic motion was.&lt;/p&gt;
+&lt;p&gt;At first I had a lot of trouble trying to adapt my SVG’s because GSAP isn’t perfectly meant to be used to manipulate the &lt;code&gt;d&lt;/code&gt; path of SVG elements. However, I eventually figured out how to do it after a bunch of Google searches.&lt;/p&gt;
 &lt;p&gt;tl.to(dotA,&lt;br&gt;
 0.8, {&lt;br&gt;
 attr: {&lt;br&gt;
-d: “M59.0596 … 959Z”&lt;br&gt;
+d: &quot;M59.0596 ... 959Z&quot;&lt;br&gt;
 },&lt;br&gt;
 ease: Power1.easeInOut,&lt;br&gt;
 })&lt;/p&gt;
-&lt;p&gt;The trick just happened to be to wrap the &lt;code class=&quot;language-text&quot;&gt;d&lt;/code&gt; modification in the &lt;code class=&quot;language-text&quot;&gt;attr&lt;/code&gt; block. This successfully applied the &lt;code class=&quot;language-text&quot;&gt;dotA&lt;/code&gt; path element in the SVG with the new &lt;code class=&quot;language-text&quot;&gt;d&lt;/code&gt; path.&lt;/p&gt;
+&lt;p&gt;The trick just happened to be to wrap the &lt;code&gt;d&lt;/code&gt; modification in the &lt;code&gt;attr&lt;/code&gt; block. This successfully applied the &lt;code&gt;dotA&lt;/code&gt; path element in the SVG with the new &lt;code&gt;d&lt;/code&gt; path.&lt;/p&gt;
 &lt;p&gt;I went on to apply this same animation to the other 4 path elements.&lt;/p&gt;
 &lt;p&gt;The final result:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*GOG3jx9dVNpwbrq4TjvZAA.gif&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I have a theory as to why there is that strange sharpness of the dots during the animation, but that’s for another blog!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*cuvajqmhcC8_croNpCLZFg.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Thank you! Please let me know if you have any suggestions!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*hw6Xjc3RJxvdLnrbYrERPg.jpeg&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Do Animated SVGs 💔 React-Native?]]></title><description><![CDATA[I’ve been looking into SVG animations for my project, Slackify. I found that SVG offers a great  property and so I decided I’d animate a…]]></description><link>https://www.arjunkalburgi.com/writing/Do-Animated-SVGs----React-Native/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/Do-Animated-SVGs----React-Native/</guid><pubDate>Tue, 06 Nov 2018 06:55:05 GMT</pubDate><content:encoded>&lt;p&gt;I’ve been looking into SVG animations for my project, &lt;a href=&quot;https://medium.com/arjunkalburgi/redesigning-slackify-an-easy-custom-emoji-solution-for-slack-41c81b76e2be&quot;&gt;Slackify&lt;/a&gt;. I found that SVG offers a great &lt;code class=&quot;language-text&quot;&gt;[animate](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate)&lt;/code&gt; &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate&quot;&gt;property&lt;/a&gt; and so I decided I’d animate a brand new logo for Slackify.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*hw6Xjc3RJxvdLnrbYrERPg.jpeg&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Do Animated SVGs 💔 React-Native?]]></title><description><![CDATA[I’ve been looking into SVG animations for my project, Slackify. I found that SVG offers a great [animate](https://developer.mozilla.org/en…]]></description><link>https://www.arjunkalburgi.com/writing/Do-Animated-SVGs----React-Native/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/Do-Animated-SVGs----React-Native/</guid><pubDate>Tue, 06 Nov 2018 06:55:05 GMT</pubDate><content:encoded>&lt;p&gt;I’ve been looking into SVG animations for my project, &lt;a href=&quot;https://medium.com/arjunkalburgi/redesigning-slackify-an-easy-custom-emoji-solution-for-slack-41c81b76e2be&quot;&gt;Slackify&lt;/a&gt;. I found that SVG offers a great &lt;code&gt;[animate](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate)&lt;/code&gt; &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate&quot;&gt;property&lt;/a&gt; and so I decided I’d animate a brand new logo for Slackify.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*AtJwk7_cpzGFJI6nZkMsjg.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;I planned out my animation and in Figma I created several SVG’s. &lt;code class=&quot;language-text&quot;&gt;animate&lt;/code&gt; only works if all the paths in your SVG have the same number of points.&lt;/p&gt;
+&lt;p&gt;I planned out my animation and in Figma I created several SVG’s. &lt;code&gt;animate&lt;/code&gt; only works if all the paths in your SVG have the same number of points.&lt;/p&gt;
 &lt;p&gt;I ended up creating:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*MvBfM58ir8Y4S17gJyBzzw.gif&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Not special but fun to try out. I also made this &lt;a href=&quot;https://codepen.io/askalburgi/pen/vQOJLE&quot;&gt;codepen of the svg&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Don’t click it, it doesn’t work. Turns out &lt;code class=&quot;language-text&quot;&gt;animate&lt;/code&gt;’s browser support isn’t that great.&lt;/p&gt;
-&lt;p&gt;I decided to try it in the React-Native Slackify app anyway. I found a nice little package to embed my SVG as an Image in the app, &lt;code class=&quot;language-text&quot;&gt;[react-native-remote-svg](https://www.npmjs.com/package/react-native-remote-svg)&lt;/code&gt;, after trying a lot of other options that didn’t work at all.&lt;/p&gt;
+&lt;p&gt;Don’t click it, it doesn’t work. Turns out &lt;code&gt;animate&lt;/code&gt;&apos;s browser support isn’t that great.&lt;/p&gt;
+&lt;p&gt;I decided to try it in the React-Native Slackify app anyway. I found a nice little package to embed my SVG as an Image in the app, &lt;code&gt;[react-native-remote-svg](https://www.npmjs.com/package/react-native-remote-svg)&lt;/code&gt;, after trying a lot of other options that didn’t work at all.&lt;/p&gt;
 &lt;p&gt;But unfortunately the animated SVG did not load in the app.&lt;/p&gt;
-&lt;p&gt;I also tried to load the SVG in a React-Native &lt;code class=&quot;language-text&quot;&gt;WebView&lt;/code&gt;, thinking maybe the WebView’s browser support would be different, but unfortunately that didn’t work either.&lt;/p&gt;
+&lt;p&gt;I also tried to load the SVG in a React-Native &lt;code&gt;WebView&lt;/code&gt;, thinking maybe the WebView’s browser support would be different, but unfortunately that didn’t work either.&lt;/p&gt;
 &lt;p&gt;So I’ve got:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*bfzlPng2aLxqJDms2hS8zQ.jpeg&quot;&gt;&lt;/p&gt;
 &lt;p&gt;🤷🏾‍ Oh well.&lt;/p&gt;
@@ -763,14 +888,14 @@ ease: Power1.easeInOut,&lt;br&gt;
 &lt;p&gt;I assumed that BEM was hierarchical, just like how we usually name variables and properties.&lt;/p&gt;
 &lt;p&gt;This led me to produce HTML like this:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*X7MIYOSLNPx05ZZ04UxDUA.jpeg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;st&lt;/code&gt; is my Block, &lt;code class=&quot;language-text&quot;&gt;-tasks__(something)&lt;/code&gt; are the Elements and &lt;code class=&quot;language-text&quot;&gt;--stress&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;--fine&lt;/code&gt; the Modifiers of certain elements.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;st&lt;/code&gt; is my Block, &lt;code&gt;-tasks__(something)&lt;/code&gt; are the Elements and &lt;code&gt;--stress&lt;/code&gt; and &lt;code&gt;--fine&lt;/code&gt; the Modifiers of certain elements.&lt;/p&gt;
 &lt;p&gt;This improper use led to the problem highlighted in blue in the above picture. I’ve got three buttons and they have wildly different class names.&lt;/p&gt;
-&lt;p&gt;They should be something like: &lt;code class=&quot;language-text&quot;&gt;st-buttonsomething--stress&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;st-buttonsomething--fine&lt;/code&gt;, and&lt;code class=&quot;language-text&quot;&gt;st-buttonsomething--add&lt;/code&gt;. This way I can have a single button style with slight differences in the modifiers.&lt;/p&gt;
+&lt;p&gt;They should be something like: &lt;code&gt;st-buttonsomething--stress&lt;/code&gt;, &lt;code&gt;st-buttonsomething--fine&lt;/code&gt;, and&lt;code&gt;st-buttonsomething--add&lt;/code&gt;. This way I can have a single button style with slight differences in the modifiers.&lt;/p&gt;
 &lt;p&gt;The lesson I learned is that Element names don’t come from their position in the HTML but rather their style as a design asset.&lt;/p&gt;
 &lt;p&gt;I now have it like this:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*BqMc2OG08PhJ68VEnYWxJw.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Where elements don’t depend on their position but rather their function and design/look/style.&lt;/p&gt;
-&lt;p&gt;I changed the HTML of my buttons, but you can still see that I now have &lt;code class=&quot;language-text&quot;&gt;st-buttonBg&lt;/code&gt; as the Element class and &lt;code class=&quot;language-text&quot;&gt;st-buttonBg--fine&lt;/code&gt; as the Modifier class.&lt;/p&gt;
+&lt;p&gt;I changed the HTML of my buttons, but you can still see that I now have &lt;code&gt;st-buttonBg&lt;/code&gt; as the Element class and &lt;code&gt;st-buttonBg--fine&lt;/code&gt; as the Modifier class.&lt;/p&gt;
 &lt;p&gt;That’s a quick lesson I learned when using BEM. Thanks to &lt;a href=&quot;http://twitter.com/cssinate&quot;&gt;Paul Grant&lt;/a&gt; for helping me learn the lesson and encouraging me to write about it!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Redesigning Slackify, an easy custom emoji solution for Slack]]></title><description><![CDATA[When you see something fantastic in the real world, maybe you can make it better? Sometimes a small tool can make a big impact and tell a…]]></description><link>https://www.arjunkalburgi.com/writing/Redesigning-Slackify--an-easy-custom-emoji-solution-for-Slack/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/Redesigning-Slackify--an-easy-custom-emoji-solution-for-Slack/</guid><pubDate>Wed, 10 Oct 2018 20:24:22 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;When you see something fantastic in the real world, maybe you can make it better? Sometimes a small tool can make a big impact and tell a great story.&lt;/p&gt;
@@ -810,30 +935,30 @@ ease: Power1.easeInOut,&lt;br&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;Coding the Design&lt;/h3&gt;
 &lt;h4&gt;StyleSheet&lt;/h4&gt;
-&lt;p&gt;I used the &lt;code class=&quot;language-text&quot;&gt;StyleSheet&lt;/code&gt; from &lt;code class=&quot;language-text&quot;&gt;react-native&lt;/code&gt; for all the components so that each component would have its own StyleSheet. These would look like this:&lt;/p&gt;
+&lt;p&gt;I used the &lt;code&gt;StyleSheet&lt;/code&gt; from &lt;code&gt;react-native&lt;/code&gt; for all the components so that each component would have its own StyleSheet. These would look like this:&lt;/p&gt;
 &lt;p&gt;const styles = StyleSheet.create({&lt;br&gt;
 emojiFormPicture: {&lt;br&gt;
-flexDirection: ‘row’,&lt;br&gt;
-alignItems: ‘center’,&lt;br&gt;
+flexDirection: &apos;row&apos;,&lt;br&gt;
+alignItems: &apos;center&apos;,&lt;br&gt;
 marginBottom: 40,&lt;br&gt;
 },&lt;br&gt;
 emojiForm: {&lt;br&gt;
 marginTop: 100,&lt;br&gt;
-width: ‘80%‘,&lt;br&gt;
+width: &apos;80%&apos;,&lt;br&gt;
 },&lt;/p&gt;
 &lt;p&gt;I originally wanted to use one of the naming convention standards that I had recently learned at a conference, but since the CSS here was so small I chose to go with my own naming convention.&lt;/p&gt;
-&lt;p&gt;As you can see above, each component’s styles would begin with the name of that component, so since this is the component for the emoji page it begins with &lt;code class=&quot;language-text&quot;&gt;emoji&lt;/code&gt;. This is followed by the section name, in this case it’s the &lt;code class=&quot;language-text&quot;&gt;Form&lt;/code&gt; section for the form that will post the emoji. And then finally the element name if there is one, shown is the &lt;code class=&quot;language-text&quot;&gt;Picture&lt;/code&gt; element.&lt;/p&gt;
+&lt;p&gt;As you can see above, each component’s styles would begin with the name of that component, so since this is the component for the emoji page it begins with &lt;code&gt;emoji&lt;/code&gt;. This is followed by the section name, in this case it’s the &lt;code&gt;Form&lt;/code&gt; section for the form that will post the emoji. And then finally the element name if there is one, shown is the &lt;code&gt;Picture&lt;/code&gt; element.&lt;/p&gt;
 &lt;h4&gt;Custom Fonts&lt;/h4&gt;
 &lt;p&gt;Expo, the XDE I used to create the React Native app, has a very interesting method of installing Custom Fonts into the app.&lt;/p&gt;
 &lt;p&gt;async componentDidMount() {    &lt;/p&gt;
-&lt;p&gt;   await Font.loadAsync({‘PT-Sans-Caption’: require(‘./path.ttf’),&lt;br&gt;
-‘PT-Sans-Caption-Bold’: require(‘pat.ttf’),&lt;br&gt;
+&lt;p&gt;   await Font.loadAsync({&apos;PT-Sans-Caption&apos;: require(&apos;./path.ttf&apos;),&lt;br&gt;
+&apos;PT-Sans-Caption-Bold&apos;: require(&apos;pat.ttf&apos;),&lt;br&gt;
 });&lt;/p&gt;
 &lt;p&gt;   this.setState({fontsLoaded: true})&lt;br&gt;
 }&lt;/p&gt;
-&lt;p&gt;I used the state variable &lt;code class=&quot;language-text&quot;&gt;fontsLoaded&lt;/code&gt; to ensure the View would only load when the fonts are loaded. Very interesting. Check it out in &lt;a href=&quot;https://github.com/askalburgi/slackify/blob/master/App.js&quot;&gt;App.js&lt;/a&gt; and read more about it &lt;a href=&quot;https://medium.com/@piyushgupta_81472/using-custom-fonts-in-expo-the-best-way-81f0e785580c&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I used the state variable &lt;code&gt;fontsLoaded&lt;/code&gt; to ensure the View would only load when the fonts are loaded. Very interesting. Check it out in &lt;a href=&quot;https://github.com/askalburgi/slackify/blob/master/App.js&quot;&gt;App.js&lt;/a&gt; and read more about it &lt;a href=&quot;https://medium.com/@piyushgupta_81472/using-custom-fonts-in-expo-the-best-way-81f0e785580c&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;A Small Note&lt;/h4&gt;
-&lt;p&gt;I’d like to note one interesting thing about the CSS that I kinda hacked together. &lt;code class=&quot;language-text&quot;&gt;react-native&lt;/code&gt; doesn’t allow all the CSS properties and it made it difficult to create the buttons that I had designed. I actually used a &lt;code class=&quot;language-text&quot;&gt;Linear Gradient&lt;/code&gt; element to reproduce the Knock Out effect desired.&lt;/p&gt;
+&lt;p&gt;I’d like to note one interesting thing about the CSS that I kinda hacked together. &lt;code&gt;react-native&lt;/code&gt; doesn’t allow all the CSS properties and it made it difficult to create the buttons that I had designed. I actually used a &lt;code&gt;Linear Gradient&lt;/code&gt; element to reproduce the Knock Out effect desired.&lt;/p&gt;
 &lt;View style={styles.buttonContainer}&gt;  
      &lt;LinearGradient colors={\[&apos;white&apos;, &apos;white&apos;, &apos;white&apos;, YELLOW, ...  
         &lt;Text style={{fontSize: style={{fontSize: this.props.size...   
@@ -1604,7 +1729,28 @@ The entrance of FourthDimensionInc. where I first learned to be a developer&lt;/
 &lt;p&gt;Something tells me there’s a smarter way to ask for donations. Starting a sentence with “If you would…” seems too passive. The donate button itself is also very passive. &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1200/1*DkZ32-3n_qeHhYqL82s9Ww.png&quot;&gt;
 &lt;img src=&quot;https://cdn-images-1.medium.com/max/1200/1*giMBZBy7NDmLnWMEexS2yg.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Ending off with contact info and credits is nice, but signifies the weirdest part of the website — that the site is a combination of a main action and additional information in the style of a homepage. If I re-did the ShoutBox website, I would make it a proper homescreen, with a link to the Chrome extension and a more pronounced donate button.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Finally figuring out what rem spacing is]]></title><description><![CDATA[Finally figuring out what rem spacing is I just I stalled Firefox and was incredibly unhappy with how my site looked on the browser. Turns…]]></description><link>https://www.arjunkalburgi.com/writing/drafts/draft_Finally-figuring-out-what-rem-spacing-is-e48ab5d39fb1.md/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/drafts/draft_Finally-figuring-out-what-rem-spacing-is-e48ab5d39fb1.md/</guid><content:encoded>&lt;p&gt;Finally figuring out what rem spacing is&lt;/p&gt;
+&lt;p&gt;Ending off with contact info and credits is nice, but signifies the weirdest part of the website — that the site is a combination of a main action and additional information in the style of a homepage. If I re-did the ShoutBox website, I would make it a proper homescreen, with a link to the Chrome extension and a more pronounced donate button.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Once Upon A Storybook: Starting to Build Better Component Libraries]]></title><description><![CDATA[I’ve learned about Design Systems recently and for my new app I wanted to start exploring them by using StorybookJs.  Ever been a designer…]]></description><link>https://www.arjunkalburgi.com/writing/drafts/draft_Once-Upon-A-Storybook--Starting-to-Build-Better-Component-Libraries-a0430dcfd07a.md/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/drafts/draft_Once-Upon-A-Storybook--Starting-to-Build-Better-Component-Libraries-a0430dcfd07a.md/</guid><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;I’ve learned about Design Systems recently and for my new app I wanted to start exploring them by using StorybookJs. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ever been a designer and a developer and wanted to stop making components twice, once in your design tool, then again in code? This is what motivated me to try StorybookJs, although I won’t really be using it to solve that problem, yet. &lt;/p&gt;
+&lt;p&gt;Instead, StorybookJs also helps me organize my components, test them later on, and, best of all, develop them in an abstracted way. &lt;/p&gt;
+&lt;p&gt;I began by reading &lt;a href=&quot;https://medium.com/nulogy/storybook-driven-development-a3c517276c07&quot;&gt;Storybook Driven Development&lt;/a&gt; by &lt;a href=&quot;https://medium.com/u/2e96c7be4493&quot;&gt;Ned Schwartz,&lt;/a&gt; it starts off with a much better explaination of why we should use Storybook Driven Development (SDD) than I’ve given here. I highly recommend reading it. &lt;/p&gt;
+&lt;p&gt;After reading that I went to &lt;a href=&quot;https://storybook.js.org/&quot;&gt;storybook.js.org&lt;/a&gt; to set up StorybookJs for my Angular project. All was good until I did the first step. Turns out Storybook for Angular is having issues right now and I wasted a couple hours trying to fix it. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Days later I came back to finish adding StorybookJs to my project by updating my project to Ionic v4 and Angular 7. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now with Storybook, this gif (from the tutorial linked above) shows how I’m going to start building and styling components. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*8T0opytn0oYuEMpd8PRTsw.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Let’s see that in action with …&lt;/p&gt;
+&lt;p&gt;All thanks goes to &lt;a href=&quot;https://medium.com/u/1aeed18fd27d&quot;&gt;Varun Vachhar&lt;/a&gt; for showing me Storybook and encouraging me always 😃&lt;/p&gt;</content:encoded></item><item><title><![CDATA[An unexpected journey 🇮🇸]]></title><description><![CDATA[The story of my 2017 Iceland trip, how I got there and what I learned Part 1: HOW I GOT THERE Great opportunities are great. No question…]]></description><link>https://www.arjunkalburgi.com/writing/drafts/draft_An-unexpected-journey------259c3fe469fb.md/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/drafts/draft_An-unexpected-journey------259c3fe469fb.md/</guid><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;The story of my 2017 Iceland trip, how I got there and what I learned&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Part 1: HOW I GOT THERE&lt;/h4&gt;
+&lt;p&gt;Great opportunities are great. No question about it. &lt;/p&gt;
+&lt;p&gt;My question is why don’t people ever talk about the work that has to be done to get those great opportunities. &lt;/p&gt;
+&lt;p&gt;In the spring of 2017 the faculty of engineering, as well as the faculties of science and business, decided they wanted a first hand look at a 3 week, multidisciplinary entrepreneurship course in Reykjavik. They hoped the students and staff sent would be able to implement and help run a similar course back home.&lt;/p&gt;
+&lt;p&gt;They picked me. All-expenses-paid. Three weeks in Iceland. Entre bootcamp.&lt;/p&gt;
+&lt;p&gt;The course would be&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Finally figuring out what rem spacing is]]></title><description><![CDATA[Finally figuring out what rem spacing is I just I stalled Firefox and was incredibly unhappy with how my site looked on the browser. Turns…]]></description><link>https://www.arjunkalburgi.com/writing/drafts/draft_Finally-figuring-out-what-rem-spacing-is-e48ab5d39fb1.md/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/drafts/draft_Finally-figuring-out-what-rem-spacing-is-e48ab5d39fb1.md/</guid><content:encoded>&lt;p&gt;Finally figuring out what rem spacing is&lt;/p&gt;
 &lt;p&gt;I just I stalled Firefox and was incredibly unhappy with how my site looked on the browser. Turns out it was `rem`.&lt;/p&gt;
 &lt;p&gt;`rem` is&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/a/28718789&quot;&gt;https://stackoverflow.com/a/28718789&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Building a Brand to Get a Job as a UX Developer]]></title><description><![CDATA[Coming off two degrees in Computer Engineering and UI Design, I’m ready to get a job where I can work on useful products in a lean product…]]></description><link>https://www.arjunkalburgi.com/writing/drafts/draft_Building-a-Brand-to-Get-a-Job-as-a-UX-Developer-a3a818f63f62.md/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/drafts/draft_Building-a-Brand-to-Get-a-Job-as-a-UX-Developer-a3a818f63f62.md/</guid><content:encoded>&lt;blockquote&gt;
@@ -1638,25 +1784,4 @@ Let’s do great things ;)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A brand filter is used for marketing to help a organize and strategize a brand. It covers the brand’s motivation, purpose, values, persona and behaviour (in that order), each using the previous to determine the next. Building marketing campaigns this way help build/maintain the brand’s brand. &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;TWG’s brand is all about how software experiences can change the world. Rangle is about curiosity and passion&lt;/p&gt;</content:encoded></item><item><title><![CDATA[An unexpected journey 🇮🇸]]></title><description><![CDATA[The story of my 2017 Iceland trip, how I got there and what I learned Part 1: HOW I GOT THERE Great opportunities are great. No question…]]></description><link>https://www.arjunkalburgi.com/writing/drafts/draft_An-unexpected-journey------259c3fe469fb.md/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/drafts/draft_An-unexpected-journey------259c3fe469fb.md/</guid><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;The story of my 2017 Iceland trip, how I got there and what I learned&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;Part 1: HOW I GOT THERE&lt;/h4&gt;
-&lt;p&gt;Great opportunities are great. No question about it. &lt;/p&gt;
-&lt;p&gt;My question is why don’t people ever talk about the work that has to be done to get those great opportunities. &lt;/p&gt;
-&lt;p&gt;In the spring of 2017 the faculty of engineering, as well as the faculties of science and business, decided they wanted a first hand look at a 3 week, multidisciplinary entrepreneurship course in Reykjavik. They hoped the students and staff sent would be able to implement and help run a similar course back home.&lt;/p&gt;
-&lt;p&gt;They picked me. All-expenses-paid. Three weeks in Iceland. Entre bootcamp.&lt;/p&gt;
-&lt;p&gt;The course would be&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Once Upon A Storybook: Starting to Build Better Component Libraries]]></title><description><![CDATA[I’ve learned about Design Systems recently and for my new app I wanted to start exploring them by using StorybookJs.  Ever been a designer…]]></description><link>https://www.arjunkalburgi.com/writing/drafts/draft_Once-Upon-A-Storybook--Starting-to-Build-Better-Component-Libraries-a0430dcfd07a.md/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/drafts/draft_Once-Upon-A-Storybook--Starting-to-Build-Better-Component-Libraries-a0430dcfd07a.md/</guid><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;I’ve learned about Design Systems recently and for my new app I wanted to start exploring them by using StorybookJs. &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Ever been a designer and a developer and wanted to stop making components twice, once in your design tool, then again in code? This is what motivated me to try StorybookJs, although I won’t really be using it to solve that problem, yet. &lt;/p&gt;
-&lt;p&gt;Instead, StorybookJs also helps me organize my components, test them later on, and, best of all, develop them in an abstracted way. &lt;/p&gt;
-&lt;p&gt;I began by reading &lt;a href=&quot;https://medium.com/nulogy/storybook-driven-development-a3c517276c07&quot;&gt;Storybook Driven Development&lt;/a&gt; by &lt;a href=&quot;https://medium.com/u/2e96c7be4493&quot;&gt;Ned Schwartz,&lt;/a&gt; it starts off with a much better explaination of why we should use Storybook Driven Development (SDD) than I’ve given here. I highly recommend reading it. &lt;/p&gt;
-&lt;p&gt;After reading that I went to &lt;a href=&quot;https://storybook.js.org/&quot;&gt;storybook.js.org&lt;/a&gt; to set up StorybookJs for my Angular project. All was good until I did the first step. Turns out Storybook for Angular is having issues right now and I wasted a couple hours trying to fix it. &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Days later I came back to finish adding StorybookJs to my project by updating my project to Ionic v4 and Angular 7. &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Now with Storybook, this gif (from the tutorial linked above) shows how I’m going to start building and styling components. &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*8T0opytn0oYuEMpd8PRTsw.gif&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Let’s see that in action with …&lt;/p&gt;
-&lt;p&gt;All thanks goes to &lt;a href=&quot;https://medium.com/u/1aeed18fd27d&quot;&gt;Varun Vachhar&lt;/a&gt; for showing me Storybook and encouraging me always 😃&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;TWG’s brand is all about how software experiences can change the world. Rangle is about curiosity and passion&lt;/p&gt;</content:encoded></item></channel></rss>
