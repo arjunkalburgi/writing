@@ -57,6 +57,8 @@ body {
     box-shadow: none;
 }
 
+.svg-inline--fa { width: 16px; }
+
 .hero_button {
     background: #12A962;
     color:#fff;
