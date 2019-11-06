@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Writing]]></title><description><![CDATA[projects, lessons, art + ideas]]></description><link>https://www.arjunkalburgi.com/writing</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Nov 2019 23:50:24 GMT</lastBuildDate><item><title><![CDATA[Creating a "Swipe-to-Confirm" Component]]></title><description><![CDATA[The Amazon app features a Slide-to-Confirm element inspired by Apple's "Swipe to Unlock". Surprisingly, a similar component is nowhere on…]]></description><link>https://www.arjunkalburgi.com/writing/creating-a-slide-to-confirm-component/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/creating-a-slide-to-confirm-component/</guid><pubDate>Tue, 05 Nov 2019 15:20:33 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Writing]]></title><description><![CDATA[projects, lessons, art + ideas]]></description><link>https://www.arjunkalburgi.com/writing</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 06 Nov 2019 21:21:08 GMT</lastBuildDate><item><title><![CDATA[Creating a "Swipe-to-Confirm" Component]]></title><description><![CDATA[The Amazon app features a Slide-to-Confirm element inspired by Apple's "Swipe to Unlock". Surprisingly, a similar component is nowhere on…]]></description><link>https://www.arjunkalburgi.com/writing/creating-a-slide-to-confirm-component/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/creating-a-slide-to-confirm-component/</guid><pubDate>Tue, 05 Nov 2019 15:20:33 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;The Amazon app features a Slide-to-Confirm element inspired by Apple&apos;s &quot;Swipe to Unlock&quot;. Surprisingly, a similar component is nowhere on the internet, so I&apos;ll need to create it myself.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Designers can use Slide-to-Confirm as a tool to help their users feel more secure (than a button that can be accidentally tapped) and more accomplished (takes more work to slide across the screen). Amazon uses it in their &quot;Buy Now&quot; flow to prevent accidental purchases. &lt;/p&gt;
@@ -34,7 +34,7 @@
 &lt;p&gt;&lt;strong&gt;Is the new idea feasable?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;If the new idea could actually work, then I&apos;ll be able to put elements on both sides of the slide item that will show and hide as I move the slide item. &lt;/p&gt;
 &lt;p&gt;I was able to create this functionality with blue and green bars. The most difficult part about this was honestly figuring out the logic of the HTML elements. I decided that having two tracks on top of each other with &lt;code&gt;position: absolute&lt;/code&gt; and a high &lt;code&gt;z-index&lt;/code&gt; for the item worked best: &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-&lt;div&quot; data-meta=&quot;id=&amp;#x22;outerContainer&amp;#x22;&gt;&quot;&gt;&amp;#x3C;div id=&quot;outerContainer&quot;&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;#x3C;div id=&quot;outerContainer&quot;&gt;
   &amp;#x3C;div id=&quot;container&quot;&gt;
     &amp;#x3C;div id=&quot;item&quot;&gt;&amp;#x3C;/div&gt;
   &amp;#x3C;/div&gt;
@@ -56,14 +56,14 @@
         style=&apos;width: 100%;&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Text in the Bars&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Now to have text within the bars so that sliding reveals/conseals the text. I quickly made an inner div with the text and made it fit to the grandparent: &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#bar_inner {
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;#bar_inner {
     // center the text
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   
-  // 
+  // position bar
   width: 100%;
   position: absolute;
   top: 0;
@@ -86,7 +86,7 @@
 &lt;p&gt;&lt;strong&gt;Confirm alert, and fallback&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Now that I have my meat set up, I need to add the potatoes. I need to trigger an event once the slider reaches the end and if the slider doesn&apos;t reach the end, it should fallback to the beginning. &lt;/p&gt;
 &lt;p&gt;Both potatoes were pretty easy, just needed to have some logic in the &lt;code&gt;dragEnd&lt;/code&gt; function&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// in dragEnd(e)
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// in dragEnd(e)
 if (currentX &amp;#x3C; dragWidth) {
   setTranslate(0, dragItem);
 } else {
