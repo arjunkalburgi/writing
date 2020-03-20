@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div>
     <header class="header">
       <strong>
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
@@ -10,6 +10,7 @@
       </nav>
     </header>
     <slot/>
+    <Contact />
   </div>
 </template>
 
@@ -20,6 +21,19 @@ query {
   }
 }
 </static-query>
+
+<script>
+
+import Contact from './../components/layout/Contact.vue'
+
+export default {
+  components: {
+    Contact,
+  }
+}
+</script>
+
+
 
 <style>
 body {
