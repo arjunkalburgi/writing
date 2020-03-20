@@ -17,8 +17,8 @@ slug: /writing/creating-a-slide-to-confirm-component
 
 Designers can use Slide-to-Confirm as a tool to help their users feel more secure (than a button that can be accidentally tapped) and more accomplished (takes more work to slide across the screen). Amazon uses it in their "Buy Now" flow to prevent accidental purchases. 
 
-![final](./amazon2.png)
-![final](./amazon3.jpeg)
+![final](https://raw.githubusercontent.com/arjunkalburgi/writing/master/content/blog/custom-input-behaviour-for-numbers/amazon2.png)
+![final](https://raw.githubusercontent.com/arjunkalburgi/writing/master/content/blog/custom-input-behaviour-for-numbers/amazon3.jpeg)
 
 The UX of this component is great! Showing green and changing the message as you swipe brings out the security and accomplishment feelings. Unfortunately, it's also highly custom.
 
@@ -101,7 +101,7 @@ Now to have text within the bars so that sliding reveals/conseals the text. I qu
 
 However this made both text's appear on top of each other. 
 
-![brokentext](./brokentext.png)
+![brokentext](https://raw.githubusercontent.com/arjunkalburgi/writing/master/content/blog/custom-input-behaviour-for-numbers/brokentext.png)
 
 And adding  `overflow: hidden` to the parent bar's does nothing (because the parent is not absolute as well). I'm actually really stuck here... 🤔
 
@@ -140,7 +140,7 @@ To finish it off, I cleaned up my code using BEM CSS, and removed some of the un
 
 https://codepen.io/arjunkalburgi/pen/QWWamxW
 
-![final](./final.gif)
+![final](https://raw.githubusercontent.com/arjunkalburgi/writing/master/content/blog/creating-a-slide-to-confirm-component/final.gif)
 
 
 
