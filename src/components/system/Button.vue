@@ -1,5 +1,5 @@
 <template lang="html">
-  <button class="button" :href="link" :title="text" :target="newTab ? 'blank' : ''">{{text}}</button>
+  <a class="button" :href="link" :title="text" :target="newTab ? 'blank' : ''">{{text}}</a>
 </template>
 
 <script lang="js">
@@ -39,7 +39,6 @@
     margin: 20px 0;
     border-radius: 3px;
     text-decoration: none;
-    border: 0;
 
     transition: background-color 500ms;
 
