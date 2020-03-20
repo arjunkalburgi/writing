@@ -17,7 +17,8 @@ slug: /writing/creating-a-slide-to-confirm-component
 
 Designers can use Slide-to-Confirm as a tool to help their users feel more secure (than a button that can be accidentally tapped) and more accomplished (takes more work to slide across the screen). Amazon uses it in their "Buy Now" flow to prevent accidental purchases. 
 
-<img src="/Users/smilinknight/projects/Arjun stuff/blog/content/blog/creating-a-slide-to-confirm-component/amazon2.png" alt="amazon2" style="zoom: 28%;" /><img src="/Users/smilinknight/projects/Arjun stuff/blog/content/blog/creating-a-slide-to-confirm-component/amazon3.jpeg" alt="amazon3" style="zoom:14.4%;" />
+![final](./amazon2.png)
+![final](./amazon3.jpeg)
 
 The UX of this component is great! Showing green and changing the message as you swipe brings out the security and accomplishment feelings. Unfortunately, it's also highly custom.
 
@@ -59,7 +60,7 @@ If the new idea could actually work, then I'll be able to put elements on both s
 
 I was able to create this functionality with blue and green bars. The most difficult part about this was honestly figuring out the logic of the HTML elements. I decided that having two tracks on top of each other with `position: absolute` and a high `z-index` for the item worked best: 
 
-```<div id="outerContainer">
+```html
 <div id="outerContainer">
   <div id="container">
     <div id="item"></div>
@@ -82,7 +83,7 @@ https://codepen.io/arjunkalburgi/pen/rNNpWdX
 
 Now to have text within the bars so that sliding reveals/conseals the text. I quickly made an inner div with the text and made it fit to the grandparent: 
 
-```
+```css
 #bar_inner {
 	// center the text
   height: 100%;
@@ -90,7 +91,7 @@ Now to have text within the bars so that sliding reveals/conseals the text. I qu
   justify-content: center;
   align-items: center;
   
-  // 
+  // position bar
   width: 100%;
   position: absolute;
   top: 0;
@@ -100,7 +101,7 @@ Now to have text within the bars so that sliding reveals/conseals the text. I qu
 
 However this made both text's appear on top of each other. 
 
-![brokentext](/Users/smilinknight/projects/Arjun stuff/blog/content/blog/creating-a-slide-to-confirm-component/brokentext.png)
+![brokentext](./brokentext.png)
 
 And adding  `overflow: hidden` to the parent bar's does nothing (because the parent is not absolute as well). I'm actually really stuck here... 🤔
 
@@ -117,7 +118,7 @@ Now that I have my meat set up, I need to add the potatoes. I need to trigger an
 
 Both potatoes were pretty easy, just needed to have some logic in the `dragEnd` function
 
-```
+```javascript
 // in dragEnd(e)
 if (currentX < dragWidth) {
   setTranslate(0, dragItem);
@@ -139,7 +140,7 @@ To finish it off, I cleaned up my code using BEM CSS, and removed some of the un
 
 https://codepen.io/arjunkalburgi/pen/QWWamxW
 
-![final](/Users/smilinknight/projects/Arjun stuff/blog/content/blog/creating-a-slide-to-confirm-component/final.gif)
+![final](./final.gif)
 
 
 

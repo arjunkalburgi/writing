@@ -33,7 +33,7 @@ This gave me a large list of markdown files that looked like `2017-04-09_Securit
 
 Gatsby's got a [blog-starter](https://github.com/gatsbyjs/gatsby-starter-blog) repo, which was quick to clone and get up and running.
 
-<img src="./initdeploy.png" alt="initdeploy" style="zoom: 50%;" />
+![initdeploy](./initdeploy.png)
 
 
 
@@ -78,7 +78,7 @@ Honestly I could spend all day doing this, but for now I just want something qui
 
 Despite the simplicity of this task, it was actually quite time consuming to style the blog. Based on my commit history, it was the markdown posts that took forever to style. For some reason, Gatsby does not have this built into their default style for their starter package I used, making me wish I knew to use a theme'd starter from the beginning (there's no way to change your theme afterwards.) 
 
-<img src="./result.png" alt="image-20190915215432021" style="zoom:50%;" />
+![The result](./result.png)
 
 
 

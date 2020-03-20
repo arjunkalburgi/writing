@@ -45,8 +45,7 @@ It's actually the final line where the redundancy comes. I use `parseFloat` for 
 
 And it all works: 
 
-<img src="./numberinput.gif" alt="Number input gif showing how it works" style="zoom:50%;" />
-
+![Number input gif showing how it works](./numberinput.gif)
 
 
 If there's a more efficient way to do this please let me know :D 
