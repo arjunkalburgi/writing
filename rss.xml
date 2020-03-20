@@ -1,9 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Writing]]></title><description><![CDATA[projects, lessons, art + ideas]]></description><link>https://www.arjunkalburgi.com/writing</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 06 Nov 2019 21:46:03 GMT</lastBuildDate><item><title><![CDATA[Creating a "Swipe-to-Confirm" Component]]></title><description><![CDATA[The Amazon app features a Slide-to-Confirm element inspired by Apple's "Swipe to Unlock". Surprisingly, a similar component is nowhere on…]]></description><link>https://www.arjunkalburgi.com/writing/creating-a-slide-to-confirm-component/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/creating-a-slide-to-confirm-component/</guid><pubDate>Tue, 05 Nov 2019 15:20:33 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Writing]]></title><description><![CDATA[projects, lessons, art + ideas]]></description><link>https://www.arjunkalburgi.com/writing</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 20 Mar 2020 03:01:24 GMT</lastBuildDate><item><title><![CDATA[Creating a Variable Design System]]></title><description><![CDATA[The brief for this project is to create an Ionic app that can be re-themed based on different brands. Should be a fun little project indeed…]]></description><link>https://www.arjunkalburgi.com/writing/Creating a Variable Design System/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/Creating a Variable Design System/</guid><pubDate>Sat, 18 Jan 2020 02:33:25 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;The brief for this project is to create an Ionic app that can be re-themed based on different brands.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Should be a fun little project indeed. The idea is to expand on Ionic Framework&apos;s existing &lt;code&gt;variables.scss&lt;/code&gt; to feature colours, fonts, opacities, shadows, radii and maybe even spacing. Then in a build process, reconfigure file/(s) so that the app is built with different variables.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1: Design Tokens&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I found &lt;a href=&quot;https://www.lightningdesignsystem.com/design-tokens&quot;&gt;this great guideline&lt;/a&gt; from Salesforce that features all their design tokens. To be frank, it&apos;s a lot and I&apos;m not sure I need it all. There&apos;s so much just in colours alone that I decided to look at some brands as well as my app so I could determine what would be necessary and not.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Colours
+Main brand colour&lt;/p&gt;
+&lt;p&gt;Alt brand colour&lt;/p&gt;
+&lt;p&gt;Dark (Black equivalent)&lt;/p&gt;
+&lt;p&gt;Light (White equivalent)&lt;/p&gt;
+&lt;p&gt;Main brand colour accessible with dark&lt;/p&gt;
+&lt;p&gt;Main brand colour accessible with light&lt;/p&gt;
+&lt;p&gt;Main brand colour accessible with alt&lt;/p&gt;
+&lt;p&gt;Alt brand colour accessible with dark&lt;/p&gt;
+&lt;p&gt;Alt brand colour accessible with light&lt;/p&gt;
+&lt;p&gt;Alt brand colour accessible with main&lt;/p&gt;
+&lt;p&gt;Light background colour&lt;/p&gt;
+&lt;p&gt;Gray text accessible on white&lt;/p&gt;
+&lt;p&gt;Gray text accessible on light background colour&lt;/p&gt;
+&lt;p&gt;Gray text accessible on Alt brand colour accessible with main&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Custom button style&lt;/li&gt;
+&lt;li&gt;Border radius style&lt;/li&gt;
+&lt;li&gt;Side spacing&lt;/li&gt;
+&lt;li&gt;Font/sizes:
+smallbold
+small
+regular
+subtitle
+title
+header&lt;/li&gt;
+&lt;li&gt;Shadows
+header shadow (global.scss:177)
+button shadow&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There are some other properties I could encorporate, but I&apos;ll start with these 6 tokens for now.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2: Using the Tokens&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now that I have my tokens, I need to update my app to use them. From there I&apos;ll be able to change the tokens for each brand, and apply them to the app.&lt;/p&gt;
+&lt;p&gt;This is actually the most difficult/time-consuming part of the process because it involved looking into each and every existing colour variable reference to ensure proper accessibility. The other tokens also required individual checking to find values that were not made into variables. It took a couple days to complete.&lt;/p&gt;
+&lt;p&gt;As I did this I also made a custom &lt;code&gt;.scss&lt;/code&gt; file for each theme where I could keep new styles that are specific to a certain theme (adjusted layouts or button configurations).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3: Repo Re-Organization&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I&apos;ll be using some npm scripts in order to move around finds before running my code. This was probably not the best method (that&apos;d be using Gulp), but the easiest to implement. &lt;/p&gt;
+&lt;p&gt;Here is an example of my &lt;code&gt;package.json&lt;/code&gt;&apos;s npm scripts: &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&quot;serve:generic&quot;: &quot;npm run generic &amp;#x26;&amp;#x26; ionic serve&quot;,
+&quot;generic&quot;: &quot;npm run generic:retailer &amp;#x26;&amp;#x26; npm run generic:assets &amp;#x26;&amp;#x26; npm run generic:theme&quot;,
+&quot;generic:retailer&quot;: &quot;copyfiles -au 3 \&quot;.retailer/generic/app/**/*\&quot; src/app&quot;,
+&quot;generic:assets&quot;: &quot;copyfiles -au 3 \&quot;.retailer/generic/assets/**/*\&quot; src/assets&quot;,
+&quot;generic:theme&quot;: &quot;copyfiles -au 2 .retailer/generic/theme/*.scss src&quot;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see all I&apos;m doing is moving files from a hidden folder (so it doesn&apos;t get included in build) and using &lt;a href=&quot;https://github.com/calvinmetcalf/copyfiles&quot;&gt;copyfiles&lt;/a&gt; to move and replace the files.&lt;/p&gt;
+&lt;p&gt;So now all I need to do to change my app&apos;s theme is to run &lt;code&gt;npm run serve:theme_name&lt;/code&gt; and it&apos;ll completely change the app to a custom stream I&apos;ve created.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Results and Comments&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;Using this method for a couple weeks has been awesome. The custom &lt;code&gt;.scss&lt;/code&gt; file has come in handy several times and the theme switching has worked will. &lt;/p&gt;
+&lt;p&gt;The biggest problem I&apos;ve had however is maintainence and new features. Making edits to sections of the copied files means making edits to the files of each theme instance, it adds up to a lot of edits. It requires careful attention to ensure that the new edits/features work for each theme - something that&apos;s a bit unruly in practice but is managable when not rushing.&lt;/p&gt;
+&lt;p&gt;Overall this is a really cool way to extend a single codebase for multiple clients.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Creating a "Swipe-to-Confirm" Component]]></title><description><![CDATA[The Amazon app features a Slide-to-Confirm element inspired by Apple's "Swipe to Unlock". Surprisingly, a similar component is nowhere on…]]></description><link>https://www.arjunkalburgi.com/writing/creating-a-slide-to-confirm-component/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/creating-a-slide-to-confirm-component/</guid><pubDate>Tue, 05 Nov 2019 15:20:33 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;The Amazon app features a Slide-to-Confirm element inspired by Apple&apos;s &quot;Swipe to Unlock&quot;. Surprisingly, a similar component is nowhere on the internet, so I&apos;ll need to create it myself.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Designers can use Slide-to-Confirm as a tool to help their users feel more secure (than a button that can be accidentally tapped) and more accomplished (takes more work to slide across the screen). Amazon uses it in their &quot;Buy Now&quot; flow to prevent accidental purchases. &lt;/p&gt;
-&lt;img src=&quot;./amazon2.png&quot; alt=&quot;amazon2&quot; style=&quot;zoom: 28%;&quot; /&gt;
-&lt;img src=&quot;./amazon3.jpeg&quot; alt=&quot;amazon3&quot; style=&quot;zoom:14.4%;&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;./amazon2.png&quot; alt=&quot;final&quot;&gt;
+&lt;img src=&quot;./amazon3.jpeg&quot; alt=&quot;final&quot;&gt;&lt;/p&gt;
 &lt;p&gt;The UX of this component is great! Showing green and changing the message as you swipe brings out the security and accomplishment feelings. Unfortunately, it&apos;s also highly custom.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Looking for similar&apos;s online&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The only similar Javascript-based components I could find online were this &lt;a href=&quot;https://codepen.io/bennettfeely/pen/jyGeJ&quot;&gt;codepen&lt;/a&gt;, this &lt;a href=&quot;https://www.davidbcalhoun.com/2011/implementing-iphones-slider-unlock-with-input-typerange/&quot;&gt;blog&lt;/a&gt;, and this &lt;a href=&quot;https://github.com/agentS/react-native-slider-button&quot;&gt;React Native library&lt;/a&gt;; none of which really come close to the functionality I&apos;m looking for. Android and iOS devs had something closer but I&apos;m looking for a Javascript and CSS solution. They all use the &lt;code&gt;&amp;#x3C;input type=&apos;range&apos;&lt;/code&gt; element, so let&apos;s start with that.&lt;/p&gt;
@@ -72,7 +129,7 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;However this made both text&apos;s appear on top of each other. &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/Users/smilinknight/projects/Arjun%20stuff/blog/content/blog/creating-a-slide-to-confirm-component/brokentext.png&quot; alt=&quot;brokentext&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./brokentext.png&quot; alt=&quot;brokentext&quot;&gt;&lt;/p&gt;
 &lt;p&gt;And adding  &lt;code&gt;overflow: hidden&lt;/code&gt; to the parent bar&apos;s does nothing (because the parent is not absolute as well). I&apos;m actually really stuck here... 🤔&lt;/p&gt;
 &lt;p&gt;In the end I went with not the most elegant solution, but I think with a CSS transition it can be okay. I used JS to switch the &lt;code&gt;z-index&lt;/code&gt; of the bars, so that the text essentially switches places and is covered by the other bar. &lt;/p&gt;
 &lt;p&gt;See it here:
@@ -116,7 +173,7 @@ if (currentX &amp;#x3C; dragWidth) {
         allowtransparency=&apos;true&apos; 
         allowfullscreen=&apos;true&apos; 
         style=&apos;width: 100%;&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/Users/smilinknight/projects/Arjun%20stuff/blog/content/blog/creating-a-slide-to-confirm-component/final.gif&quot; alt=&quot;final&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./final.gif&quot; alt=&quot;final&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Converting to Angular&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Now that I have the component in JS, I need it in Angular. This was simple enough overall, but had an annoying time making it work due to some scope bugs. After taking the weekend off and then running the code locally, I was able to figure them all out and have it all working. &lt;/p&gt;
 &lt;p&gt;I put the final version in CodePen here:
@@ -156,7 +213,7 @@ if (parseFloat(val)) {
 &lt;p&gt;But that step is required to ensure the differences between &lt;code&gt;&apos;0.04&apos;&lt;/code&gt; and &lt;code&gt;0.40&lt;/code&gt; and &lt;code&gt;4.00&lt;/code&gt; are all taken care of. :smile: &lt;/p&gt;
 &lt;p&gt;It&apos;s actually the final line where the redundancy comes. I use &lt;code&gt;parseFloat&lt;/code&gt; for the case of &lt;code&gt;00.040&lt;/code&gt; where there maybe extra zeros present. And  &lt;code&gt;toFixed(2)&lt;/code&gt; is for the case when &lt;code&gt;6.00&lt;/code&gt; simplifies to &lt;code&gt;6&lt;/code&gt;. &lt;/p&gt;
 &lt;p&gt;And it all works: &lt;/p&gt;
-&lt;img src=&quot;./numberinput.gif&quot; alt=&quot;Number input gif showing how it works&quot; style=&quot;zoom:50%;&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;./numberinput.gif&quot; alt=&quot;Number input gif showing how it works&quot;&gt;&lt;/p&gt;
 &lt;p&gt;If there&apos;s a more efficient way to do this please let me know :D &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://arjunkalburgi.github.io/assets/Graphics/Backgrounds/leaves-white.jpg&quot; alt=&quot;leaves&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Moving my blog to Gatsby]]></title><description><![CDATA[After seeing a shift in the industry from Medium, it's time I leave as well and host my blog on my own site. This shouldn't be too bad of a…]]></description><link>https://www.arjunkalburgi.com/writing/moving-my-blog-to-gatsby/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/moving-my-blog-to-gatsby/</guid><pubDate>Sun, 15 Sep 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;After seeing a shift in the industry from Medium, it&apos;s time I leave as well and host my blog on my own site.&lt;/p&gt;
@@ -169,7 +226,7 @@ if (parseFloat(val)) {
 &lt;p&gt;This gave me a large list of markdown files that looked like &lt;code&gt;2017-04-09_Security-Review--UX-of-Canadian-banking-applications-53aa77dd2cf4.md&lt;/code&gt;. &lt;/p&gt;
 &lt;h3&gt;Set Up Gatsby Blog&lt;/h3&gt;
 &lt;p&gt;Gatsby&apos;s got a &lt;a href=&quot;https://github.com/gatsbyjs/gatsby-starter-blog&quot;&gt;blog-starter&lt;/a&gt; repo, which was quick to clone and get up and running.&lt;/p&gt;
-&lt;img src=&quot;./initdeploy.png&quot; alt=&quot;initdeploy&quot; style=&quot;zoom: 50%;&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;./initdeploy.png&quot; alt=&quot;initdeploy&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Then using some bash scripts to format my markdown posts to the file structure Gatsby expects. &lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# make the new directory
 $ for f in *.md ; do mkdir -p ../blog/$f ; cp $f ../blog/$f/index.md ; done 
@@ -192,7 +249,7 @@ $ for d in * ; do mv $d ${d,,} ; done
 &lt;h3&gt;Styling&lt;/h3&gt;
 &lt;p&gt;Honestly I could spend all day doing this, but for now I just want something quick. I&apos;ll use a lot of the CSS I already have from my &lt;a href=&quot;www.arjunkalburgi.com&quot;&gt;website&lt;/a&gt;. But for the blog posts, for now I&apos;ll just copy what Varun&apos;s got on &lt;a href=&quot;varun.ca/writing&quot;&gt;his site&lt;/a&gt;, it&apos;s gorgeous.&lt;/p&gt;
 &lt;p&gt;Despite the simplicity of this task, it was actually quite time consuming to style the blog. Based on my commit history, it was the markdown posts that took forever to style. For some reason, Gatsby does not have this built into their default style for their starter package I used, making me wish I knew to use a theme&apos;d starter from the beginning (there&apos;s no way to change your theme afterwards.) &lt;/p&gt;
-&lt;img src=&quot;./result.png&quot; alt=&quot;image-20190915215432021&quot; style=&quot;zoom:50%;&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;./result.png&quot; alt=&quot;The result&quot;&gt;&lt;/p&gt;
 &lt;h3&gt;Results&lt;/h3&gt;
 &lt;p&gt;Pretty happy with the public facing results, but on the internal there&apos;s a couple things I lose. &lt;/p&gt;
 &lt;p&gt;One is that I don&apos;t have the nice editor Medium provides. I installed &lt;a href=&quot;https://typora.io/&quot;&gt;Typora&lt;/a&gt; to fix this (using it right now). It lets me paste images into the markdown files and helps me out with presenting my images as well. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to use Modals in Ionic v4]]></title><description><![CDATA[After taking much too long to figure this out myself, I’m writing a blog post about it to help the next dev. This should be easy, but the…]]></description><link>https://www.arjunkalburgi.com/writing/How-to-use-Modals-in-Ionic-v4/</link><guid isPermaLink="false">https://www.arjunkalburgi.com/writing/How-to-use-Modals-in-Ionic-v4/</guid><pubDate>Fri, 16 Aug 2019 17:03:42 GMT</pubDate><content:encoded>&lt;blockquote&gt;
