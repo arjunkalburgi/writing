@@ -26,7 +26,7 @@
     },
     data () {
       return {
-          number_of_leaves: 24,
+          number_of_leaves: 23,
           list: [
             {link: "https://arjunkalburgi.com/writing",     icon: "blog"},
             {link: "https://twitter.com/arjunkalburgi",     icon: "twitter"},
