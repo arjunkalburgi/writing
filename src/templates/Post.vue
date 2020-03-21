@@ -70,7 +70,57 @@
     }
 
     &_content {
-      & > p { margin: 50px 0; }
+      /deep/ p { margin: 40px 0; line-height: 30px; }
+
+      /deep/ li { margin: 5px 0; }
+      /deep/ li p { margin: 5px 0; }
+
+      /deep/ a {
+        color: #12a962 !important;
+        box-shadow: 0 4px 0 0 rgba(18,169,98,.32);
+        text-decoration: none;
+      }
+
+      /deep/ h1, /deep/ h2 {
+        font: var(--bold-text);
+        font-size: 22px;
+        margin-top: 120px;
+      }
+
+      /deep/ h3 {
+        font: var(--bold-text);
+        font-size: 20px;
+        margin-top: 100px;
+      }
+
+      /deep/ strong, /deep/ h4, /deep/ h5, /deep/ h6 {
+        font: var(--bold-text);
+        font-size: 18px;
+        margin-top: 80px;
+      }
+
+      /deep/ img {
+        width: 70%;
+      }
+
+      /deep/ blockquote {
+        border-left: .32813rem solid #12a962;
+        margin-left: -1.75rem;
+        margin-right: 1.75rem;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 1.42188rem;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.75rem;
+        font-size: 1.20112rem;
+        line-height: 1.75rem;
+        color: hsla(0,0%,0%,0.59);
+        font-style: italic;
+      }
     }
   }
+
+  div /deep/ p { margin: 50px 0; }
+
 </style>

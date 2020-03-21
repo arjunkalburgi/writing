@@ -9,7 +9,7 @@ keywords: []
 slug: /@askalburgi/playing-the-infinite-job-search-game-4e4b4b406425
 ---
 
-> Recently I got an email expressing concern for finding a job, in my reply I explain what I call ‘**The Infinite Job Search Game’.**
+> Recently I got an email expressing concern for finding a job, in my reply I explain what I call ‘The Infinite Job Search Game’.
 
 Recently I got an email expressing concern for finding a job. The sender is about to start a degree in Computer Science and was worried that Computer Engineering would have been the better choice for more job opportunities at the end of his degree.
 
@@ -17,7 +17,7 @@ After debunking the difference between the two disciplines, my advice to him was
 
 While searching for a job after my degree, I realized that networking and job search is also an infinite game.
 
-**The Infinite Job Search Game**
+## The Infinite Job Search Game
 
 1\. Get involved with something
 
@@ -32,8 +32,7 @@ While searching for a job after my degree, I realized that networking and job se
 6\. Repeat   
 6a. Contact the previous mentors every so often for coffee/questions/life updates
 
-**Mentorship is key to this game.**
-
+##### Mentorship is key to this game.
 This brings purpose to your networking, because it’s about finding and learning from mentors instead of simply trying to meet someone. The more you learn, the more questions you have, the more you try to meet people that can answer those questions and help you along your journey.
 
 These days, I try to email/text/contact people from my (now long) list of mentors at least once a week - I’ll actively seek out questions to ask them. Thanks to context, having a conversation with someone can be better than Googling it.
@@ -43,10 +42,9 @@ Companies care about finding people that are good people, not really about smart
 Overall, I’m really excited for the future Computer Science graduate that emailed me. I wonder how in 4 years his knowledge of The Infinite Job Search Game will boost his learnings and opportunities.
 
 ![Wish I knew the Infinite Job Search Game back in 2013](https://cdn-images-1.medium.com/max/800/0*used5UdqOzSWNxql)
+
 Wish I knew the Infinite Job Search Game back in 2013
 
 #### A quick note on job postings
 
 I actually don’t look at job postings at all. They’re useless, and they’re slow. I’d rather them be thinking about me in their meetings while they’re creating the role itself (this has actually happened multiple times). That happens by getting to know them, and with referrals.
-
-![](https://cdn-images-1.medium.com/max/800/1*k3x4eNfGaG54H9skwyKeSA.png)
