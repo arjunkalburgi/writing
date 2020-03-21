@@ -2,10 +2,10 @@
   <div class="PostList">
     <ul class="PostList_details">
       <li>
-        <smaller class="PostList_details--date" v-html="post.date" />
+        <p class="PostList_detail PostList_detail--date" v-html="post.date"></p>
       </li>
       <li>
-        <smaller class="PostList_details--time">{{post.timeToRead}} min read</smaller>
+        <p class="PostList_detail PostList_detail--time">{{post.timeToRead}} min read</p>
       </li>
     </ul>
     
@@ -66,11 +66,14 @@
 
         &:not(:first-of-type) { margin: 0 0 0 20px; }
       }
-
-      p { margin: 0; }
     }
 
-    &_title { margin: 20px 0; }
+    &_detail {
+      margin: 0; 
+      font-size: smaller;
+    }
+
+    &_title { margin: 5px 0 20px; }
 
     &_button { display: inline-block; margin-top: 2px; }
   }

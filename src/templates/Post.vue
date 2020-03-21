@@ -13,9 +13,7 @@
         </ul>
         <h2 class="post_title">{{$page.post.title}}</h2>
       </div>
-      <div class="post_content">
-        <div v-html="$page.post.content" />
-      </div>
+      <div class="post_content" v-html="$page.post.content" />
     </div>
   </Layout>
 </template>
@@ -43,7 +41,6 @@
     },
   }
 </script>
-
 
 <style scoped lang="scss">
   .post {
