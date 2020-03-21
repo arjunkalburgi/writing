@@ -115,12 +115,12 @@
         margin-bottom: 1.75rem;
         font-size: 1.20112rem;
         line-height: 1.75rem;
-        color: hsla(0,0%,0%,0.59);
+        color: hsla(0,0%,0%,0.8);
         font-style: italic;
       }
+
+
+
     }
   }
-
-  div p { margin: 50px 0; }
-
 </style>

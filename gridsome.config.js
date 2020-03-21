@@ -17,5 +17,12 @@ module.exports = {
         route: '/:slug'
       }
     }
-  ]
+  ],
+  transformers: {
+    remark: {
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  }
 }
