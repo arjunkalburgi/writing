@@ -142,8 +142,8 @@
         @media (prefers-color-scheme: dark) { color: #FFFFFFcc; }
       }
 
-      :not(pre) > code, pre { border-radius: 5px; font-size: 13px; }
-      p code, p pre { font-size: 17px; }
+      :not(pre) > code, pre { font-size: 13px; }
+      p code, p pre { font-size: 15px; }
 
     }
   }

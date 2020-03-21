@@ -1,13 +1,24 @@
 :root {
-  --code-bg: #bfbfbf;
+  --code-bg: #f2f2f2;
   --code-title-bg-color: #cbecc7;
   --code-title-color: rgb(0, 0, 0);
   --code-line-bg: rgb(2, 55, 81);
   --code-line-border-color: rgb(2, 155, 206);
 
-  --block-text: #005d31;
+  --block-text: #0E7F4A;
   --inline-bg: #eefaed;
   --inline-text: #12a962;
+
+  --comment-text: #5F7272;
+  --punctuation-text: #9846cf;
+  --namespace-text: rgb(45, 86, 148);
+  --symbol-text: #737b1b;
+  --tag-text: #297B6C;
+  --bool-text: #C83951;
+  --num-text: #BB4B2A;
+  --const-text: #3A69D2;
+  --string-text: #53791B;
+  --classname-text: #A55C04;
 }
 
 code[class*="language-"],
@@ -73,16 +84,16 @@ pre {
 .token.comment,
 .token.prolog,
 .token.cdata {
-  color: #637777;
+  color: var(--comment-text);
   font-style: italic;
 }
 
 .token.punctuation {
-  color: #c792ea;
+  color: var(--punctuation-text);
 }
 
 .namespace {
-  color: #b2ccd6;
+  color: var(--namespace-text);
 }
 
 .token.deleted {
@@ -92,39 +103,39 @@ pre {
 
 .token.symbol,
 .token.property {
-  color: #80cbc4;
+  color: var(--symbol-text);
 }
 
 .token.tag,
 .token.operator,
 .token.keyword {
-  color: #7fdbca;
+  color: var(--tag-text);
 }
 
 .token.boolean {
-  color: #ff5874;
+  color: var(--bool-text);
 }
 
 .token.number {
-  color: #f78c6c;
+  color: var(--num-text);
 }
 
 .token.constant,
 .token.function,
 .token.builtin,
 .token.char {
-  color: #82aaff;
+  color: var(--const-text);
 }
 
 .token.selector,
 .token.doctype {
-  color: #c792ea;
+  color: var(--punctuation-text);
   font-style: italic;
 }
 
 .token.attr-name,
 .token.inserted {
-  color: #addb67;
+  color: var(--string-text);
   font-style: italic;
 }
 
@@ -133,13 +144,13 @@ pre {
 .token.entity,
 .language-css .token.string,
 .style .token.string {
-  color: #addb67;
+  color: var(--string-text);
 }
 
 .token.class-name,
 .token.atrule,
 .token.attr-value {
-  color: #ffcb8b;
+  color: var(--classname-text);
 }
 
 .token.regex,
@@ -261,6 +272,7 @@ pre[class*="language-"].line-numbers > code {
   margin: 0.5em 0;
   padding: 1em;
   overflow: auto;
+  border-radius: 5px;
 }
 
 .gridsome-highlight pre[class*="language-"] {
@@ -284,8 +296,21 @@ pre[class*="language-"].line-numbers > code {
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --code-bg: #103623;
+
     --block-text: #83d4af;
     --inline-bg: #103623;
     --inline-text: #83d4af;
+
+    --comment-text: #a0bdbd;
+    --punctuation-text: #d5b7ea;
+    --namespace-text: #dfc1d7;
+    --symbol-text: #a8ded8;
+    --tag-text: #7fdbca;
+    --bool-text: #fe9faf;
+    --num-text: #f3a68e;
+    --const-text: #c5d4f5;
+    --string-text: #bee485;
+    --classname-text: #ffcb8b;
   }
 }
