@@ -115,11 +115,13 @@
         margin-bottom: 1.75rem;
         font-size: 1.20112rem;
         line-height: 1.75rem;
-        color: hsla(0,0%,0%,0.8);
+        color: #000000cc;
         font-style: italic;
+        @media (prefers-color-scheme: dark) { color: #FFFFFFcc; }
       }
 
-
+      :not(pre) > code, pre { border-radius: 5px; font-size: 13px; }
+      p code, p pre { font-size: 17px; }
 
     }
   }

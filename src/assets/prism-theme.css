@@ -1,289 +1,291 @@
-/* Generated with http://k88hudson.github.io/syntax-highlighting-theme-generator/www */
-/* http://k88hudson.github.io/react-markdocs */
-/**
- * @author k88hudson
- *
- * Based on prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
- */
-/*********************************************************
-* General
-*/
-pre[class*="language-"],
-code[class*="language-"] {
-  color: #12a962;
-  font-size: 13px;
-  text-shadow: none;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  direction: ltr;
+:root {
+  --code-bg: #bfbfbf;
+  --code-title-bg-color: #cbecc7;
+  --code-title-color: rgb(0, 0, 0);
+  --code-line-bg: rgb(2, 55, 81);
+  --code-line-border-color: rgb(2, 155, 206);
+
+  --block-text: #005d31;
+  --inline-bg: #eefaed;
+  --inline-text: #12a962;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: var(--block-text);
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
+  word-wrap: normal;
   line-height: 1.5;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
-pre[class*="language-"]::selection,
-code[class*="language-"]::selection,
-pre[class*="language-"]::mozselection,
-code[class*="language-"]::mozselection {
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
   text-shadow: none;
-  background: #bfbfbf;
+  background: rgba(29, 59, 83, 0.99);
 }
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: rgba(29, 59, 83, 0.99);
+}
+
 @media print {
-  pre[class*="language-"],
-  code[class*="language-"] {
+  code[class*="language-"],
+  pre[class*="language-"] {
     text-shadow: none;
   }
 }
-pre[class*="language-"] {
+
+/* Code blocks */
+pre {
   padding: 1em;
-  margin: .5em 0;
+  margin: 0.5em 0;
   overflow: auto;
-  background: #f0f7f4;
 }
-:not(pre) > code[class*="language-"] {
-  padding: .1em .3em;
-  border-radius: .3em;
-  color: #12a962;
-  background: #d4f7d3;
+
+:not(pre) > code,
+pre {
+  color: var(--inline-text);
+  background: var(--inline-bg);
 }
-/*********************************************************
-* Tokens
-*/
-.namespace {
-  opacity: .7;
+
+:not(pre) > code {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
 }
+
 .token.comment,
 .token.prolog,
-.token.doctype,
 .token.cdata {
-  color: #93a1a1;
+  color: #637777;
+  font-style: italic;
 }
+
 .token.punctuation {
-  color: #999999;
+  color: #c792ea;
 }
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
+
+.namespace {
+  color: #b2ccd6;
+}
+
 .token.deleted {
-  color: #005d31;
+  color: rgba(239, 83, 80, 0.56);
+  font-style: italic;
 }
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #93a1a1;
+
+.token.symbol,
+.token.property {
+  color: #80cbc4;
 }
+
+.token.tag,
 .token.operator,
-.token.entity,
+.token.keyword {
+  color: #7fdbca;
+}
+
+.token.boolean {
+  color: #ff5874;
+}
+
+.token.number {
+  color: #f78c6c;
+}
+
+.token.constant,
+.token.function,
+.token.builtin,
+.token.char {
+  color: #82aaff;
+}
+
+.token.selector,
+.token.doctype {
+  color: #c792ea;
+  font-style: italic;
+}
+
+.token.attr-name,
+.token.inserted {
+  color: #addb67;
+  font-style: italic;
+}
+
+.token.string,
 .token.url,
+.token.entity,
 .language-css .token.string,
 .style .token.string {
-  color: #a67f59;
-  background: #ffffff;
+  color: #addb67;
 }
+
+.token.class-name,
 .token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #000000;
+.token.attr-value {
+  color: #ffcb8b;
 }
-.token.function {
-  color: #f0c46c;
-}
+
 .token.regex,
 .token.important,
 .token.variable {
-  color: #ee9900;
+  color: var(--block-text);
 }
+
 .token.important,
 .token.bold {
   font-weight: bold;
 }
+
 .token.italic {
   font-style: italic;
 }
-.token.entity {
-  cursor: help;
-}
-/*********************************************************
-* Line highlighting
-*/
-pre[data-line] {
+
+pre[class*="language-"].line-numbers {
   position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
 }
-pre[class*="language-"] > code[class*="language-"] {
+
+pre[class*="language-"].line-numbers > code {
   position: relative;
-  z-index: 1;
+  white-space: inherit;
 }
-.line-highlight {
+
+.line-numbers .line-numbers-rows {
   position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  background: #d2f7c6;
-  box-shadow: inset 5px 0 0 #12a962;
-  z-index: 0;
   pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+.command-line-prompt {
+  border-right: 1px solid #999;
+  display: block;
+  float: left;
+  font-size: 100%;
+  letter-spacing: -1px;
+  margin-right: 1em;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.command-line-prompt > span:before {
+  color: #999;
+  content: " ";
+  display: block;
+  padding-right: 0.8em;
+}
+
+.command-line-prompt > span[data-user]:before {
+  content: "[" attr(data-user) "@" attr(data-host) "] $";
+}
+
+.command-line-prompt > span[data-user="root"]:before {
+  content: "[" attr(data-user) "@" attr(data-host) "] #";
+}
+
+.command-line-prompt > span[data-prompt]:before {
+  content: attr(data-prompt);
+}
+
+.gridsome-code-title {
+  position: relative;
+  margin-bottom: -0.8em;
+  background-color: var(--code-title-bg-color);
+  color: var(--code-title-color);
+  font-size: 0.875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+ monospace;
+}
+
+.gridsome-highlight-code-line {
+  background-color: var(--code-line-bg);
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid var(--code-line-border-color);
+}
+
+.gridsome-highlight {
+  background-color: var(--code-bg);
+  position: relative;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gridsome-highlight pre[class*="language-"] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: initial;
+  float: left;
+  /* 1 */
+  min-width: 100%;
+  /* 2 */
+}
+
+.gridsome-highlight pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
 }
 
 @media (prefers-color-scheme: dark) {
-  /* Generated with http://k88hudson.github.io/syntax-highlighting-theme-generator/www */
-  /* http://k88hudson.github.io/react-markdocs */
-  /**
-  * @author k88hudson
-  *
-  * Based on prism.js default theme for JavaScript, CSS and HTML
-  * Based on dabblet (http://dabblet.com)
-  * @author Lea Verou
-  */
-  /*********************************************************
-  * General
-  */
-  pre[class*="language-"],
-  code[class*="language-"] {
-    color: #64d788;
-    font-size: 13px;
-    text-shadow: none;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    line-height: 1.5;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-  }
-  pre[class*="language-"]::selection,
-  code[class*="language-"]::selection,
-  pre[class*="language-"]::mozselection,
-  code[class*="language-"]::mozselection {
-    text-shadow: none;
-    background: #ffffff;
-  }
-  @media print {
-    pre[class*="language-"],
-    code[class*="language-"] {
-      text-shadow: none;
-    }
-  }
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: .5em 0;
-    overflow: auto;
-    background: #103723;
-  }
-  :not(pre) > code[class*="language-"] {
-    padding: .1em .3em;
-    border-radius: .3em;
-    color: #005d31;
-    background: #c6dfc3;
-  }
-  /*********************************************************
-  * Tokens
-  */
-  .namespace {
-    opacity: .7;
-  }
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #c0ced0;
-  }
-  .token.punctuation {
-    color: #999999;
-  }
-  .token.property,
-  .token.tag,
-  .token.boolean,
-  .token.number,
-  .token.constant,
-  .token.symbol,
-  .token.deleted {
-    color: #bcffd9;
-  }
-  .token.selector,
-  .token.attr-name,
-  .token.string,
-  .token.char,
-  .token.builtin,
-  .token.inserted {
-    color: #c0ced0;
-  }
-  .token.operator,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .style .token.string {
-    color: #d9af82;
-    background: #285137;
-  }
-  .token.atrule,
-  .token.attr-value,
-  .token.keyword {
-    color: #ffffff;
-  }
-  .token.function {
-    color: #f0c46c;
-  }
-  .token.regex,
-  .token.important,
-  .token.variable {
-    color: #f3aa3c;
-  }
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-  .token.italic {
-    font-style: italic;
-  }
-  .token.entity {
-    cursor: help;
-  }
-  /*********************************************************
-  * Line highlighting
-  */
-  pre[data-line] {
-    position: relative;
-  }
-  pre[class*="language-"] > code[class*="language-"] {
-    position: relative;
-    z-index: 1;
-  }
-  .line-highlight {
-    position: absolute;
-    left: 0;
-    right: 0;
-    padding: inherit 0;
-    margin-top: 1em;
-    background: #285137;
-    box-shadow: inset 5px 0 0 #38794c;
-    z-index: 0;
-    pointer-events: none;
-    line-height: inherit;
-    white-space: pre;
+  :root {
+    --block-text: #83d4af;
+    --inline-bg: #103623;
+    --inline-text: #83d4af;
   }
 }

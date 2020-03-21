@@ -20,8 +20,11 @@ module.exports = {
   ],
   transformers: {
     remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
       plugins: [
-        '@gridsome/remark-prismjs'
+        'gridsome-plugin-remark-prismjs-all',
       ]
     }
   }

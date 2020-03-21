@@ -118,7 +118,7 @@
   @media (prefers-color-scheme: dark) {
     :root { --brand-colour: var(--brand-colourdark); --brand-textcolour: var(--brand-contrastlight); }
     body, .contact { background: var(--brand-contrastdark) !important; }
-    .image { filter: brightness(0.6); }
+    img { filter: brightness(0.8); }
     .hero_nameImg { 
       &.light { display: none; }
       &.dark { display: block; }
