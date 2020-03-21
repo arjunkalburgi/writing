@@ -2,6 +2,7 @@
   <Layout>
     <Hero />
     <section class="posts section">
+      <BackgroundAnimation :total='number_of_leaves' />
       <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
     </section>
 
@@ -44,6 +45,7 @@
 
   import Hero from './../components/layout/Hero.vue'
   import PostList from './../components/layout/PostList.vue'
+  import BackgroundAnimation from './../components/system/BackgroundAnimation.vue'
 
   export default {
     name: 'Blog',
@@ -53,6 +55,10 @@
     components: {
       Hero,
       PostList,
+      BackgroundAnimation
+    },
+    data () {
+      return { number_of_leaves: 400, }
     }
   }
 </script>
@@ -120,6 +126,8 @@
   .hero {
     margin-bottom: 25vh;
   }
+
+  .posts { position: relative; }
 
   // DARK MODE 
   @media (prefers-color-scheme: dark) {

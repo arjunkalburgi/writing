@@ -25,17 +25,17 @@
 
     },
     data () {
-    return {
-        number_of_leaves: 24,
-        list: [
-          {link: "https://arjunkalburgi.com/writing",     icon: "blog"},
-          {link: "https://twitter.com/arjunkalburgi",     icon: "twitter"},
-          {link: "https://github.com/arjunkalburgi",      icon: "github"},
-          {link: "https://linkedin.com/in/arjunkalburgi", icon: "linkedin"},
-          {link: "https://codepen.io/arjunkalburgi",      icon: "codepen"},
-          {link: "mailto:askalburgi@gmail.com",           icon: "email"},
-        ]
-    }
+      return {
+          number_of_leaves: 24,
+          list: [
+            {link: "https://arjunkalburgi.com/writing",     icon: "blog"},
+            {link: "https://twitter.com/arjunkalburgi",     icon: "twitter"},
+            {link: "https://github.com/arjunkalburgi",      icon: "github"},
+            {link: "https://linkedin.com/in/arjunkalburgi", icon: "linkedin"},
+            {link: "https://codepen.io/arjunkalburgi",      icon: "codepen"},
+            {link: "mailto:askalburgi@gmail.com",           icon: "email"},
+          ]
+      }
     },
     methods: {
 
