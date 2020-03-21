@@ -45,5 +45,3 @@ And most importantly, I had so much fun. 100% would do it all over again.
 ![](https://cdn-images-1.medium.com/max/800/0*pBG7K09M2bK_3ZtC)
 
 Also interesting, everyone at the beach (in Chennai, India) called each other “bro” 😂 I guess surfing culture is universal?
-
-![](https://cdn-images-1.medium.com/max/800/1*hw6Xjc3RJxvdLnrbYrERPg.jpeg)

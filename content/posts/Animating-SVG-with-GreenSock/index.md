@@ -42,5 +42,3 @@ I have a theory as to why there is that strange sharpness of the dots during the
 ![](https://cdn-images-1.medium.com/max/800/1*cuvajqmhcC8_croNpCLZFg.png)
 
 Thank you! Please let me know if you have any suggestions!
-
-![](https://cdn-images-1.medium.com/max/800/1*hw6Xjc3RJxvdLnrbYrERPg.jpeg)

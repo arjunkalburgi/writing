@@ -27,5 +27,3 @@ I did it quite hastily, but I’m impressed with myself how painless and quick i
 I’m definitely going to be adding more and more to my Style Guide website, and be making more of these for other websites and styles I work on!
 
 See the quick CSS work here:
-
-![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

@@ -22,5 +22,3 @@ I realized after discussing with Jeph yesterday that my website isn’t the fron
 That’s why my new website doesn’t have content on it, simply featuring the “meme” version of my logo on a simple canvas, a description of my purpose, links to those platforms, and direct links to contact me.
 
 The website isn’t live just yet, but here’s the [github preview](https://github.com/askalburgi/askalburgi.github.io/tree/websiteAug2017Curr)
-
-![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

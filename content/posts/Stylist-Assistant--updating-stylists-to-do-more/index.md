@@ -133,5 +133,3 @@ The project as it stands relies on stylists to help the app build fashionable ou
 Data is a great tool that can be leveraged to do great things, but clean and accurate data is really hard to come by and without it those great things aren’t.
 
 Tell me what you think about the project via [Twitter](http://twitter.com/askalburgi) or [LinkedIn](https://www.linkedin.com/in/arjun-kalburgi-82b25058/)!
-
-![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

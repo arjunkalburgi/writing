@@ -38,5 +38,3 @@ Where elements don’t depend on their position but rather their function and de
 I changed the HTML of my buttons, but you can still see that I now have `st-buttonBg` as the Element class and `st-buttonBg--fine` as the Modifier class.
 
 That’s a quick lesson I learned when using BEM. Thanks to [Paul Grant](http://twitter.com/cssinate) for helping me learn the lesson and encouraging me to write about it!
-
-![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

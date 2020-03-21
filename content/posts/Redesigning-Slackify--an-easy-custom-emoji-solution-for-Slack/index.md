@@ -137,5 +137,3 @@ Install the expo app for [Android](https://play.google.com/store/apps/details?id
 [Go to this link!](https://snack.expo.io/@askalburgi/github.com-askalburgi-slackify) You’ll see all the code and be able to try out the prototype.
 
 Tell me how it is via [Twitter](http://twitter.com/askalburgi) or [Instagram](http://instagram.com/askalburgi)!
-
-![](https://cdn-images-1.medium.com/max/800/1*hw6Xjc3RJxvdLnrbYrERPg.jpeg)

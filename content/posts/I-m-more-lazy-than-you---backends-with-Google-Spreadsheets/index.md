@@ -72,5 +72,3 @@ After the Spreadsheet is updated, Google/Sheety take some time for the changes t
 ### The Results
 
 Visit [**TheRadList**](https://medium.com/arjunkalburgi/theradlist-a-new-side-product-e07bf0d3fdd8) today to see Sheety in action! Well it’s not that exciting, you won’t even see it, but it’s lazy and that’s what counts.
-
-![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

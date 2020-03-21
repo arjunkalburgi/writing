@@ -89,5 +89,3 @@ In the end though, Junto will connect the three stakeholders and the yoga indust
 #### View the final project here:
 
 *   [Figma](https://www.figma.com/file/CtaPNlceNomro6r7QTPWAJ/HiFi-Final)
-
-![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

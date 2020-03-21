@@ -125,5 +125,3 @@ Quick shoutout to the company I’m working for, Krugo. I’m working on getting
 Krugo helps groups of friends collaboratively plan trips by finding events, buying tickets and getting a place to stay. Can’t wait to take my own Krugo soon 😜
 
 Check ’em out on [Medium](https://medium.com/@krugo) or get the [app for iOS](https://krugotravel.com/). Android coming soon!
-
-![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

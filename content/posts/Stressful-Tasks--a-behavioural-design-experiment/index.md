@@ -94,5 +94,3 @@ I think the best improvement would be to introduce a bottom fixed chat style tex
 [Go to this link!](http://askalburgi.github.io/Stressful-Tasks) The app is on the web, so you can try it on your desktop or on your phone.
 
 Tell me how it is via [Twitter](http://twitter.com/askalburgi) or [Instagram](http://instagram.com/askalburgi)!
-
-![](https://cdn-images-1.medium.com/max/800/1*hw6Xjc3RJxvdLnrbYrERPg.jpeg)

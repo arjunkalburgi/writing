@@ -161,6 +161,3 @@ Thanks for reading!
 
 
 
-
-
-![some leaves to end with](https://www.arjunkalburgi.com/assets/Graphics/Backgrounds/leaves-white.jpg)

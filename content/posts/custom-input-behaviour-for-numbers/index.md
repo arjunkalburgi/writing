@@ -50,6 +50,3 @@ And it all works:
 
 If there's a more efficient way to do this please let me know :D 
 
-
-
-![leaves](https://arjunkalburgi.github.io/assets/Graphics/Backgrounds/leaves-white.jpg)

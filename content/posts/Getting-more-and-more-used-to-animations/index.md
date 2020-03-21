@@ -35,5 +35,3 @@ Next I’m going to try recreating this gif in After Effects and using Lottie to
 ![](https://cdn-images-1.medium.com/max/800/1*OXD9RfgmQzgVODT3_xj08A.gif)
 
 Post to come about my Online Library soon, just got to get these animations done :)
-
-![](https://cdn-images-1.medium.com/max/800/1*hw6Xjc3RJxvdLnrbYrERPg.jpeg)

@@ -36,5 +36,3 @@ So I’ve got:
 🤷🏾‍ Oh well.
 
 If you know how I could have done this _properly_ in React-Native, **please let me know!** I really want to learn.
-
-![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

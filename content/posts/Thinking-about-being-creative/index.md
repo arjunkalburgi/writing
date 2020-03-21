@@ -26,5 +26,3 @@ Another thing I learned is that the word creative is misused when people say “
 There are so many ways to be creative and we’re all creative in so many ways. Any type of organizing or critical thinking is in fact creativity. It took me a long time to learn this and I think I’m still understanding it.
 
 I kept the word _creative_ in the captions of the pictures because I wanted to make one point not two. Too confusing otherwise
-
-![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

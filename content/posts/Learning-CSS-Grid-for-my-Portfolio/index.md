@@ -50,6 +50,3 @@ And just like that. We have our completely old website with a brand new grid lay
 ![](https://cdn-images-1.medium.com/max/400/1*tT72BY7voH4t1u4L1uOIww.png)
 
 Especially in the HTML, I was able to reduce a lot. Honestly it speaks more to the terrible HTML I had before than to how great the Grid System is, but either way, I was able to fix the issue that I had!
-
-![Image for the caption lol](https://cdn-images-1.medium.com/max/800/1*XnF2eYbJ32jpOj2pE6atHA.png)
-Image for the caption lol![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

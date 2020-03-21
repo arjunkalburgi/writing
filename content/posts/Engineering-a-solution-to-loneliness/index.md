@@ -23,5 +23,3 @@ I’ve completely diversified the amount of people and projects I spend time wit
 
 I’m sooooo proud of myself. But I’m not content, I guess that’s growth mindset for ya.
 
-![Reflecting on life in the glow of the sun. I call it, growth.](https://cdn-images-1.medium.com/max/800/1*RdfHmg9CrUkkUfreOj0wuw.png)
-Reflecting on life in the glow of the sun. I call it, growth.![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

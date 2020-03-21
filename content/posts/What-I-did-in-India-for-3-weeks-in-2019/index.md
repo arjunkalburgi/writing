@@ -26,4 +26,3 @@ It would be immature and ignorant of me to say anything definitive about what I 
 One day I hope to do this more often and take it a step further by building small solutions around some of the things I learn.
 
 ![](https://cdn-images-1.medium.com/max/800/0*YoQVGXNrRz9j9yus)
-![](https://cdn-images-1.medium.com/max/800/0*4y7h0OypftY05vCt.jpg)

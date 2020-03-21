@@ -36,5 +36,3 @@ Slackify is an Expo app that allows users to choose/take photos which then get r
 I can’t wait to find out how turning a moment into a _meme for the team_ is taken by my slack team. I’m optimistic it’ll be awesome.
 
 > Links: [Devpost](https://devpost.com/software/auto-apply), [Github](https://github.com/askalburgi/slackify), [Youtube](https://youtu.be/Hseg7avgAWk)
-
-![](https://cdn-images-1.medium.com/max/800/1*OoTeOBZ4tF09RWuXkXNihA.jpeg)

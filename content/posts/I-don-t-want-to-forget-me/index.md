@@ -29,5 +29,3 @@ Clearly photos aren’t enough to satisfy that main question. But videos could b
 So I’m going to start vlogging again, just for myself. And not necessarily about something interesting, I just want to tell my future self about my current self and how life is going. How I feel and how I think.
 
 Maybe if interesting things are happening in my life I’ll edit it together and post it. But right now it’s more important to just film. I don’t want to forget me.
-
-![](https://cdn-images-1.medium.com/max/800/1*hw6Xjc3RJxvdLnrbYrERPg.jpeg)
