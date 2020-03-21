@@ -34,8 +34,22 @@
 
   export default {
     name: 'Blog',
-    metaInfo: {
-      title: '',
+    metaInfo() {
+      return {
+        title: "Arjun Kalburgi Blog",
+        meta: [
+          { property: "og:title", content: "Arjun Kalburgi Blog" },
+          { property: "og:image", content: 'https://www.arjunkalburgi.com/writing/sra.jpg' },
+          { property: "og:type", content: "article" },
+          { property: "og:description", content: "I write about my experiences and learnings. Sometimes I post my creative expressions, experiments and ideas, all in the name of sharing and expressing myself." },
+
+          { name: "twitter:description", content: "I write about my experiences and learnings. Sometimes I post my creative expressions, experiments and ideas, all in the name of sharing and expressing myself." },
+          { name: "twitter:title", content: "Arjun Kalburgi Blog" },
+          { name: "twitter:site", content: "@arjunkalburgi" },
+          { name: "twitter:image", content: 'https://www.arjunkalburgi.com/writing/sra.jpg' },
+          { name: "twitter:creator", content: "@arjunkalburgi" },
+        ],
+      }
     },
     components: {
       Hero,
