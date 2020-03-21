@@ -69,41 +69,41 @@
       margin-top: 15px;
     }
 
-    &_content {
-      /deep/ p { margin: 40px 0; line-height: 30px; }
+    &_content /deep/ {
+      p { margin: 40px 0; line-height: 30px; }
 
-      /deep/ li { margin: 5px 0; }
-      /deep/ li p { margin: 5px 0; }
+      li { margin: 5px 0; }
+      li p { margin: 5px 0; }
 
-      /deep/ a {
+      a {
         color: #12a962 !important;
         box-shadow: 0 4px 0 0 rgba(18,169,98,.32);
         text-decoration: none;
       }
 
-      /deep/ h1, /deep/ h2 {
+      h1, h2 {
         font: var(--bold-text);
         font-size: 22px;
         margin-top: 120px;
       }
 
-      /deep/ h3 {
+      h3 {
         font: var(--bold-text);
         font-size: 20px;
         margin-top: 100px;
       }
 
-      /deep/ strong, /deep/ h4, /deep/ h5, /deep/ h6 {
+      strong, h4, h5, h6 {
         font: var(--bold-text);
         font-size: 18px;
         margin-top: 80px;
       }
 
-      /deep/ img {
+      img {
         width: 70%;
       }
 
-      /deep/ blockquote {
+      blockquote {
         border-left: .32813rem solid #12a962;
         margin-left: -1.75rem;
         margin-right: 1.75rem;
@@ -121,6 +121,6 @@
     }
   }
 
-  div /deep/ p { margin: 50px 0; }
+  div p { margin: 50px 0; }
 
 </style>
