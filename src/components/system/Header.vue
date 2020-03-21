@@ -9,10 +9,10 @@
 
 <style scoped lang="scss">
   .Header {
-    height: 70px;
+    height: 90px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin: 0 35% 0 30px;
 
     &_logo {
       width: 200px;

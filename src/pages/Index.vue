@@ -2,7 +2,7 @@
   <Layout>
     <Hero />
     <section class="posts section">
-      <BackgroundAnimation :total='number_of_leaves' />
+      <BackgroundAnimation class="bgani" :total='number_of_leaves' />
       <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
     </section>
   </Layout>
@@ -113,6 +113,7 @@
   }
 
   .posts { position: relative; }
+  .bgani { left: -15vw !important; right: -15vw !important; }
 
   // DARK MODE 
   @media (prefers-color-scheme: dark) {
