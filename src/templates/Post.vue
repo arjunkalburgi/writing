@@ -27,7 +27,7 @@
       date (format: "MMMM D, YYYY")
       timeToRead
       description
-      image
+      cover
     }
   }
 </page-query>
@@ -64,23 +64,20 @@
     computed: {
       getCoverImage() {
         let coverImage = "";
-        const cover = this.$page.post.image;
+        const cover = this.$page.post.cover;
         if (cover != null) {
-          if (cover.includes('http')) {
+          if (typeof(cover) != String) {
+            console.log('cover: ', this.$page.post.cover);
+            coverImage = `${this.getBaseUrl}${this.$page.post.cover.src}`;
+          } else if (cover.includes('http')) {
             coverImage = cover;
-          } else {
-            // coverImage = require(`${cover}`);
-            // coverImage = require.resolve(cover)
-            // coverImage = `${this.getBaseUrl}${this.$page.post.image.src}`;
-            coverImage = `${this.$page.post.image}`;
           }
         }
-        console.log(coverImage);
         return coverImage;
       },
       getBaseUrl() {
-        console.log(process)
-        return process.env.GRIDSOME_BASE_URL;
+        // return process.env.GRIDSOME_BASE_URL;
+        return 'https://www.arjunkalburgi.com/writing'
       }
     }
   }
