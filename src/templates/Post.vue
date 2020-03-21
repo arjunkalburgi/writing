@@ -44,7 +44,7 @@
         meta: [
           { name: 'description', content: this.$page.post.description },
           
-          { property: "og:title", content: `${this.getBaseUrl}${this.$page.post.image}` },
+          { property: "og:title", content: this.$page.post.title },
           { property: "og:image", content: this.getCoverImage },
           { property: "og:type", content: "article" },
           { property: "og:description", content: this.$page.post.description },
@@ -69,13 +69,17 @@
           if (cover.includes('http')) {
             coverImage = cover;
           } else {
-            console.log(this.getBaseUrl, this.$page.post.image.src, cover);
-            coverImage = `${this.getBaseUrl}${cover}`;
+            // coverImage = require(`${cover}`);
+            // coverImage = require.resolve(cover)
+            // coverImage = `${this.getBaseUrl}${this.$page.post.image.src}`;
+            coverImage = `${this.$page.post.image}`;
           }
         }
+        console.log(coverImage);
         return coverImage;
       },
       getBaseUrl() {
+        console.log(process)
         return process.env.GRIDSOME_BASE_URL;
       }
     }
