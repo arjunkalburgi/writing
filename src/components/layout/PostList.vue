@@ -2,10 +2,10 @@
   <div class="PostList">
     <ul class="PostList_details">
       <li>
-        <p class="PostList_details--date" v-html="post.date" />
+        <smaller class="PostList_details--date" v-html="post.date" />
       </li>
       <li>
-        <p class="PostList_details--time">{{post.timeToRead}} min read</p>
+        <smaller class="PostList_details--time">{{post.timeToRead}} min read</smaller>
       </li>
     </ul>
     
@@ -70,8 +70,8 @@
       p { margin: 0; }
     }
 
-    &_title { }
+    &_title { margin: 20px 0; }
 
-    &_button { display: inline-block; }
+    &_button { display: inline-block; margin-top: 2px; }
   }
 </style>
