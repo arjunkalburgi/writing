@@ -66,14 +66,13 @@
         let coverImage = "";
         const cover = this.$page.post.image;
         if (cover != null) {
-          console.log(cover)
           if (cover.includes('http')) {
             coverImage = cover;
           } else {
-            coverImage = `${this.getBaseUrl}${this.$page.post.image.src}`;
+            console.log(this.getBaseUrl, this.$page.post.image.src, cover);
+            coverImage = `${this.getBaseUrl}${cover}`;
           }
         }
-        console.log(coverImage);
         return coverImage;
       },
       getBaseUrl() {
