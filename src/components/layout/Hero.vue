@@ -47,7 +47,7 @@
 <style scoped lang="scss">
   .hero {
     > * {
-      width: 50%;
+      width: 60%;
       @media screen and (max-width: 40em) { width: unset; }
     }
 

@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Hero />
-    <section class="posts">
+    <section class="posts section">
       <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
     </section>
 
@@ -91,7 +91,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .portfolioitem_title,
+  .PostList_title,
   .text.big,
   .contact_contents--title {
     font: var(--bold-text);
@@ -115,6 +115,10 @@
   .hero_nameImg { 
     &.light { display: block; }
     &.dark { display: none; }
+  }
+
+  .hero {
+    margin-bottom: 25vh;
   }
 
   // DARK MODE 
