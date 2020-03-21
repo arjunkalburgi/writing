@@ -77,7 +77,7 @@
       },
       getBaseUrl() {
         // return process.env.GRIDSOME_BASE_URL;
-        return 'https://www.arjunkalburgi.com/writing'
+        return 'https://www.arjunkalburgi.com'
       }
     }
   }
