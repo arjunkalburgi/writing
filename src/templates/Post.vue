@@ -44,7 +44,7 @@
         meta: [
           { name: 'description', content: this.$page.post.description },
           
-          { property: "og:title", content: this.$page.post.title },
+          { property: "og:title", content: `${this.getBaseUrl}${this.$page.post.image}` },
           { property: "og:image", content: this.getCoverImage },
           { property: "og:type", content: "article" },
           { property: "og:description", content: this.$page.post.description },

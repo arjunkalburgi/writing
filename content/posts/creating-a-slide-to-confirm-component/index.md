@@ -8,7 +8,7 @@ date: '2019-11-05T15:20:33.815Z'
 
 slug: /creating-a-slide-to-confirm-component
 
-image: final.gif
+image: ./final.gif
 ---
 
 
