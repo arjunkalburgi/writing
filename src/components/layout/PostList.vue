@@ -11,7 +11,7 @@
     
     <h2 class="PostList_title" v-html="post.title" />
     <p class="PostList_description" v-html="post.description" />
-    <Button class="PostList_button" :link="post.path" :text="buttontext" />
+    <Button class="PostList_button" :link="'https://arjunkalburgi.com/writing'+post.path" :text="buttontext" />
   </div>
 </template>
 
