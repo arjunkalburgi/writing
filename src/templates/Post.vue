@@ -1,13 +1,14 @@
 <template>
   <Layout>
+    <Header />
     <div class="post section">
       <div class="post_header">
         <ul class="post_details">
           <li>
-            <smaller class="post_details--date">{{ $page.post.date}}</smaller>
+            <p class="post_detail post_detail--date">{{ $page.post.date}}</p>
           </li>
           <li>
-            <smaller class="post_details--time">{{$page.post.timeToRead}} min read</smaller>
+            <p class="post_detail post_detail--time">{{$page.post.timeToRead}} min read</p>
           </li>
         </ul>
         <h2 class="post_title">{{$page.post.title}}</h2>
@@ -31,6 +32,19 @@
   }
 </page-query>
 
+<script lang="js">
+
+  import Header from './../components/system/Header.vue'
+
+  export default  {
+    name: 'Post',
+    components: {
+      Header
+    },
+  }
+</script>
+
+
 <style scoped lang="scss">
   .post {
     width: 50%;
@@ -47,6 +61,11 @@
 
         &:not(:first-of-type) { margin: 0 0 0 20px; }
       }
+    }
+
+    &_detail {
+      margin: 0; 
+      font-size: smaller;
     }
 
     &_title {
