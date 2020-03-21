@@ -25,7 +25,7 @@ Only after a few weeks with them was I able to begin understanding their perspec
 
 Perspective is so important when teaching/learning. People are rarely malicious, they just have a different perspective. You have to learn their perspective to be able to communicate with them properly — learning or teaching.
 
-**How do you feel about public speaking? What was your favorite public speaking experience? Least favorite?**
+#### How do you feel about public speaking? What was your favorite public speaking experience? Least favorite?
 
 My mom enrolled me in the community public speaking contest every year throughout my childhood. I still find a lot of joy out of public speaking today, I’m a loud, energetic and motivated extrovert and it comes in handy. My most favourite public speaking experience was this past year at the Computer Engineering orientation. I spoke on how I’ve made the most of my degree (mostly via hacking) and how they can make the most of theirs.   
 You can actually see the presentation here: [https://www.youtube.com/watch?v=jTUb8VTWUFw&t=29s](https://www.youtube.com/watch?v=jTUb8VTWUFw&t=29s)

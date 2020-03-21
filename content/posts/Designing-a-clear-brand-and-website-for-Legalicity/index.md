@@ -59,7 +59,6 @@ The best part of this design is how the angles and shapes mirror that of NLPaten
 Because my goal for this project was to do a lot more design iterations, I did a lot of design iterations:
 
 ![](https://cdn-images-1.medium.com/max/1200/0*DHeWcvhskyIMECuu)
-
 ![](https://cdn-images-1.medium.com/max/800/0*NVdCTBQfVYk-Dc6L)
 ![](https://cdn-images-1.medium.com/max/400/0*yYa3Ku3AiT-HOEiv)
 
@@ -74,5 +73,3 @@ One thing I could have improved is justifying more of the design decisions. Bein
 #### View the final project here:
 
 *   [InVision prototype](https://projects.invisionapp.com/share/V4NGGGSQ7HE)
-
-![](https://cdn-images-1.medium.com/max/800/1*k3x4eNfGaG54H9skwyKeSA.png)

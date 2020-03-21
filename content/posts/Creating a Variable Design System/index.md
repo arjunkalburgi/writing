@@ -17,7 +17,7 @@ Should be a fun little project indeed. The idea is to expand on Ionic Framework'
 
 
 
-**Step 1: Design Tokens**
+### Step 1: Design Tokens
 
 I found [this great guideline](https://www.lightningdesignsystem.com/design-tokens) from Salesforce that features all their design tokens. To be frank, it's a lot and I'm not sure I need it all. There's so much just in colours alone that I decided to look at some brands as well as my app so I could determine what would be necessary and not.
 
@@ -72,7 +72,7 @@ There are some other properties I could encorporate, but I'll start with these 6
 
 
 
-**Step 2: Using the Tokens**
+### Step 2: Using the Tokens
 
 Now that I have my tokens, I need to update my app to use them. From there I'll be able to change the tokens for each brand, and apply them to the app.
 
@@ -82,7 +82,7 @@ As I did this I also made a custom `.scss` file for each theme where I could kee
 
 
 
-**Step 3: Repo Re-Organization**
+### Step 3: Repo Re-Organization
 
 I'll be using some npm scripts in order to move around finds before running my code. This was probably not the best method (that'd be using Gulp), but the easiest to implement. 
 
@@ -102,7 +102,7 @@ So now all I need to do to change my app's theme is to run `npm run serve:theme_
 
 
 
-**Results and Comments** 
+### Results and Comments
 
 Using this method for a couple weeks has been awesome. The custom `.scss` file has come in handy several times and the theme switching has worked will. 
 

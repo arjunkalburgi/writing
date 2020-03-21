@@ -23,14 +23,12 @@ Designers can use Slide-to-Confirm as a tool to help their users feel more secur
 The UX of this component is great! Showing green and changing the message as you swipe brings out the security and accomplishment feelings. Unfortunately, it's also highly custom.
 
 
-
-**Looking for similar's online**
+### Looking for similar's online
 
 The only similar Javascript-based components I could find online were this [codepen](https://codepen.io/bennettfeely/pen/jyGeJ), this [blog](https://www.davidbcalhoun.com/2011/implementing-iphones-slider-unlock-with-input-typerange/), and this [React Native library](https://github.com/agentS/react-native-slider-button); none of which really come close to the functionality I'm looking for. Android and iOS devs had something closer but I'm looking for a Javascript and CSS solution. They all use the `<input type='range'` element, so let's start with that.
 
 
-
-**Browser support for Thumb Range**
+### Browser support for Thumb Range
 
 Using the blog to help kickstart my progress, I made a codepen and quickly figured out some interesting things. The blog only supports Firefox when applying CSS to the `<input type='range'` element using `input::-moz-range-thumb`. I needed to include `input::-webkit-slider-thumb` for support on Safari and Chrome, the platforms I'm developing for.
 
@@ -40,8 +38,7 @@ Progress on the component here:
 https://codepen.io/arjunkalburgi/pen/dyyJMKO
 
 
-
-**A new idea**
+### A new idea
 
 Turning my attention to how I'll solve changing the track message and colour as you swipe got me looking at something new: draggable components. 
 
@@ -53,8 +50,7 @@ Progress here:
 https://codepen.io/arjunkalburgi/pen/GRRyjzZ
 
 
-
-**Is the new idea feasable?**
+### Is the new idea feasable?
 
 If the new idea could actually work, then I'll be able to put elements on both sides of the slide item that will show and hide as I move the slide item. 
 
@@ -78,8 +74,7 @@ Progress here:
 https://codepen.io/arjunkalburgi/pen/rNNpWdX
 
 
-
-**Text in the Bars**
+### Text in the Bars
 
 Now to have text within the bars so that sliding reveals/conseals the text. I quickly made an inner div with the text and made it fit to the grandparent: 
 
@@ -111,8 +106,7 @@ See it here:
 https://codepen.io/arjunkalburgi/pen/poopRzX
 
 
-
-**Confirm alert, and fallback**
+### Confirm alert, and fallback
 
 Now that I have my meat set up, I need to add the potatoes. I need to trigger an event once the slider reaches the end and if the slider doesn't reach the end, it should fallback to the beginning. 
 
@@ -131,8 +125,7 @@ I've added an animation on fallback and wrapped the alert in a function for the 
 https://codepen.io/arjunkalburgi/pen/BaaJYbx
 
 
-
-**Finalizing**
+### Finalizing
 
 To finish it off, I cleaned up my code using BEM CSS, and removed some of the unnecessary things like the coloured bars(*) and styled the dragItem. 
 
@@ -143,8 +136,7 @@ https://codepen.io/arjunkalburgi/pen/QWWamxW
 ![final](./final.gif)
 
 
-
-**Converting to Angular**
+### Converting to Angular
 
 Now that I have the component in JS, I need it in Angular. This was simple enough overall, but had an annoying time making it work due to some scope bugs. After taking the weekend off and then running the code locally, I was able to figure them all out and have it all working. 
 

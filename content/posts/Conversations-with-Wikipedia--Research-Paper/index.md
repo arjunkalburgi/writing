@@ -17,7 +17,7 @@ slug: /@askalburgi/conversations-with-wikipedia-research-paper-4b7717873087
 
 > **Keywords:** E-learning, Conversational Agent, Wikipedia, Self-directed learning, Mobile learning, Informal learning.
 
-#### 1. **Introduction and Motivation**
+#### 1. Introduction and Motivation
 
 Asking a peer to explain a concept is a simple example of a learner-initiated conversation that occurs naturally. This type of learning relies on a peer to have sufficient knowledge of the topic, which is not always the case. Automating the conversation means understanding the user’s goal and the user’s requested topic, for any user and any topic. The ultimate goal of this project is to create an automated educational experience that is useful and context-dependent, just like that of conversing with a peer.
 
@@ -25,15 +25,15 @@ Existing agents create and research experiences modelled after conversing with a
 
 The project builds a prototype e-learning agent that attempts to explore the requirements of the desired experience. The prototype is built as a command line interface (CLI) and focuses specifically on the context and dialogue of the conversational experience. Content is supplied to the agent from Wikipedia so that a large number of topics can be covered.
 
-#### 2\. **Existing Conversational E-Learning Agents**
+#### 2. Existing Conversational E-Learning Agents
 
 Conversational agents are still far from achieving human-like dialogue ([Thomason and Litman](http://aclweb.org/anthology/N/N13/N13-1098.pdf), 2013) despite researchers actively pursuing this goal. Dialog has been used to simulate the highly interactive nature of human tutoring ([Katz and Albacete, 2013](http://psycnet.apa.org/record/2013-31546-001)), in specific domains where the conversational agent or tutoring system control most of the learning experience. However, it has been shown that there is no one size fits all language model to be used for such tutoring ([Katz and Jordan and Albacete, 2016](https://ieeexplore.ieee.org/document/7756915/)). Conversational agents that help students learn by holding a conversation in natural language (Nye and Graesser and Hu, 2014) have been explored but conversations that are student-initiated have not. Existing agents ask students to explain topics, this project has the agent explaining topics from Wikipedia so the user can ask further questions.
 
-#### 3. **E-learning Dialog Development**
+#### 3. E-learning Dialog Development
 
 A conversational prototype was built from an iterative, design-based research perspective. The prototype features three parts: prompting, briefly summarizing, and conversing with the user.
 
-#### 3.1. **Building Context using Wikipedia**
+#### 3.1. Building Context using Wikipedia
 
 The system needs to understand the goals of the user to have an appropriate conversation. These goals are the user’s context.
 
@@ -43,13 +43,13 @@ Both depth-first (i.e., choosing a Wikipedia page and exploring its content) and
 
 **Initial Testing.** The prompt, “what would you like to learn”, was used to start a discussion and observe the type of knowledge the discussion centered around. Centering around a specific topic signified depth-first interest, and centering around relations between topics signified breadth-first interest. A few college students were briefly asked the prompting question at a hackathon. The discussions displayed depth-first interest, thus the project continued using depth-first conversation.
 
-#### 3.2. **Creating the Agent with the Wikipedia API**
+#### 3.2. Creating the Agent with the Wikipedia API
 
 Wikipedia API libraries were used to retrieve the information and metadata from a Wikipedia page for the agent to use. A search query helped identify a Wikipedia topic for the learner and a nested list implementation of a page’s sections and subsections was useful in leading the conversation to more specific information.
 
 Although conversations at this stage were possible, the text retrieved from the sections is too large and lacked conversational flow. To improve the conversation, the text needed to be summarized.
 
-#### 3.3. **Creating Natural Conversation with the PyTeaser API**
+#### 3.3. Creating Natural Conversation with the PyTeaser API
 
 Interviews were conducted to better understand how the agent should create summaries and handle questions the learner may have afterwards. These 10 interviews were modelled after the existing prototype and were performed on college students.
 
@@ -61,7 +61,7 @@ The PyTeaser API was used to provide this type of summary in the prototype. The 
 
 This follow-up questioning was added to the agent after the summarization stage. Once the learner replies with his/her question, the agent responds by re-summarizing the topic, using keywords from the question as the query. Unfortunately the summarization again relied on PyTeaser, possibly bringing more confusion than help.
 
-#### 3.4. **Improving Conversation**
+#### 3.4. Improving Conversation
 
 **Using Concepts from Summarization.** The agent can use NLU techniques to find keywords and concepts to help build a summary, similar to what the interviewer would do. The agent uses the IBM Watson NLU API (Watson) to retrieve concepts from the user’s response to help provide more data to the query focused summarizer.
 
@@ -71,7 +71,7 @@ This follow-up questioning was added to the agent after the summarization stage.
 
 As this usually happened after the learner motioned for the interview to end, the agent asks similar questions at the end of the experience.
 
-#### 4\. **Next Steps**
+#### 4\. Next Steps
 
 There were many possible paths the prototype could take to further explore the potential for learner-initiated conversational agents.
 

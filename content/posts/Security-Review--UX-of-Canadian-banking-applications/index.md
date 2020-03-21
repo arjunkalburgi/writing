@@ -23,7 +23,7 @@ A quick summary of what’s to come:
 
 Each section will have a small tldr for a quick summary :)
 
-### What is Security UX? What we are looking for?
+## What is Security UX? What we are looking for?
 
 In a world bombarded with bad security, as a company you want to ensure your users that your security will keep them safe. But how do you communicate that? Especially since security is notorious for boring users.
 
@@ -33,13 +33,13 @@ In this review, we will be looking for these cases of Security UX in the onboard
 
 **tldr;** Security UX is using design to make users feel and be safer. This review goes through the onboarding of the RBC, Scotiabank, TD and CIBC banking apps looking for how the app asks us to make decisions about our security and how the app makes us aware of how we’re protected.
 
-### RBC Mobile
+## RBC Mobile
 
 > The setting: we are a user looking to do cool things with the RBC Mobile app, but we also want to make sure it’s safe.
 
 These screenshots were taken with a Nexus 5 which does not have a finger print sensor, so additional security features offered by RBC’s app regarding the finger print sensor were not captured here.
 
-#### Walk-through
+### Walk-through
 
 ![](https://cdn-images-1.medium.com/max/400/1*99L4a3eWiUEZuQ76PF7ZXA.png)
 ![](https://cdn-images-1.medium.com/max/400/1*vEMdJ5iuKWIqEkEQScT_RA.png)
@@ -60,7 +60,7 @@ Let’s go ahead and sign in now, where the app prompts a verification question!
 
 **Walk-through tldr;** In terms of UX making users make good security decisions, the app using very opinionated design on log in is good security UX. In terms of UX making users aware, the app flops. Users need to understand the risks and the work being done to mitigate those risks — the app hiding this information in the back is no good.
 
-#### Improvements
+### Improvements
 
 The beginning panes are a great way to talk about security because it forces concise copy and graphics to assist comprehension. I would add a pane for security, something short and sweet that links to more information.
 
@@ -68,13 +68,13 @@ The current design is built on the premise that you can see different things in 
 
 **RBC tldr;** Design choices made in this app do not prioritize security enough, though some effort is made by being very opinionated upon actual sign in. Additionally, design of the app in general is messy. That being said, it can be very easy to change the current design to be more concise and to emphasize security more.
 
-### Scotiabank Mobile Banking
+## Scotiabank Mobile Banking
 
 > The setting: we are a user looking to do cool things with the [Scotiabank Mobile Banking](https://play.google.com/store/apps/details?id=com.scotiabank.mobile%5C) app, but we also want to make sure it’s safe.
 
 These screenshots were taken with an iPhone which does have a finger print sensor, so additional security features offered by Scotiabank’s app regarding the finger print sensor are expected.
 
-#### Walk-through
+### Walk-through
 
 ![](https://cdn-images-1.medium.com/max/400/1*7dRAcaqoBg2bJxfF7_KxoQ.jpeg)
 ![](https://cdn-images-1.medium.com/max/400/1*kwr_ynuCJ_ByJfVLnaD9Og.jpeg)
@@ -98,7 +98,7 @@ In character, the user we are is satisfied with the information provided from th
 
 **Walk-through tldr;** In terms of UX making users make good security decisions, the app scores similarly to RBC. In terms of UX making users aware, the app scores much higher. The Security and Privacy page convey’s necessary information to users although ideally the information would be more concise and more visible, instead of being hidden behind the “lock” icon.
 
-#### Improvements
+### Improvements
 
 The biggest issue with Scotiabank’s app is that the design is a home page with an onboarding flow squeezed in — except the full onboarding experience didn’t fit, so they just hacked off what didn’t fit and threw it out. Scotiabank could give a much better security UX (general UX too) if they properly implemented both.
 
@@ -108,13 +108,13 @@ The phone being used here has a finger print sensor (Apple’s Touch ID no less)
 
 **Scotiabank tldr;** Design choices made in the Scotiabank Mobile Banking app seriously limit what can be done for security UX. This is quite frankly a bad app.
 
-### TD Canada
+## TD Canada
 
 > The setting: we are a user looking to do cool things with the TD Canada app, but we also want to make sure it’s safe.
 
 These screenshots were taken with a iPhone 5 which does not have a finger print sensor, so any additional security features offered by TD’s app regarding the finger print sensor were not captured here.
 
-#### Walk-through
+### Walk-through
 
 ![](https://cdn-images-1.medium.com/max/600/1*y4L2fWseG-NxQPA4h9_Aog.jpeg)
 ![](https://cdn-images-1.medium.com/max/600/1*O4av7iURlNJjNderFT32LA.jpeg)
@@ -137,7 +137,7 @@ On sign in, we’re prompted for a security question! The copy here is great! We
 
 **Walk-through tldr;** In terms of UX making users make good security decisions, the app scores similarly to RBC and Scotiabank, and for the same reasons as well. In terms of UX making users aware, the app is easily the worst. The TD Canada app makes absolutely no effort.
 
-#### Improvements
+### Improvements
 
 Like Scotiabank’s app, the TD Canada app needs to include an onboarding flow. This point is especially necessary since the app doesn’t have a home screen either.
 
@@ -145,13 +145,13 @@ This design attempts to satisfy a popular and “good” design practice which i
 
 **TD tldr;** Design choices made in the TD Canada app also seriously limit what can be done for security UX. TD somehow made a worse app than Scotiabank.
 
-### CIBC Mobile Banking
+## CIBC Mobile Banking
 
 > The setting: we are a user looking to do cool things with the CIBC Mobile Banking app, but we also want to make sure it’s safe.
 
 These screenshots were taken with a Nexus 6P which has a finger print sensor, so additional security features offered by CIBC’s app regarding the finger print sensor are expected.
 
-#### Walk-through
+### Walk-through
 
 ![](https://cdn-images-1.medium.com/max/400/1*TH3Wed-q3V28bOjAf4uaQA.png)
 ![](https://cdn-images-1.medium.com/max/400/1*dUUdJ4BFe_JqMMNM5kom1Q.png)
@@ -178,7 +178,7 @@ And with that, we’re into the main app!
 
 **Walk-through tldr;** In terms of UX making users make good security decisions, the app scores similarly to the others. Although it doesn’t have a security question, it gives the option to sign in with your fingerprint so it balances out. In terms of UX making users aware, the app scores slightly better than Scotiabank, it’s all in the phrasing “guarantee” is a great word.
 
-#### Improvements
+### Improvements
 
 CIBC can make their security guarantee more central. Keeping it in one of the panes would be just fine.
 
@@ -186,7 +186,7 @@ The app can also be more opinionated with their fingerprint feature. Force users
 
 **CIBC tldr;** Overall this app is the best of the bunch. CIBC’s understanding of general UX helps it greatly with it’s security UX.
 
-### A banking app with good security UX
+## A banking app with good security UX
 
 ![](https://cdn-images-1.medium.com/max/1200/1*hdL2RduPmhsyu_twxd1e-g.jpeg)
 
@@ -198,6 +198,6 @@ The security question page is implemented like TD’s app and the security custo
 
 I honestly think this is sufficient to have a good security ux onboaring flow. It doesn’t have to take a lot to give users the tools for them to comprehend and force them to adhere to a standard of security measures.
 
-### Why Security UX is important
+## Why Security UX is important
 
 I think one big misconception in today’s UX world is that users don’t care about security. And for the the past while, that might have been more or less true. Security UX marks a departure from that notion. Users do and will care more than ever that the products they use keep their information safe. By making users aware of how that is happening, and by forcing users to go through additional security measures this can be accomplished. With good security UX, that doesn’t have to be the tedious process that it was in the past. It’s time for design to step up in the security world.

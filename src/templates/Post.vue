@@ -41,7 +41,7 @@
       return {
         title: this.$page.post.title,
         meta: [
-          { name: 'description', content: this.$page.post.description }
+          { name: 'description', content: this.$page.post.description },
         ],
       }
     },
@@ -107,22 +107,36 @@
         font: var(--bold-text);
         font-size: 22px;
         margin-top: 120px;
+
+        + p { margin-top: 20px; }
       }
 
       h3 {
         font: var(--bold-text);
         font-size: 20px;
         margin-top: 100px;
+
+        + p { margin-top: 20px; }
       }
 
-      strong, h4, h5, h6 {
+      h4, h5, h6 {
         font: var(--bold-text);
         font-size: 18px;
         margin-top: 80px;
+
+        + p { margin-top: 20px; }
       }
 
+      strong { font-family: 'Raleway'; }
+
       img {
-        width: 70%;
+        width: auto;
+        max-width: 70%;
+        max-height: 560px;
+
+        + img {
+          max-width: 30%;
+        }
       }
 
       blockquote {
