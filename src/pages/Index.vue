@@ -35,7 +35,7 @@
   export default {
     name: 'Blog',
     metaInfo: {
-      title: 'Hello, world!',
+      title: '',
     },
     components: {
       Hero,
