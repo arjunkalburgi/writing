@@ -27,6 +27,7 @@
       date (format: "MMMM D, YYYY")
       timeToRead
       description
+      image
     }
   }
 </page-query>
@@ -63,10 +64,16 @@
     computed: {
       getCoverImage() {
         let coverImage = "";
-        const cover = this.$page.post.cover;
+        const cover = this.$page.post.image;
         if (cover != null) {
-          coverImage = `${this.getBaseUrl}${this.$page.post.cover.src}`;
+          console.log(cover)
+          if (cover.includes('http')) {
+            coverImage = cover;
+          } else {
+            coverImage = `${this.getBaseUrl}${this.$page.post.image.src}`;
+          }
         }
+        console.log(coverImage);
         return coverImage;
       },
       getBaseUrl() {

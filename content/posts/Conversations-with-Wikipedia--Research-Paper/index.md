@@ -5,6 +5,7 @@ date: '2018-05-28T04:48:30.222Z'
 categories: []
 keywords: []
 slug: /@askalburgi/conversations-with-wikipedia-research-paper-4b7717873087
+image: 'https://cdn-images-1.medium.com/max/800/0*P4re_2qMolHcE0up.png'
 ---
 
 ![](https://cdn-images-1.medium.com/max/800/0*P4re_2qMolHcE0up.png)
@@ -92,5 +93,3 @@ This exploration has the potential to be expanded on. The agent built is current
 3.  J. Thomason and D. Litman, “Differences in User Responses to a Wizard-of-Oz versus Automated System,” _Proc. North American Chapter Assoc. Computational Linguistics: Human Language Technologies_ (NAACL-HLT 13), 2013, pages. 796–801.
 4.  S. Katz, P. Jordan & P. Albacete. Exploring How to Adaptively Apply Tutorial Dialogue Tactics. _In Proceedings of the 16th IEEE International Conference on Advanced Learning Technologies._ (ICALT2016), 2016.
 5.  Nye, B. D., Graesser, A. C., & Hu, X. (2014). AutoTutor and Family: A Review of 17 Years of Natural Language Tutoring. _International Journal of Artificial Intelligence in Education_, _24_(4), 427–469. [http://doi.org/10.1007/s40593-014-0029-5](http://doi.org/10.1007/s40593-014-0029-5)
-
-![](https://cdn-images-1.medium.com/max/800/1*3_pVQ9n_GCOr21L_hhVuJQ.png)

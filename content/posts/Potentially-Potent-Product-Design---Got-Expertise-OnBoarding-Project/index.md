@@ -8,6 +8,7 @@ categories: []
 keywords: []
 slug: >-
   /@askalburgi/potentially-potent-product-design-got-expertise-onboarding-project-6c3903a1ddff
+image: https://cdn-images-1.medium.com/max/800/1*I4OV1G5iQLpi4Y8SgVqQXw.jpeg
 ---
 
 > How do you create a better experience for something you know your users won’t want to do? What steps can the visual language take?
