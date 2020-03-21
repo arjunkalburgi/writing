@@ -1,6 +1,6 @@
 export default {
   "trailingSlash": true,
-  "pathPrefix": "/writing",
+  "pathPrefix": "/",
   "titleTemplate": "%s - Arjun Kalburgi Blog",
   "siteUrl": "https://www.arjunkalburgi.com/writing",
   "version": "0.7.13",
