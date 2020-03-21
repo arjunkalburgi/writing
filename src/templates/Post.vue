@@ -42,6 +42,18 @@
         title: this.$page.post.title,
         meta: [
           { name: 'description', content: this.$page.post.description },
+          
+          { property: "og:title", content: this.$page.post.title },
+          { property: "og:image", content: this.getCoverImage },
+          { property: "og:type", content: "article" },
+          { property: "og:description", content: this.$page.post.description },
+          { property: "og:updated_time", content: this.$page.post.date },
+
+          { name: "twitter:description", content: this.$page.post.description },
+          { name: "twitter:title", content: this.$page.post.title },
+          { name: "twitter:site", content: "@arjunkalburgi" },
+          { name: "twitter:image", content: this.getCoverImage },
+          { name: "twitter:creator", content: "@arjunkalburgi" },
         ],
       }
     },

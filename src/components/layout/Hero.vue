@@ -47,8 +47,9 @@
 <style scoped lang="scss">
   .hero {
     > * {
-      width: 60%;
-      @media screen and (max-width: 40em) { width: unset; }
+      width: 50%;
+      @media screen and (max-width: 80em) { width: 70%; }
+      @media screen and (max-width: 60em) { width: 80%; }
     }
 
     &_nameImg { width: 200px; }

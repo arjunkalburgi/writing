@@ -54,6 +54,8 @@
   .PostList {
     margin: 10vh auto 10vh 0;
     width: 60%;
+    @media screen and (max-width: 80em) { width: 80%; }
+    @media screen and (max-width: 60em) { width: 100%; }
 
     &_details {
       padding: 0;
