@@ -8,6 +8,8 @@ module.exports = {
   siteName: 'Arjun Kalburgi Blog',
   siteDescription: 'I write about my experiences and learnings. Sometimes I post my creative expressions, experiments and ideas, all in the name of sharing and expressing myself.',
   icon: './src/assets/pics/Black.png',
+  siteUrl: 'https://www.arjunkalburgi.com/writing',
+  pathPrefix: '/writing',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
