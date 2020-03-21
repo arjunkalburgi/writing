@@ -148,6 +148,7 @@
       strong { font-family: 'Raleway'; }
 
       img {
+        border-radius: 3px;
         width: auto;
         max-width: 70%;
         max-height: 560px;
