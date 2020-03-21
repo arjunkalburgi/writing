@@ -3,7 +3,7 @@
   <section class="hero section">
 		<img class="hero_nameImg light" src="../../assets/pics/LogoFull.svg" title="Arjun Kalburgi Leaf Logo" />
 		<img class="hero_nameImg dark" src="../../assets/pics/WhiteFull.svg" title="Arjun Kalburgi Leaf Logo" />
-		<p class="hero_text--tag">learning, finding, designing, developing impact</p>
+		<p class="hero_text--tag">learning, finding, designing, and developing impact</p>
 		<p class="hero_text--intro">I write about my experiences and learnings. Sometimes I post my creative expressions, experiments and ideas, all in the name of sharing and expressing myself.</p>
     <ButtonList :hasButton=true v-bind:button='button' v-bind:list='list' />
   </section>
