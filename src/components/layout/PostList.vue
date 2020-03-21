@@ -25,7 +25,7 @@
           title
           timeToRead
           description
-          date (format: "D MMMM YYYY")
+          date (format: "MMMM D, YYYY")
           path
         }
       }
