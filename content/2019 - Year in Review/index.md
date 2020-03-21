@@ -3,7 +3,7 @@ title: 2019 - Year in Review
 description: >-
  2019 has been quite the year for me personally, as well as in global conversation. In both areas, the concept of Home has been central.
 # date: '2019-12-30T02:33:25.417Z'
-slug: /writing/2019-year-in-review
+slug: /2019-year-in-review
 ---
 
 

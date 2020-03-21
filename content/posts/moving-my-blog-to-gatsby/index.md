@@ -6,7 +6,7 @@ description: >-
 date: '2019-09-15T17:03:42.159Z'
 categories: []
 keywords: []
-slug: /writing/moving-my-blog-to-gatsby
+slug: /moving-my-blog-to-gatsby
 ---
 
 > After seeing a shift in the industry from Medium, it's time I leave as well and host my blog on my own site.

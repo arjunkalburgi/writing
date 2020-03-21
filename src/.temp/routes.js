@@ -9,6 +9,10 @@ export default [
     component: () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/smilinknight/projects/Arjun stuff/blog/node_modules/gridsome/app/pages/404.vue")
   },
   {
+    path: "/:slug/",
+    component: () => import(/* webpackChunkName: "page--src--templates--post-vue" */ "/Users/smilinknight/projects/Arjun stuff/blog/src/templates/Post.vue")
+  },
+  {
     name: "home",
     path: "/",
     component: () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/smilinknight/projects/Arjun stuff/blog/src/pages/Index.vue")
