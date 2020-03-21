@@ -24,8 +24,9 @@
       id
       title
       content
-      date (format: "D MMMM YYYY")
+      date (format: "MMMM D, YYYY")
       timeToRead
+      description
     }
   }
 </page-query>
@@ -36,9 +37,30 @@
 
   export default  {
     name: 'Post',
+    metaInfo() {
+      return {
+        title: this.$page.post.title,
+        meta: [
+          { name: 'description', content: this.$page.post.description }
+        ],
+      }
+    },
     components: {
       Header
     },
+    computed: {
+      getCoverImage() {
+        let coverImage = "";
+        const cover = this.$page.post.cover;
+        if (cover != null) {
+          coverImage = `${this.getBaseUrl}${this.$page.post.cover.src}`;
+        }
+        return coverImage;
+      },
+      getBaseUrl() {
+        return process.env.GRIDSOME_BASE_URL;
+      }
+    }
   }
 </script>
 
