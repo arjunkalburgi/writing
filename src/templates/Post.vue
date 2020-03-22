@@ -45,7 +45,7 @@
           { name: 'description', content: this.$page.post.description },
           
           { property: "og:title", content: this.$page.post.title },
-          { property: "og:image", content: this.getCoverImage, name: 'image' },
+          { property: "og:image", content: this.getCoverImage },
           { property: "og:type", content: "article" },
           { property: "og:description", content: this.$page.post.description },
           { property: "og:updated_time", content: this.$page.post.date },
@@ -58,22 +58,20 @@
         ],
       }
     },
-    components: {
-      Header
-    },
+    components: { Header },
     computed: {
       getCoverImage() {
-        let coverImage = "";
+        let path = "";
         const cover = this.$page.post.cover;
-        if (cover != null) {
-          if (typeof(cover) != String) {
-            console.log('cover: ', this.$page.post.cover);
-            coverImage = `${this.getBaseUrl}${this.$page.post.cover.src}`;
-          } else if (cover.includes('http')) {
-            coverImage = cover;
-          }
+        if (cover != null && typeof(cover) != 'string') {
+          console.log('cover: ', cover);
+          path = `${this.getBaseUrl}${cover.src}`;
+        } else if (cover != null && cover.includes('http')) {
+          path = cover;
+        } else {
+          path = `${this.getBaseUrl}/writing/sra.jpg`;
         }
-        return coverImage;
+        return path;
       },
       getBaseUrl() {
         // return process.env.GRIDSOME_BASE_URL;

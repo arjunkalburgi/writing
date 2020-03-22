@@ -1,6 +1,8 @@
 ---
 title: Creating a "Swipe-to-Confirm" Component
+
 cover: ./final.gif
+
 description: >-
   The Amazon app features a Slide-to-Confirm element inspired by Apple's "Swipe to Unlock". Surprisingly, a similar component is nowhere on the internet, so I'll need to create it myself.
 
