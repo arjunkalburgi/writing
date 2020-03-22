@@ -7,7 +7,7 @@ date: '2019-01-15T22:38:27.057Z'
 categories: []
 keywords: []
 slug: /@askalburgi/creating-a-custom-loading-spinner-for-android-1ce686396c68
-image: 'https://cdn-images-1.medium.com/max/800/1*TOT7NQcg-4VcfbAynbk7vA.gif'
+cover: 'https://cdn-images-1.medium.com/max/800/1*TOT7NQcg-4VcfbAynbk7vA.gif'
 ---
 
 > Recently at Krugo, I was implementing a custom loading animation. I don’t usually write about work things, but this one was different.

@@ -8,7 +8,7 @@ categories: []
 keywords: []
 slug: >-
   /@askalburgi/designing-a-mobile-app-with-clarity-for-yoga-teachers-913b4ac17b51
-image: 'https://cdn-images-1.medium.com/max/800/1*uXfEfWpUTESENwaLXedg5g.jpeg'
+cover: 'https://cdn-images-1.medium.com/max/800/1*uXfEfWpUTESENwaLXedg5g.jpeg'
 ---
 
 > How do you create a visual language for a mobile app that must follow specific UX goals? What visual language do the users want? What feelings do the users want?

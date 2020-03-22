@@ -7,7 +7,7 @@ date: '2018-08-21T04:36:40.618Z'
 categories: []
 keywords: []
 slug: /@askalburgi/designing-a-clear-brand-and-website-for-legalicity-c1dcebbc3c6e
-image: https://cdn-images-1.medium.com/max/800/1*uOEQEOakmidEfcqsdYURgg.png
+cover: https://cdn-images-1.medium.com/max/800/1*uOEQEOakmidEfcqsdYURgg.png
 ---
 
 > How do you create a brand for a legal tech client? What does a legal tech brand look like? What does it feel like?

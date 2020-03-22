@@ -45,7 +45,7 @@
           { name: 'description', content: this.$page.post.description },
           
           { property: "og:title", content: this.$page.post.title },
-          { property: "og:image", content: this.getCoverImage },
+          { property: "og:image", content: this.getCoverImage, name: 'image' },
           { property: "og:type", content: "article" },
           { property: "og:description", content: this.$page.post.description },
           { property: "og:updated_time", content: this.$page.post.date },
