@@ -69,14 +69,11 @@
         } else if (cover != null && cover.includes('http')) {
           path = cover;
         } else {
-          path = `${this.getBaseUrl}/writing/sra.jpg`;
+          path = `${this.getBaseUrl}/writing/sra.jpg?${cover}`;
         }
         return path;
       },
-      getBaseUrl() {
-        // return process.env.GRIDSOME_BASE_URL;
-        return 'https://www.arjunkalburgi.com'
-      }
+      getBaseUrl() { return 'https://www.arjunkalburgi.com' }
     }
   }
 </script>
