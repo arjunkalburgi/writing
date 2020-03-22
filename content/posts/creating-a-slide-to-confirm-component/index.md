@@ -1,21 +1,25 @@
 ---
 title: Creating a "Swipe-to-Confirm" Component
 
-cover: 'https://www.arjunkalburgi.com/writing/assets/static/final.8e3a09a.6e883588bad609a43065f7294e5e56ab.gif'
-
 description: >-
   The Amazon app features a Slide-to-Confirm element inspired by Apple's "Swipe to Unlock". Surprisingly, a similar component is nowhere on the internet, so I'll need to create it myself.
 
 date: '2019-11-05T15:20:33.815Z'
 
 slug: /creating-a-slide-to-confirm-component
+
+cover: 'https://www.arjunkalburgi.com/writing/assets/static/final.8e3a09a.6e883588bad609a43065f7294e5e56ab.gif'
 ---
 
 
 
 > The Amazon app features a Slide-to-Confirm element inspired by Apple's "Swipe to Unlock". Surprisingly, a similar component is nowhere on the internet, so I'll need to create it myself.
 
+### Intro
 
+In this post I build a Slide-to-Confirm component. 
+
+![final](./final.gif)
 
 Designers can use Slide-to-Confirm as a tool to help their users feel more secure (than a button that can be accidentally tapped) and more accomplished (takes more work to slide across the screen). Amazon uses it in their "Buy Now" flow to prevent accidental purchases. 
 
