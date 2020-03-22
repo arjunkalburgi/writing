@@ -85,6 +85,7 @@
   .post {
     width: 50%;
     margin: 25vh 35% 15vh 15%;
+    @media screen and (max-width: 40em) { width: 85%; margin: 20vh auto 15vh; }
 
     &_details {
       padding: 0;
@@ -155,6 +156,8 @@
         + img {
           max-width: 30%;
         }
+
+        @media screen and (max-width: 40em) { width: 33%; }
       }
 
       blockquote {
