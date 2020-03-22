@@ -4,7 +4,7 @@ description: >-
   After accomplishing this twice now on two different occasions, I want to note it down for future reference. I think this is pretty core functionality for number inputs.
 date: '2019-09-25T15:20:33.815Z'
 slug: /custom-input-behaviour-for-numbers
-cover: './numberinput.gif'
+cover: 'https://www.arjunkalburgi.com/writing/assets/static/numberinput.bd6740a.71e096183240d2f2e98fde11a493f589.gif'
 ---
 
 > After accomplishing this twice now on two different occasions, I want to note it down for future reference. I think this is pretty core functionality for number inputs.
