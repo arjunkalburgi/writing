@@ -150,11 +150,9 @@
         max-width: 70%;
         max-height: 560px;
 
-        + img {
-          max-width: 30%;
-        }
+        + img { max-width: 30%; }
 
-        @media screen and (max-width: 40em) { width: 33%; }
+        @media screen and (max-width: 40em) { max-height: 250px; max-width: 90%; }
       }
 
       blockquote {
