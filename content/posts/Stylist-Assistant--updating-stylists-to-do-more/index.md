@@ -7,6 +7,7 @@ date: '2019-04-17T19:37:02.271Z'
 categories: []
 keywords: []
 slug: /@askalburgi/stylist-assistant-updating-stylists-to-do-more-236bf74c50a7
+cover: 'https://cdn-images-1.medium.com/max/800/1*SISeI0rwJZYMaDVVocYF3g.png'
 ---
 
 > My final year capstone project helps personal stylists recommend daily outfits for their clients and shows potential for market disruption.
