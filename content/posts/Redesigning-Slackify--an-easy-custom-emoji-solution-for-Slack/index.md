@@ -6,6 +6,7 @@ description: >-
 date: '2018-10-10T20:24:22.900Z'
 categories: []
 keywords: []
+cover: https://cdn-images-1.medium.com/max/800/1*OBm4tAGYdUiVVRzfYdsW5g.png
 slug: >-
   /@askalburgi/redesigning-slackify-an-easy-custom-emoji-solution-for-slack-41c81b76e2be
 ---
@@ -74,6 +75,7 @@ I’d also like to make a note about the buttons, since they’re one of the onl
 
 I used the `StyleSheet` from `react-native` for all the components so that each component would have its own StyleSheet. These would look like this:
 
+```javascript
 const styles = StyleSheet.create({    
     emojiFormPicture: {  
          flexDirection: 'row',  
@@ -84,6 +86,7 @@ const styles = StyleSheet.create({
          marginTop: 100,  
          width: '80%',  
      },
+```
 
 I originally wanted to use one of the naming convention standards that I had recently learned at a conference, but since the CSS here was so small I chose to go with my own naming convention.
 
@@ -93,6 +96,7 @@ As you can see above, each component’s styles would begin with the name of tha
 
 Expo, the XDE I used to create the React Native app, has a very interesting method of installing Custom Fonts into the app.
 
+```javascript
 async componentDidMount() {    
 
    await Font.loadAsync({'PT-Sans-Caption': require('./path.ttf'),  
@@ -101,6 +105,7 @@ async componentDidMount() {
 
    this.setState({fontsLoaded: true})    
 }
+```
 
 I used the state variable `fontsLoaded` to ensure the View would only load when the fonts are loaded. Very interesting. Check it out in [App.js](https://github.com/askalburgi/slackify/blob/master/App.js) and read more about it [here](https://medium.com/@piyushgupta_81472/using-custom-fonts-in-expo-the-best-way-81f0e785580c).
 
@@ -108,11 +113,13 @@ I used the state variable `fontsLoaded` to ensure the View would only load when 
 
 I’d like to note one interesting thing about the CSS that I kinda hacked together. `react-native` doesn’t allow all the CSS properties and it made it difficult to create the buttons that I had designed. I actually used a `Linear Gradient` element to reproduce the Knock Out effect desired.
 
+```javascript
 <View style={styles.buttonContainer}>  
      <LinearGradient colors={\['white', 'white', 'white', YELLOW, ...  
         <Text style={{fontSize: style={{fontSize: this.props.size...   
      </LinearGradient>          
 </View>
+```
 
 Sometimes you have to pull some queasy compromises. Also in that same [button component](https://github.com/askalburgi/slackify/blob/master/components/button.js), I modularized the font size to make the smaller Slack team change button easier to make. A neat trick I think to make more flexible components for easier front-end work.
 
