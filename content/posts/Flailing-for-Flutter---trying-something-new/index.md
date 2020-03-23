@@ -31,10 +31,12 @@ After forever, we’re now ready to go! (I’m choosing to work in VS Code)
 
 Before I could get to coding I had to set up the Android and iOS devices on my machine. Fortunately I had ones set up for previous projects, I just needed to launch them like so:
 
+```bash
 $ flutter emulators  
 $ flutter emulators --launch Pixel\_2\_XL\_API\_28  
 $ flutter emulators --launch iOS Simulator  
 $ flutter run -d all
+```
 
 This runs the starter app on both!
 
@@ -78,6 +80,7 @@ I ended up finding the [Numeric Initial Viewport Axes Example](https://google.gi
 
 In the end I wasn’t able to get it to work seemingly due to a [bug that hasn’t been fixed](https://github.com/google/charts/issues/134). This is how it would’ve worked though, by setting up a viewport and allowing PanAndZoomBehavior.:
 
+```javascript
 new charts.TimeSeriesChart(  
   widget.seriesList,  
   animate: widget.animate,  
@@ -91,6 +94,7 @@ new charts.TimeSeriesChart(
      changedListener: \_onSelectionChanged,  
   )\],  
 )
+```
 
 Turns out Flutter isn’t capable of the graphing I need :(
 

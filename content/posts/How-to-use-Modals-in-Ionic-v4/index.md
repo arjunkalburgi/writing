@@ -26,7 +26,7 @@ Very basic, just run `ionic g page modal` using Ionic CLI just like you would fo
 
 Since modal pages aren’t part of your app navigation, you must remove the automatic entry for this page from your `app-routing-module.ts` file.
 
-```
+```javascript
 const routes: Routes = [
      { path: '', redirectTo: 'home', pathMatch: 'full' },  
      ...  
@@ -39,7 +39,7 @@ const routes: Routes = [
 
 This part is neccessary to solve the issue.
 
-```
+```javascript
 @NgModule({  
      declarations: \[ **ModalPage** \],  
      imports: \[ ... \],  
@@ -56,7 +56,7 @@ The documentation does not show to include the page in `entryComponents` or `exp
 
 Now that the modal’s module is ready, import it into the page you want to use it in.
 
-```
+```javascript
 @NgModule({  
      declarations: \[ HomePage, **ModalPage** \],  
      imports: \[ ... \],  
@@ -70,7 +70,7 @@ The documentation does not show either of these! This is a big part of how the i
 
 The following is exactly how the documentation explains, I’m just including it here for completion’s sake.
 
-```
+```javascript
 import { ModalController } from '@ionic/angular';
 
 export class **HomePage** {
@@ -89,7 +89,7 @@ export class **HomePage** {
 
 #### Dismiss the Modal
 
-```
+```javascript
 import { ModalController } from '@ionic/angular';
 
 export class **ModalPage** {

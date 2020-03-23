@@ -18,12 +18,13 @@ Say hello to [Sheety](https://sheety.co/), the shitty database API (as far as da
 
 Sheety was made by [Phillip Caudell](http://twitter.com/@phillipcaudell) “because he hates making backends” and honestly it’s the greatest thing ever for front end developers like me.
 
-Let’s look at an example. I’ve rebuilt my old project, [**TheRadList**](https://medium.com/arjunkalburgi/theradlist-a-new-side-product-e07bf0d3fdd8), to use Sheety so that my friends can easily edit the restaurant content on the website.
+Let’s look at an example. I’ve rebuilt my old project, [TheRadList](https://medium.com/arjunkalburgi/theradlist-a-new-side-product-e07bf0d3fdd8), to use Sheety so that my friends can easily edit the restaurant content on the website.
 
 ![TheRadList with data from Sheety](https://cdn-images-1.medium.com/max/800/1*A8M_qmhSM5Lf3TZTr4LZjA.jpeg)
+
 TheRadList with data from Sheety
 
-### The Spreadsheet
+## The Spreadsheet
 
 I’ve moved all the data from a JSON var in the JS of TheRadList (yes, that’s how far I went to avoid using a backend) to this Google Spreadsheet:
 
@@ -31,7 +32,7 @@ I’ve moved all the data from a JSON var in the JS of TheRadList (yes, that’s
 
 My friends have edit access to this spreadsheet and I made them a custom link to make it easier to find: [https://theradlist.com/data](https://theradlist.com/data)
 
-### The API
+## The API
 
 Putting the Google Docs Publish Link into Sheety’s API tool results in the following API link for me to use!
 
@@ -39,10 +40,11 @@ Putting the Google Docs Publish Link into Sheety’s API tool results in the fol
 
 With all the data as objects in a list, it’s easy for me to read via JavaScript.
 
-### The Javascript
+## The Javascript
 
 I copied the example on the Sheety website to load the data from the API.
 
+```javascript
 var template;    
 $(document).ready(function () {  
    $.getJSON(  
@@ -52,10 +54,11 @@ $(document).ready(function () {
          $('#list-places').html(template(data))  
       })  
 })
+```
 
 It uses Handlebars to load the data into the specific `#item-template` I made and then into the `div` I need.
 
-### Other Things
+## Other Things
 
 #### The Filters
 
@@ -69,6 +72,6 @@ I did another project with Sheety where I needed to my data to have some nested 
 
 After the Spreadsheet is updated, Google/Sheety take some time for the changes to be reflected. Sometimes it’s instant but sometimes it takes a couple minutes. I don’t recommend using it for chat apps 😂
 
-### The Results
+## The Results
 
-Visit [**TheRadList**](https://medium.com/arjunkalburgi/theradlist-a-new-side-product-e07bf0d3fdd8) today to see Sheety in action! Well it’s not that exciting, you won’t even see it, but it’s lazy and that’s what counts.
+Visit [TheRadList](https://medium.com/arjunkalburgi/theradlist-a-new-side-product-e07bf0d3fdd8) today to see Sheety in action! Well it’s not that exciting, you won’t even see it, but it’s lazy and that’s what counts.

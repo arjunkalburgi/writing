@@ -9,7 +9,7 @@ keywords: []
 slug: /@askalburgi/online-styleguide-e08e8998d305
 ---
 
-About a month ago I made a web version of my branding style guide at [askalburgi.github.io/styleguide](https://askalburgi.github.io/styleguide). With the express purpose of being able to easily Copy+Paste assets when I need them.
+About a month ago I made a web version of my branding style guide at [askalburgi.github.io/styleguide](https://askalburgi.github.io/assets). With the express purpose of being able to easily Copy+Paste assets when I need them.
 
 The website features the colours, logos, iconography and imagery that can be found on my main [portfolio site](https://askalburgi.github.io), all in big clickable buttons to easily Copy+Paste.
 

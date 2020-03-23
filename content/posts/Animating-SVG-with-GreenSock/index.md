@@ -21,6 +21,7 @@ With SVG’s `animate` the preferred effect was not achieved, though mostly the 
 
 At first I had a lot of trouble trying to adapt my SVG’s because GSAP isn’t perfectly meant to be used to manipulate the `d` path of SVG elements. However, I eventually figured out how to do it after a bunch of Google searches.
 
+```javascript
 tl.to(dotA,   
       0.8, {  
       attr: {  
@@ -28,6 +29,7 @@ tl.to(dotA,
       },   
       ease: Power1.easeInOut,  
   })
+```
 
 The trick just happened to be to wrap the `d` modification in the `attr` block. This successfully applied the `dotA` path element in the SVG with the new `d` path.
 

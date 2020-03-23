@@ -15,11 +15,8 @@ It seems like I’ve settled into a learning process. As with [learning Vue.js](
 
 In this case it was this [article](https://css-tricks.com/snippets/css/complete-guide-grid/) on CSS Tricks, it went over the basics of CSS Grid and how to use it.
 
-```
-.container {
-```
-
-```
+```css
+.container { }
 .item {  grid-column-start: <number>;  grid-column-end: <number>;  grid-row-start: <number>;  grid-row-end: <number>; }
 ```
 

@@ -9,7 +9,6 @@ slug: /@askalburgi/theradlist-a-new-side-product-e07bf0d3fdd8
 
 > What can I say, I just love food…
 
-![](https://cdn-images-1.medium.com/max/800/1*k3x4eNfGaG54H9skwyKeSA.png)
 
 #### The Beginning
 
@@ -27,7 +26,7 @@ The true main goal of the site was to practice up on my design skills. Of all th
 
 ![](https://cdn-images-1.medium.com/max/800/1*qpA9S3RtIxE9IP9Iwa-mBQ.png)
 
-#### **The Product**
+#### The Product
 
 Now that I’ve graduated school, finances have become a priority. I’ve decided to attempt to turn TheRadList into something that can earn me a passive income by featuring ads and selling review placement to restaurants.
 

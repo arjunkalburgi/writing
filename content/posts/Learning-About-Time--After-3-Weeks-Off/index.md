@@ -30,5 +30,3 @@ So effectively I had a vacation (2 days in LA) for the vacation (cruise) for the
 Groggy, lethargic, and unfocused. I spent the week diving into my backlog looking for work that I would be able to concentrate on and I’m actually still finding it so difficult to work.
 
 But I’m taking it easy, working myself back into my routine, because I’m learning that time is fickle, and things take time. 😃
-
-![](https://cdn-images-1.medium.com/max/800/0*ebk-yRePl4dmId30.jpg)

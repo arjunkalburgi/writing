@@ -16,7 +16,7 @@ cover: 'https://cdn-images-1.medium.com/max/800/1*TOT7NQcg-4VcfbAynbk7vA.gif'
 
 First I implemented this BehaviorSubject in my Dependency Injection:
 
-```
+```javascript
 var progressBar: BehaviorSubject<Boolean> = BehaviorSubject.createDefault(false)  
 fun setProgressBar(value: Boolean) {  
     progressBar.onNext(value)  
@@ -25,7 +25,7 @@ fun setProgressBar(value: Boolean) {
 
 And subscribed to it from the MainActivity:
 
-```
+```javascript
 Injector.progressBar._subscribeBy_(  
         onNext = {  
             if (it) {  
@@ -47,7 +47,7 @@ Shape Shifter allows you to export the animation as an `animated-vector` , made
 
 I found that breaking that `animated-vector` into four separate files worked best. The first is the main file, make sure your ProgressBar uses this.
 
-```
+```javascript
 <animated-vector   
     android:drawable="@drawable/your\_vector\_file">  
   
@@ -63,7 +63,7 @@ I found that breaking that `animated-vector` into four separate files worked bes
 
 The vector file, taken from the `<vector>` section of the `animated-vector` :
 
-```
+```javascript
 <vector android:name="vector"  
     android:viewportWidth="1024"  
     android:viewportHeight="1024">  
@@ -74,7 +74,7 @@ The vector file, taken from the `<vector>` section of the `animated-vector` :
 
 And the two animation files taken from the `<target>` sections and placed under `res/anim/` . They’ll look like this:
 
-```
+```javascript
 <set\>  
     <objectAnimator ... />  
     <objectAnimator ... />  
@@ -89,18 +89,18 @@ This was all great, but it didn’t exactly work. The animation wouldn’t repea
 
 Change `ProgressBar` to `ImageView`
 
-```
+```javascript
 <ImageView  
     android:contentDescription="@string/loading"  
     android:id="@+id/progress\_bar"  
-    android:layout\_width="200dp"  
-    android:layout\_height="200dp"  
-    android:layout\_gravity="center" />
+    android:layout_width="200dp"  
+    android:layout_height="200dp"  
+    android:layout_gravity="center" />
 ```
 
 Initialize the animation including `registerAnimationCallback` to force the looping of the animation.
 
-```
+```javascript
 val avd = AnimatedVectorDrawableCompat.create(_applicationContext_,            
                                       R.drawable._your\_vector\_file_)  
 findViewById<ImageView>(R.id._progress\_bar_)._apply_ { setImageDrawable(avd)  
@@ -114,7 +114,7 @@ avd?.registerAnimationCallback(obj:Animatable2Compat.AnimationCallback() {
 
 To top it off, I added `start()` and `stop()` to my `_subscribeBy_` method just to be nice:
 
-```
+```javascript
 Injector.progressBar._subscribeBy_(  
         onNext = {  
             if (it) {  

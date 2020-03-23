@@ -23,5 +23,3 @@ Honestly I think there is probably better content out there to learn this, but M
 Some are more art than others, while some have been more notes than art.
 
 I want to continue learning more note/art techniques to keep my sketch-noting going! If you have any resources or advice, [Tweet at me](http://twitter.com/askalburgi)!
-
-![](https://cdn-images-1.medium.com/max/800/1*k3x4eNfGaG54H9skwyKeSA.png)

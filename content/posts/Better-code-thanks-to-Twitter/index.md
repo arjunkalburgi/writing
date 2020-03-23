@@ -17,8 +17,6 @@ Though unnoticeable in use on my website, I hated how the leaves would bounce ba
 
 I’ve been following [Varun Vachhar](https://medium.com/u/1aeed18fd27d) on Twitter for some time and see his animation work all the time. Now that I moved my job search to Toronto, I decided to go out of my comfort zone and reach out to him about helping me on my animation. His response was more than I could’ve asked for!
 
-Click the Tweet to see the thread!
-
 He ended up making a CodePen that forked mine, showing me that GSAP can re-run the animation after completion:
 
 I made some tweaks to it and ended up with the following, which is now applied to my website! It’s a much more natural movement for the leaves! Thanks Varun!

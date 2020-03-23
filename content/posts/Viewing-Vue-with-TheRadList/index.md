@@ -68,21 +68,26 @@ Inner-component structure is another way to improve your app. I updated how the 
 
 ![](https://cdn-images-1.medium.com/max/600/1*j5_TYqnW1RSfIW9R_7WiWw.png)
 ![Updating List Component to take in 1 prop for all the filters](https://cdn-images-1.medium.com/max/600/1*WDLgd9EwIyG0jQELpGQV5Q.png)
-Updating List Component to take in 1 prop for all the filters
+
+> Updating List Component to take in 1 prop for all the filters
 
 #### Arrow Function Quirkiness
 
 Took me quite a while to figure out why my watch function wasn’t working when trying to watch for when the user toggles the “Deep Dive” view.
 
+```javascript
 watch: {  
      expand: (newVal, oldVal)=>{ this.expanded = (newVal=="large") }  
 }
+```
 
 According to [StackOverflow](https://stackoverflow.com/a/40557674), it’s simply because arrow functions (`()=>{}`) don’t take in bindings for `this`. In other words, `this` doesn’t work inside them! Just reverting back to regular function syntax fixed the problem. A good lesson.
 
+```javascript
 watch: {  
      expand(newVal, oldVal) { this.expanded = (newVal=="large") }  
 }
+```
 
 #### Single File Components
 

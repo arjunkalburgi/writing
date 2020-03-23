@@ -88,12 +88,14 @@ I'll be using some npm scripts in order to move around finds before running my c
 
 Here is an example of my `package.json`'s npm scripts: 
 
-```
-"serve:generic": "npm run generic && ionic serve",
-"generic": "npm run generic:retailer && npm run generic:assets && npm run generic:theme",
-"generic:retailer": "copyfiles -au 3 \".retailer/generic/app/**/*\" src/app",
-"generic:assets": "copyfiles -au 3 \".retailer/generic/assets/**/*\" src/assets",
-"generic:theme": "copyfiles -au 2 .retailer/generic/theme/*.scss src",
+```json
+{
+   "serve:generic": "npm run generic && ionic serve",
+   "generic": "npm run generic:retailer && npm run generic:assets && npm run generic:theme",
+   "generic:retailer": "copyfiles -au 3 \".retailer/generic/app/**/*\" src/app",
+   "generic:assets": "copyfiles -au 3 \".retailer/generic/assets/**/*\" src/assets",
+   "generic:theme": "copyfiles -au 2 .retailer/generic/theme/*.scss src",
+}
 ```
 
 As you can see all I'm doing is moving files from a hidden folder (so it doesn't get included in build) and using [copyfiles](https://github.com/calvinmetcalf/copyfiles) to move and replace the files.

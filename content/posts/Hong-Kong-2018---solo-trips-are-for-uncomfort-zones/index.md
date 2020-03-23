@@ -19,7 +19,7 @@ I’m too extroverted.
 
 When I got there I immediately started meeting people by playing basketball in the park, talking to people at malls and coffee shops and adding everyone I met on Instagram.
 
-[**Arjun goes to play basketball in the park**](https://drive.google.com/file/d/1heV5yUua1VQhAY42yVXKV8_q9qNzwAI0GQ/preview "https://drive.google.com/file/d/1heV5yUua1VQhAY42yVXKV8_q9qNzwAI0GQ/preview")[](https://drive.google.com/file/d/1heV5yUua1VQhAY42yVXKV8_q9qNzwAI0GQ/preview)
+[VIDEO: Arjun goes to play basketball in the park](https://drive.google.com/file/d/1heV5yUua1VQhAY42yVXKV8_q9qNzwAI0GQ/preview "https://drive.google.com/file/d/1heV5yUua1VQhAY42yVXKV8_q9qNzwAI0GQ/preview")[](https://drive.google.com/file/d/1heV5yUua1VQhAY42yVXKV8_q9qNzwAI0GQ/preview)
 
 This realization really clicked for me when I did open mic stand up, (almost) impromptu, 4 days into my trip. I was so unfazed when walking back to the hostel after my 5 minutes that I just knew I was still well in my comfort zone.
 
@@ -28,4 +28,3 @@ The rest of my trip I tried to think about what my uncomfort zone is and how I c
 But I think that’s for another post. :)
 
 ![](https://cdn-images-1.medium.com/max/800/0*QFUIlzO_kcVtADJh)
-![](https://cdn-images-1.medium.com/max/800/1*3_pVQ9n_GCOr21L_hhVuJQ.png)

@@ -77,5 +77,7 @@ In the end we did what we wanted, creating an entirely new experience for Radio 
 Tell me how it is via [Twitter](http://twitter.com/askalburgi) or [Instagram](http://instagram.com/askalburgi)!
 
 ![](https://cdn-images-1.medium.com/max/800/1*RLTVE0wgjEfhsrXK8cZ4hw.png)
+
+##### Bonus, 
+such a bad screen-grab from the President of CBC Radio Canada 😂
 ![such a bad screen-grab from the President of CBC Radio Canada 😂](https://cdn-images-1.medium.com/max/800/1*v4EpnYvimzZ21z4OFQoPKg.png)
-such a bad screen-grab from the President of CBC Radio Canada 😂![](https://cdn-images-1.medium.com/max/800/1*k3x4eNfGaG54H9skwyKeSA.png)
