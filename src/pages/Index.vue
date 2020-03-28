@@ -76,6 +76,7 @@
 
   :root {
     --brand-colour: #12A962;
+    --brand-colourlight: #12A962;
     --brand-colourdark: #005d31;
     
     --brand-contrastlight: #efefef;
@@ -108,20 +109,6 @@
     @media screen and (max-width: 40em) { width: 85%; }
   }
 
-  .image {
-    background: linear-gradient(135deg, #dedede 0%, #dedede 40%, #bfbfbf 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    border-radius: 3px;
-  }
-
-  .hero_nameImg { 
-    &.light { display: block; }
-    &.dark { display: none; }
-  }
-
   .hero {
     margin-bottom: 25vh;
   }
@@ -133,10 +120,5 @@
   @media (prefers-color-scheme: dark) {
     :root { --brand-colour: var(--brand-colourdark); --brand-textcolour: var(--brand-contrastlight); }
     body, .contact { background: var(--brand-contrastdark) !important; }
-    img { filter: brightness(0.8); }
-    .hero_nameImg { 
-      &.light { display: none; }
-      &.dark { display: block; }
-    }
   }
 </style>

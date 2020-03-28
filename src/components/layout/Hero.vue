@@ -1,22 +1,23 @@
 <template lang="html">
 
   <section class="hero section">
-		<img class="hero_nameImg light" src="../../assets/pics/LogoFull.svg" :alt="logo_alttext" />
-		<img class="hero_nameImg dark" src="../../assets/pics/WhiteFull.svg" :alt="logo_alttext" />
+    <LogoImage class="hero_nameImg" />
 		<p class="hero_text--tag">learning, finding, designing, and developing impact</p>
 		<p class="hero_text--intro">I write about my experiences and learnings. Sometimes I post my creative expressions, experiments and ideas, all in the name of sharing and expressing myself.</p>
-    <ButtonList :hasButton=true v-bind:button='button' v-bind:list='list' title="Blog and Social Media links" />
+    <ButtonList :hasButton=true v-bind:button='button' v-bind:list='list' />
   </section>
 
 </template>
 
 <script lang="js">
 
+  import LogoImage from './../system/LogoImage.vue'
   import ButtonList from './../system/ButtonList.vue'
 
   export default  {
     name: 'hero',
     components: {
+      LogoImage,
       ButtonList
     },
     props: [],
@@ -25,14 +26,13 @@
     },
     data () {
       return {
-        logo_alttext: "Arjun Kalburgi's logo - it's a leaf that lays on it's side, with a sharp leaf blade and a soft stem - symbolizing that he grows sharply but remains humble."
-        button: {link: "https://www.arjunkalburgi.com", text: "about"},
+        button: {link: "https://www.arjunkalburgi.com", text: "about", alt: "View my portfolio" },
         list: [
-          {link: "https://twitter.com/arjunkalburgi",     icon: "twitter"},
-          {link: "https://github.com/arjunkalburgi",      icon: "github"},
-          {link: "https://linkedin.com/in/arjunkalburgi", icon: "linkedin"},
-          {link: "https://codepen.io/arjunkalburgi",      icon: "codepen"},
-          {link: "mailto:askalburgi@gmail.com",           icon: "email"},
+          {link: "https://twitter.com/arjunkalburgi",     icon: "twitter",  alt: "View my Twitter" },
+          {link: "https://github.com/arjunkalburgi",      icon: "github",   alt: "View my GitHub" },
+          {link: "https://linkedin.com/in/arjunkalburgi", icon: "linkedin", alt: "View my Linked In" },
+          {link: "https://codepen.io/arjunkalburgi",      icon: "codepen",  alt: "View my Code Pen" },
+          {link: "mailto:askalburgi@gmail.com",           icon: "email",    alt: "Send me an Email" },
         ]
       }
     },
@@ -43,14 +43,15 @@
 
     }
 }
+
+
 </script>
 
 <style scoped lang="scss">
   .hero {
     > * {
       width: 50%;
-      @media screen and (max-width: 80em) { width: 70%; }
-      @media screen and (max-width: 60em) { width: 80%; }
+      @media screen and (max-width: 40em) { width: unset; }
     }
 
     &_nameImg { width: 200px; }

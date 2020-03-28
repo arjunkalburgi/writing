@@ -4,7 +4,7 @@
     <BackgroundAnimation :total='number_of_leaves' />
 		<div class="contact_contents">
 			<h2 class="contact_contents--title">More</h2>
-      <ButtonList class="contact_contents--links" :hasButton=false v-bind:list='list' title="Blog and Social Media links" />
+      <ButtonList class="contact_contents--links" :hasButton=false v-bind:list='list' />
 		</div>
   </footer>
 
@@ -25,17 +25,17 @@
 
     },
     data () {
-      return {
-          number_of_leaves: 23,
-          list: [
-            {link: "https://arjunkalburgi.com/writing",     icon: "blog"},
-            {link: "https://twitter.com/arjunkalburgi",     icon: "twitter"},
-            {link: "https://github.com/arjunkalburgi",      icon: "github"},
-            {link: "https://linkedin.com/in/arjunkalburgi", icon: "linkedin"},
-            {link: "https://codepen.io/arjunkalburgi",      icon: "codepen"},
-            {link: "mailto:askalburgi@gmail.com",           icon: "email"},
-          ]
-      }
+    return {
+        number_of_leaves: 24,
+        list: [
+          {link: "https://arjunkalburgi.com/writing",     icon: "blog",     alt: "View my Blog" },
+          {link: "https://twitter.com/arjunkalburgi",     icon: "twitter",  alt: "View my Twitter" },
+          {link: "https://github.com/arjunkalburgi",      icon: "github",   alt: "View my GitHub" },
+          {link: "https://linkedin.com/in/arjunkalburgi", icon: "linkedin", alt: "View my Linked In" },
+          {link: "https://codepen.io/arjunkalburgi",      icon: "codepen",  alt: "View my Code Pen" },
+          {link: "mailto:askalburgi@gmail.com",           icon: "email",    alt: "Send me an Email" },
+        ]
+    }
     },
     methods: {
 
