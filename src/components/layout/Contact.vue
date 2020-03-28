@@ -1,12 +1,12 @@
 <template lang="html">
 
-  <section class="contact contact-style b-loaded" id="contact">
+  <footer class="contact contact-style b-loaded" id="contact">
     <BackgroundAnimation :total='number_of_leaves' />
 		<div class="contact_contents">
 			<h2 class="contact_contents--title">More</h2>
-      <ButtonList class="contact_contents--links" :hasButton=false v-bind:list='list' />
+      <ButtonList class="contact_contents--links" :hasButton=false v-bind:list='list' title="Blog and Social Media links" />
 		</div>
-  </section>
+  </footer>
 
 </template>
 

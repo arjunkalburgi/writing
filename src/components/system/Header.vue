@@ -1,5 +1,5 @@
 <template>
-  <header class="Header">
+  <header class="Header" role="banner">
     <a href="/">
       <img class="Header_logo light" src="./../../assets/pics/LogoFull.svg" title="Arjun Kalburgi Leaf Logo" />
       <img class="Header_logo dark" src="./../../assets/pics/WhiteFull.svg" title="Arjun Kalburgi Leaf Logo" />

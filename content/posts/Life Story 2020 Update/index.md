@@ -11,13 +11,15 @@ cover: ./arjun2020.jpg
 
 ## The beginning
 
-I remember the first time I ever thought about usability and accessability. Back in 2014, my second year of Computer Engineering (CompE) my class assignment was to build a python game. Everyone was using pygame for their frontend but to me that didn't make sense - no one could play my game if it just sat on my computer. It needed to be on the Internet, where everone could access it regardless of their device or mobile OS (Android vs iOS was huge at the time).
+I remember the first time I ever thought about usability and accessibility. Back in 2014, my second year of Computer Engineering (CompE) my class assignment was to build a python game. Everyone was using pygame for their frontend but to me that didn't make sense - no one could play my game if it just sat on my computer. It needed to be on the Internet, where everone could access it regardless of their device or mobile OS (Android vs iOS was huge at the time).
 
 I complained to the senior year CompE students, and they answered matter-of-factly that we should put it on the Internet then. They taught me Flask and taught me about the Client-Server relationship, how AJAX worked, and even how to host the site. (It's still live today at [connectfour275.herokuapp.com](connectfour275.herokuapp.com).) 
 
 ![my connect4 game](./connect4.png)
 
 But damn that site was/is ugly, 😂 it prompted me to start studying UX in my free time (starting with Don Norman’s Design of Everyday Things) and I became that designer CompE, advocating for it in other [group projects](https://github.com/arjunkalburgi/CloudyCar). 
+
+This was the beginning of my dream to amass as many of the skills I could in order to build wholesome, user-centered products. 
 
 ## Loving impact
 
@@ -29,15 +31,19 @@ For 3 years I was the team-lead for organizing Alberta’s largest hackathons an
 
 As we kept making the largest hackathon larger, I got called on for speaking engagements, faculty recruting events, cross-faculty expeditions to Iceland, and more.
 
-In my final two years, Brittany (friend and former CompE Prez) and I started hosting new events on our own and helping the faculty with other improvements. We helped create such a [big impact](https://www.arjunkalburgi.com/writing/growth-hack-ed/) on the community and I loved it.
+One story I always love is how my friend Liza, an EE, got mad at a couple of us CompE's for delaying her birthday dinner so we could code our side-projects. Then we started organizing the hackathon, and more of her friends started participating, and she got to see how much cool things we could do with code. Two years later she was coding on her birthday - cleaning up her first hackathon project which won her 3rd place! She's now in her Masters for CompE.
+
+We created such a [big impact](https://www.arjunkalburgi.com/writing/growth-hack-ed/) on student's lives and I love it.
 
 ## Learning UI 
 
-As I was studying CompE, learning UX on the side and living my best life being a driven community member, I soon learned that visual design is a key component to creating the exceptional user experience I was after. So upon completing my degree, I enrolled in RED Academy's UI course - not to become a designer, but to learn the craft and speak the language. 
+As I was studying CompE, learning UX, and organizing hackathons, I soon learned that visual design is a key component to creating the exceptional user experience I was after. So upon completing my degree, I enrolled in RED Academy's UI course - not to become a designer, but to learn the craft and speak the language. 
 
 ![Me at RED](./arjunatred.jpg)
 
-Throughout the course I learned a lot more than just visual design, I also learned to [respect my own creativity](https://www.arjunkalburgi.com/writing/thinking-about-being-creative/). We all have the ability to be creative off the dome and by practice and honing it we can turn that creativity into something beautiful and to be proud of. It is an awesome feeling.
+The course was a lot of fun with design challenges and client projects. I also got to work with the UX students and learn a bit of their process and methods. For one project, my shy UX groupmates had me conduct their UX interviews because I was a lot better at it 😂 teaching myself throughout university really paid off for that project.
+
+The best thing about the course was that I learned to [respect my own creativity](https://www.arjunkalburgi.com/writing/thinking-about-being-creative/). We all have the ability to be creative off the dome and by practice and honing it we can turn that creativity into something beautiful and to be proud of. It is an awesome feeling.
 
 ## Creating Products 
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="PostList">
+  <article class="PostList">
     <ul class="PostList_details">
       <li>
         <p class="PostList_detail PostList_detail--date" v-html="post.date"></p>
@@ -12,7 +12,7 @@
     <h2 class="PostList_title" v-html="post.title" />
     <p class="PostList_description" v-html="post.description" />
     <Button class="PostList_button" :link="'https://www.arjunkalburgi.com/writing'+post.path" :text="buttontext" />
-  </div>
+  </article>
 </template>
 
 <page-query>

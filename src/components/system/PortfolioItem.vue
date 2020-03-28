@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="portfolioitem_image">
-      <div class="image b-lazy" :class="item.image" :title="item.alt"></div>
+      <div class="image b-lazy" :class="item.image" :alt="item.alt"></div>
     </div>
   </div>
 

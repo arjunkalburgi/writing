@@ -1,8 +1,8 @@
 <template>
   <Layout>
     <Header />
-    <div class="post section">
-      <div class="post_header">
+    <main class="post section">
+      <div class="post_header" role="region" aria-labelledby="Article Header">
         <ul class="post_details">
           <li>
             <p class="post_detail post_detail--date">{{ $page.post.date}}</p>
@@ -13,8 +13,8 @@
         </ul>
         <h2 class="post_title">{{$page.post.title}}</h2>
       </div>
-      <div class="post_content" v-html="$page.post.content" />
-    </div>
+      <div class="post_content" v-html="$page.post.content" role="region" aria-labelledby="Article Body" />
+    </main>
   </Layout>
 </template>
 

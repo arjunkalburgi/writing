@@ -21,7 +21,7 @@ And damn, I see it.
 
 ![growthman](https://cdn-images-1.medium.com/max/800/1*Bjt2NwoxVm5Y1RzdXhfTvw.png)
 
-I can also see the impact we made with these events. We shook up the strict adademic culture of the school and made space for innovators and creative thinkers. We slowly brought so many students outside their comfort zones. Over the three years students would first hear of the hackathon, then have their friends attend, then finally attend the event themselves.
+I can also see the impact we made with these events. We shook up the strict academic culture of the school and made space for innovators and creative thinkers. We slowly brought so many students outside their comfort zones. Over the three years students would first hear of the hackathon, then have their friends attend, then finally attend the event themselves.
 
 One story I always love is how my friend Liza, an EE, went from being mad at us one year, for delaying her birthday dinner because of our coding party, to coding on her birthday two years later - because she wanted to clean up her first ever hackathon project (she even placed!)
 

@@ -1,5 +1,5 @@
 <template lang="html">
-  <ul class="buttonlist">
+  <ul class="buttonlist" role="navigation" :aria-labelledby="title">
 
     <li v-if="hasButton" :key="button.text" class="button">
       <Button class="buttonlist_button" :link="button.link" :text="button.text" />
@@ -25,7 +25,7 @@
       Button,
       FontAwesomeIcon
     },
-    props: ['hasButton', 'button', 'list'],
+    props: ['hasButton', 'button', 'list', 'title'],
     mounted () {
 
     },
@@ -59,7 +59,10 @@
     li {
       float: left;
       list-style: none;
-      &:not(:first-of-type) { margin: 0 0 0 20px; }
+      &:not(:first-of-type) { 
+        margin: 0 0 0 20px;
+        @media screen and (max-width: 40em) { margin: 0 0 0 4vw; }
+      }
 
       a.buttonlist_icon {
         font: var(--icon-text);

@@ -1,11 +1,11 @@
 <template lang="html">
 
   <section class="hero section">
-		<img class="hero_nameImg light" src="../../assets/pics/LogoFull.svg" title="Arjun Kalburgi Leaf Logo" />
-		<img class="hero_nameImg dark" src="../../assets/pics/WhiteFull.svg" title="Arjun Kalburgi Leaf Logo" />
+		<img class="hero_nameImg light" src="../../assets/pics/LogoFull.svg" :alt="logo_alttext" />
+		<img class="hero_nameImg dark" src="../../assets/pics/WhiteFull.svg" :alt="logo_alttext" />
 		<p class="hero_text--tag">learning, finding, designing, and developing impact</p>
 		<p class="hero_text--intro">I write about my experiences and learnings. Sometimes I post my creative expressions, experiments and ideas, all in the name of sharing and expressing myself.</p>
-    <ButtonList :hasButton=true v-bind:button='button' v-bind:list='list' />
+    <ButtonList :hasButton=true v-bind:button='button' v-bind:list='list' title="Blog and Social Media links" />
   </section>
 
 </template>
@@ -25,6 +25,7 @@
     },
     data () {
       return {
+        logo_alttext: "Arjun Kalburgi's logo - it's a leaf that lays on it's side, with a sharp leaf blade and a soft stem - symbolizing that he grows sharply but remains humble."
         button: {link: "https://www.arjunkalburgi.com", text: "about"},
         list: [
           {link: "https://twitter.com/arjunkalburgi",     icon: "twitter"},
