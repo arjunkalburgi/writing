@@ -63,12 +63,12 @@
       getCoverImage() {
         let path = "";
         const cover = this.$page.post.cover;
-        if (cover != null && typeof(cover) != 'string') {
-          console.log('cover: ', cover);
-          path = `${this.getBaseUrl}${cover.src}`;
-        } else if (cover != null && cover.includes('http')) {
+        console.log('cover image: ', this.$page.post.cover.src);
+        if (cover != null && typeof(cover) != 'string') { // cover is a path?
+          path = `${this.getBaseUrl}${this.$page.post.cover.src}`;
+        } else if (cover != null && cover.includes('http')) { // cover is a link
           path = cover;
-        } else {
+        } else { // cover isn't defined
           path = `${this.getBaseUrl}/writing/sra.jpg?${cover}`;
         }
         return path;

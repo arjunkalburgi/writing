@@ -4,6 +4,7 @@ description: >-
  The brief for this project is to create an Ionic app that can be re-themed based on different brands.
 date: '2020-01-18T02:33:25.417Z'
 slug: /Creating-a-Variable-Design-System
+cover: "./arjun2020.jpg"
 ---
 
 
