@@ -1,10 +1,11 @@
 ---
 title: Cloudy Car
-description: Introduction
+description: Cloudy Car is an Uber-like application that enables users to become drivers and riders. Cloudy Car was built for my Software Development class as a group project. The professor outlined User Stories for us to turn into a functionality spec. The following post will provide a detailed walkthrough and critique of some of the design choices made.
 date: '2017-01-02T18:56:03.474Z'
 categories: []
 keywords: []
 slug: /@askalburgi/cloudy-car-db1f84bb1306
+cover: "https://cdn-images-1.medium.com/max/600/1*LHrasX7joKQuMZarSWQnLg.png"
 ---
 
 ### Introduction

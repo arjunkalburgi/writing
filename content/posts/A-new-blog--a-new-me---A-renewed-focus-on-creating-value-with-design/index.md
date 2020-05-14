@@ -8,6 +8,7 @@ categories: []
 keywords: []
 slug: >-
   /@askalburgi/a-new-blog-a-new-me-a-renewed-focus-on-creating-value-with-design-588d746a2550
+cover: "https://cdn-images-1.medium.com/max/600/1*tp1FxVDz7w7ouPS2kxly0Q.jpeg"
 ---
 
 Everything in my life is a journey, including the road to _Projects to Products._ My passion for creating value with design has been building slowly since high school.

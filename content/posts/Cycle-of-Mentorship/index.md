@@ -5,6 +5,7 @@ date: '2017-09-19T17:43:36.335Z'
 categories: []
 keywords: []
 slug: /@askalburgi/cycle-of-mentorship-7e184c107cf9
+cover: https://cdn-images-1.medium.com/max/800/1*53lPEky3ithWRORA9eP8Ug.png
 ---
 
 Where would you be without mentors? I don’t even want to imagine it.
@@ -33,5 +34,5 @@ I’m that same kid from 2014, I’m not sure I could answer the same questions 
 
 Being on the other side, being a mentor, is a new challenge.
 
-![Let’s see. Lol.](https://cdn-images-1.medium.com/max/800/1*53lPEky3ithWRORA9eP8Ug.png)
+![Let’s see. Lol.]()
 Let’s see. Lol.![](https://cdn-images-1.medium.com/max/800/1*k3x4eNfGaG54H9skwyKeSA.png)

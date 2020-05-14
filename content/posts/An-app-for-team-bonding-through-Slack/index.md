@@ -5,6 +5,7 @@ date: '2017-09-11T14:02:06.873Z'
 categories: []
 keywords: []
 slug: /@askalburgi/an-app-for-team-bonding-through-slack-7b9022dabc95
+cover: "https://cdn-images-1.medium.com/max/800/1*IyPH6bwKqQru95sHfHOoeQ.png"
 ---
 
 > Slackify, created at PennApps XVI

@@ -7,6 +7,7 @@ date: '2017-12-20T07:43:34.733Z'
 categories: []
 keywords: []
 slug: /@askalburgi/6he-6ty-that-ma6e-me-30d2159286e2
+cover: "https://cdn-images-1.medium.com/max/800/1*k3x4eNfGaG54H9skwyKeSA.png"
 ---
 
 ![](https://cdn-images-1.medium.com/max/800/1*k3x4eNfGaG54H9skwyKeSA.png)

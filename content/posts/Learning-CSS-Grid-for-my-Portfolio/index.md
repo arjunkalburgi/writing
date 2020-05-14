@@ -7,6 +7,7 @@ date: '2019-04-25T14:51:02.322Z'
 categories: []
 keywords: []
 slug: /@askalburgi/learning-css-grid-for-my-portfolio-7140f80ca936
+cover: https://cdn-images-1.medium.com/max/400/1*ErpqfbqYAI0nxy1UXajRcQ.png
 ---
 
 > Been seeing a lot about CSS Grid on Twitter, decided to fix some smelly HTML/CSS on my portfolio using it!

@@ -7,6 +7,7 @@ date: '2019-05-15T18:59:17.106Z'
 categories: []
 keywords: []
 slug: /@askalburgi/flailing-for-flutter-trying-something-new-3d2de2b11bbe
+cover: https://cdn-images-1.medium.com/max/800/1*EJS1ev59fgo2DpKWB6vnTg.png
 ---
 
 > Looking to create a new app and I wanted to experiment with Flutter. My two concerns of [themeing](https://medium.com/@mx_tino/flutter-themes-9cebc0fecd1d) and [charts](https://medium.com/flutter-io/beautiful-animated-charts-for-flutter-164940780b8c) were alieviated by two blog posts, but let’s try it out!

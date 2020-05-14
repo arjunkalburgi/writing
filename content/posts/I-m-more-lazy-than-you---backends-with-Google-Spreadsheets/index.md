@@ -8,6 +8,7 @@ categories: []
 keywords: []
 slug: >-
   /@askalburgi/im-more-lazy-than-you-backends-with-google-spreadsheets-3eeac8d135c1
+cover: https://cdn-images-1.medium.com/max/800/1*ppV1HxVjysDSUgBcaL3HbQ.png
 ---
 
 As most developers I’ve gone on a journey of how I can make websites faster and easier. I’ve experimented with WordPress, [HTML5UP](https://html5up.net), Github Pages, and now I’ve got a new tool.

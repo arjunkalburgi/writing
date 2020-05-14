@@ -7,6 +7,7 @@ date: '2019-01-28T05:42:18.402Z'
 categories: []
 keywords: []
 slug: /@askalburgi/i-dont-want-to-forget-me-76003560b64e
+cover: https://cdn-images-1.medium.com/max/800/0*U9vtIaWqtGWZIp36
 ---
 
 “_Youth can not know how age thinks and feels, but old men are guilty if they forget what it is to be young_” — Dumbledore, Order of the Phoenix.

@@ -7,6 +7,7 @@ date: '2017-08-30T08:47:13.185Z'
 categories: []
 keywords: []
 slug: /@askalburgi/i-believe-these-four-values-can-change-the-world-c0bbae346f11
+cover: https://cdn-images-1.medium.com/max/800/1*loZCt_22h4iM0C3hYmv10Q.png
 ---
 
 They are my strongest traits, those closest to me understand how truly powerful they make me.

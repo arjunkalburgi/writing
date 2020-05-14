@@ -7,6 +7,7 @@ date: '2019-08-05T19:12:31.486Z'
 categories: []
 keywords: []
 slug: /learning-about-time--after-3-weeks-off
+cover: https://cdn-images-1.medium.com/max/800/0*o_GXcdRRPC2oFaRa
 ---
 
 I’ve taken 3 weeks off before, I went to India for that long just 5 months ago — but the context around that trip and my most recent one were very different. Because now I have a job where I work until I burn out — I’m learning how to not do that.

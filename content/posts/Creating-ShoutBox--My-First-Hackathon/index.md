@@ -5,6 +5,7 @@ date: '2017-07-21T07:39:49.017Z'
 categories: []
 keywords: []
 slug: /@askalburgi/creating-shoutbox-my-first-hackathon-84dfac495c3a
+cover: "https://cdn-images-1.medium.com/max/800/1*ENGFDsKdRgxpl91gJC8a7w.png"
 ---
 
 > The beginning of becoming a maker.

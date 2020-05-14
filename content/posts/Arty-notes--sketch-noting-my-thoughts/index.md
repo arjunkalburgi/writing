@@ -7,6 +7,7 @@ date: '2019-04-22T14:16:00.744Z'
 categories: []
 keywords: []
 slug: /@askalburgi/arty-notes-sketch-noting-my-thoughts-e29f142a9eb4
+cover: "https://cdn-images-1.medium.com/max/800/0*5eiLBfngln98WE4C"
 ---
 
 > I’ve always been fascinated with sketch notes and bullet journalling. Recently I started trying my hand.

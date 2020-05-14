@@ -7,6 +7,7 @@ date: '2018-07-27T19:56:24.301Z'
 categories: []
 keywords: []
 slug: /@askalburgi/designing-a-mobile-app-ui-for-runnr-3198d3433c03
+cover: https://cdn-images-1.medium.com/max/1200/0*RIyFnnIaw4XXfaKu
 ---
 
 > How do you create a visual language for a mobile app? What does a good visual language look like? What does it feel like?

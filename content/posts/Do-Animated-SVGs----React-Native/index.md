@@ -7,6 +7,7 @@ date: '2018-11-06T06:55:05.151Z'
 categories: []
 keywords: []
 slug: /@askalburgi/do-animated-svgs-react-native-2c6f75149189
+cover: https://cdn-images-1.medium.com/max/800/1*MvBfM58ir8Y4S17gJyBzzw.gif
 ---
 
 I’ve been looking into SVG animations for my project, [Slackify](https://medium.com/arjunkalburgi/redesigning-slackify-an-easy-custom-emoji-solution-for-slack-41c81b76e2be). I found that SVG offers a great [animate property](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate) and so I decided I’d animate a brand new logo for Slackify.
