@@ -26,8 +26,8 @@
       content
       date (format: "MMMM D, YYYY")
       timeToRead
-      description
       cover
+      description
     }
   }
 </page-query>
@@ -63,7 +63,7 @@
       getCoverImage() {
         let path = "";
         const cover = this.$page.post.cover;
-        console.log('cover image: ', this.$page.post.cover.src);
+        console.table({'this.$page.post.cover.src': this.$page.post.cover.src, 'require src': require(this.$page.post.cover.src), 'https': cover, 'require no src': require(cover)});
         if (cover != null && typeof(cover) != 'string') { // cover is a path?
           path = `${this.getBaseUrl}${this.$page.post.cover.src}`;
         } else if (cover != null && cover.includes('http')) { // cover is a link
