@@ -19,7 +19,7 @@ I feel like a lot of things happen just because my cousin yells at me to do it.
 
 I've had these floating leaves on my website for nearly 2 years. At first they were hacked from another website, then I rebuilt them using GSAP. 
 
-![leavesgif](/Users/smilinknight/projects/ArjunStuff/blog/content/drafts/Introducing arjunanimations/leavesgif.gif)
+![leavesgif](./leavesgif.gif)
 
 The best part about them is how they separate my website from so many other portfolio sites. I don't think my website design is all that great, but these leaves bring a wow factor. As I built and designed websites for friends and tas.health's Shopify store, that wow factor was centered in my mind.
 
@@ -43,7 +43,7 @@ I had to learn what a Universal Module Definition is, but the concept is pretty 
 
 The package needs some flexibility so users can have some customization. I modified the animation function to accept a custom `className` for the animation to work on, a custom number of leaves that are created and custom sprites that the animation will animate. 
 
-```js
+```javascript
 arjunanimation_leaves.animate({
     // identify the class name of the element you want the animaiton to appear within
     //      the leaves will not show outside this container
@@ -90,7 +90,7 @@ I need to make the Shopify app so that businesses can add leaves to their site! 
 
 If you know how to make Shopify apps, help me out! Finding it confusing so far 😅
 
-![leavesgif](/Users/smilinknight/projects/ArjunStuff/blog/content/drafts/Introducing arjunanimations/leavesgif.gif)
+![leavesgif](./leavesgif.gif)
 
 
 

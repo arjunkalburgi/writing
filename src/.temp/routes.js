@@ -1,26 +1,30 @@
+const c1 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/smilinknight/projects/ArjunStuff/blog/src/pages/About.vue")
+const c2 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/smilinknight/projects/ArjunStuff/blog/node_modules/gridsome/app/pages/404.vue")
+const c3 = () => import(/* webpackChunkName: "page--src--templates--post-vue" */ "/Users/smilinknight/projects/ArjunStuff/blog/src/templates/Post.vue")
+const c4 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/smilinknight/projects/ArjunStuff/blog/src/pages/Index.vue")
+
 export default [
   {
     path: "/about/",
-    component: () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/smilinknight/projects/Arjun stuff/blog/src/pages/About.vue")
+    component: c1
   },
   {
     name: "404",
     path: "/404/",
-    component: () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/smilinknight/projects/Arjun stuff/blog/node_modules/gridsome/app/pages/404.vue")
+    component: c2
   },
   {
     path: "/:title/",
-    component: () => import(/* webpackChunkName: "page--src--templates--post-vue" */ "/Users/smilinknight/projects/Arjun stuff/blog/src/templates/Post.vue")
+    component: c3
   },
   {
     name: "home",
     path: "/",
-    component: () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/smilinknight/projects/Arjun stuff/blog/src/pages/Index.vue")
+    component: c4
   },
   {
     name: "*",
     path: "*",
-    component: () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/smilinknight/projects/Arjun stuff/blog/node_modules/gridsome/app/pages/404.vue")
+    component: c2
   }
 ]
-

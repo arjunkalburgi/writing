@@ -5,21 +5,21 @@ export default {
   "touchicons": [
     {
       "width": 76,
-      "src": "/assets/static/src/assets/pics/Black.png?width=76&key=8442fa7"
+      "src": "/assets/static/src/assets/pics/Black.png?width=76&key=8288e62"
     }
   ],
   "favicons": [
     {
       "width": 16,
-      "src": "/assets/static/src/assets/pics/Black.png?width=16&key=0dd582a"
+      "src": "/assets/static/src/assets/pics/Black.png?width=16&key=8f2fea4"
     },
     {
       "width": 32,
-      "src": "/assets/static/src/assets/pics/Black.png?width=32&key=0dd582a"
+      "src": "/assets/static/src/assets/pics/Black.png?width=32&key=8f2fea4"
     },
     {
       "width": 96,
-      "src": "/assets/static/src/assets/pics/Black.png?width=96&key=0dd582a"
+      "src": "/assets/static/src/assets/pics/Black.png?width=96&key=8f2fea4"
     }
   ]
 }

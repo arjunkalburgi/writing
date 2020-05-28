@@ -1,5 +1,5 @@
 <template lang="html">
-  <ul class="buttonlist" role="navigation" :aria-labelledby="title">
+  <ul class="buttonlist" role="navigation">
 
     <li v-if="hasButton" :key="button.text" class="button">
       <Button class="buttonlist_button" :link="button.link" :text="button.text" :alttext="button.alt" />

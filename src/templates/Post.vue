@@ -63,7 +63,7 @@
       getCoverImage() {
         let path = "";
         const cover = this.$page.post.cover;
-        console.table({'this.$page.post.cover.src': this.$page.post.cover.src, 'require src': require(this.$page.post.cover.src), 'https': cover, 'require no src': require(cover)});
+        console.table({'cover.src': this.$page.post.cover.src, 'cover': cover});
         if (cover != null && typeof(cover) != 'string') { // cover is a path?
           path = `${this.getBaseUrl}${this.$page.post.cover.src}`;
         } else if (cover != null && cover.includes('http')) { // cover is a link

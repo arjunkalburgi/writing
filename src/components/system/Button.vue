@@ -1,5 +1,5 @@
 <template lang="html">
-  <a class="button" :href="link" :target="newTab ? 'blank' : ''" :alt="alttext | ''" >{{text}}</a>
+  <a class="button" :href="link" :target="newTab ? 'blank' : ''" :alt="alttext" >{{text}}</a>
 </template>
 
 <script lang="js">
