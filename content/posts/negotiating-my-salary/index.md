@@ -4,7 +4,7 @@ description: >-
   I got a new job and negotiated my salary. I've always been interested in how to do this and wanted to share my experience.
 date: '2020-06-11T14:20:33.815Z'
 slug: /negotiating-my-salary
-cover: ./arjun2020.jpg
+cover: ./leavesgif.gif
 ---
 
 > I got a new job and negotiated my salary. I've always been interested in how to do this and wanted to share my experience.

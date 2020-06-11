@@ -4,7 +4,7 @@ description: >-
   Over the last 5 years I've been learning strong UX skills to build web interfaces and products that connect and enable people. I want to look back on this journey, thinking about where I've been and some of the specific memories I have.
 date: '2020-03-23T14:20:33.815Z'
 slug: /life-story-update-2020
-cover: "./arjun2020.jpg"
+cover: ./arjun2020.jpg
 ---
 
 > Over the last 5 years I've been learning strong UX skills to build web interfaces and products that connect and enable people. I want to look back on this journey, thinking about where I've been and some of the specific memories I have.

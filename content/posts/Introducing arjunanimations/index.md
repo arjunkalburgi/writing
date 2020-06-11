@@ -4,9 +4,7 @@ description: >-
   I've started a new project, a suite of JS and CSS animations called ArjunAnimations.
 date: '2020-05-28T14:20:33.815Z'
 slug: /introducing-arjunanimations
-cover: "./arjun2020.jpg"
-
-
+cover: ./leavesgif.gif
 ---
 
 > I've started a new project, a suite of JS and CSS animations called ArjunAnimations. 

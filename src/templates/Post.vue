@@ -70,7 +70,7 @@
         } else { // cover isn't defined
           path = `${this.getBaseUrl}/writing/sra.jpg?${cover}`;
         }
-        console.table({'cover': cover, 'cover.src': cover.src, 'final': path});
+        console.table({'cover': cover, 'final': path});
         return path;
       },
       getBaseUrl() { return 'https://www.arjunkalburgi.com' }
