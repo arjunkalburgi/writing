@@ -63,14 +63,14 @@
       getCoverImage() {
         let path = "";
         const cover = this.$page.post.cover;
-        console.table({'cover.src': this.$page.post.cover.src, 'cover': cover});
         if (cover != null && typeof(cover) != 'string') { // cover is a path?
-          path = `${this.getBaseUrl}${this.$page.post.cover.src}`;
+          path = `${this.getBaseUrl}${cover.src}`;
         } else if (cover != null && cover.includes('http')) { // cover is a link
           path = cover;
         } else { // cover isn't defined
           path = `${this.getBaseUrl}/writing/sra.jpg?${cover}`;
         }
+        console.table({'cover': cover, 'cover.src': cover.src, 'final': path});
         return path;
       },
       getBaseUrl() { return 'https://www.arjunkalburgi.com' }

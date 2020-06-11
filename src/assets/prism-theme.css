@@ -271,9 +271,11 @@ pre[class*="language-"].line-numbers > code {
   position: relative;
   margin: 0.5em 0;
   padding: 1em;
-  overflow: auto;
+  overflow: scroll;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 80em) { .gridsome-highlight { width: 130%; } }
 
 .gridsome-highlight pre[class*="language-"] {
   background-color: transparent;
