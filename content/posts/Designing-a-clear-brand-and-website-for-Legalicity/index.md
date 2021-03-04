@@ -6,7 +6,7 @@ description: >-
 date: '2018-08-21T04:36:40.618Z'
 categories: []
 keywords: []
-slug: /@askalburgi/designing-a-clear-brand-and-website-for-legalicity-c1dcebbc3c6e
+slug: /designing-a-clear-brand-and-website-for-legalicity
 cover: https://cdn-images-1.medium.com/max/800/1*uOEQEOakmidEfcqsdYURgg.png
 ---
 

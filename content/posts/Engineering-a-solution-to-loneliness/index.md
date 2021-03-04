@@ -4,7 +4,7 @@ description: I’m not sure the title is totally accurate…
 date: '2017-09-16T04:41:27.688Z'
 categories: []
 keywords: []
-slug: /@askalburgi/engineering-a-solution-to-loneliness-e19b7c0f74fe
+slug: /engineering-a-solution-to-loneliness-e19b7c0f74fe
 ---
 
 I’m not sure the title is totally accurate…

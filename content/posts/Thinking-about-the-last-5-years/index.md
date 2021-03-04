@@ -4,7 +4,7 @@ description: ''
 date: '2018-05-02T19:25:45.360Z'
 categories: []
 keywords: []
-slug: /@askalburgi/thinking-about-the-last-5-years-28f8386164af
+slug: /thinking-about-the-last-5-years-28f8386164af
 ---
 
 ![I’ve been thinking…](https://cdn-images-1.medium.com/max/800/1*3JNM-R5esEGDwyUDzktqBQ.jpeg)

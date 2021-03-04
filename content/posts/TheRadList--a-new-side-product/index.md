@@ -4,7 +4,7 @@ description: 'What can I say, I just love food…'
 date: '2018-05-28T05:30:04.483Z'
 categories: []
 keywords: []
-slug: /@askalburgi/theradlist-a-new-side-product-e07bf0d3fdd8
+slug: /theradlist-a-new-side-product-e07bf0d3fdd8
 ---
 
 > What can I say, I just love food…

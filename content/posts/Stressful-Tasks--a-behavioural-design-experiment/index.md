@@ -6,7 +6,7 @@ description: >-
 date: '2019-01-13T05:01:38.326Z'
 categories: []
 keywords: []
-slug: /@askalburgi/stressful-tasks-a-behavioural-design-experiment-ff59a23bf1e5
+slug: /stressful-tasks-a-behavioural-design-experiment
 ---
 
 > Stress overwhelms people, but why? Prioritizing tasks and activities requires one simple trick, understanding that you can only give 100%.

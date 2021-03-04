@@ -4,7 +4,7 @@ description: Recently I went surfing for the first time ever. It was awesome.
 date: '2019-03-16T22:55:14.819Z'
 categories: []
 keywords: []
-slug: /@askalburgi/learning-to-surf-a-mindset-practice-17fe3bbbd560
+slug: /learning-to-surf-a-mindset-practice-17fe3bbbd560
 cover: https://cdn-images-1.medium.com/max/800/0*pBG7K09M2bK_3ZtC
 ---
 

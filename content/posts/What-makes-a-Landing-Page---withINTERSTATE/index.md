@@ -4,7 +4,7 @@ description: My first design project as a part of the course I’m taking at RED
 date: '2018-07-12T19:37:35.701Z'
 categories: []
 keywords: []
-slug: /@askalburgi/what-makes-a-landing-page-withinterstate-511f2f93dfff
+slug: /what-makes-a-landing-page-withinterstate-511f2f93dfff
 ---
 
 > My first design project as a part of the course I’m taking at [RED Academy](https://medium.com/red-academy)

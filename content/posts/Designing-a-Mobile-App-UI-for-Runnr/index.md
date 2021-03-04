@@ -6,7 +6,7 @@ description: >-
 date: '2018-07-27T19:56:24.301Z'
 categories: []
 keywords: []
-slug: /@askalburgi/designing-a-mobile-app-ui-for-runnr-3198d3433c03
+slug: /designing-a-mobile-app-ui-for-runnr-3198d3433c03
 cover: https://cdn-images-1.medium.com/max/1200/0*RIyFnnIaw4XXfaKu
 ---
 

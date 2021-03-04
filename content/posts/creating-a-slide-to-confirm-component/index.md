@@ -6,7 +6,7 @@ description: >-
 
 date: '2019-11-05T15:20:33.815Z'
 
-slug: /creating-a-slide-to-confirm-component
+slug: /creating-a-swipe-to-confirm-component
 
 cover: https://www.arjunkalburgi.com/writing/assets/static/final.8e3a09a.6e883588bad609a43065f7294e5e56ab.gif
 ---

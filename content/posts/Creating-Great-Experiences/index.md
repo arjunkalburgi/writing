@@ -6,7 +6,7 @@ description: >-
 date: '2017-06-25T07:37:24.611Z'
 categories: []
 keywords: []
-slug: /@askalburgi/creating-great-experiences-acf3474a2b21
+slug: /creating-great-experiences-acf3474a2b21
 ---
 
 I love creating great experiences, this can take a lot of shapes as there are a lot of ways to go about it. Over the last year my interest has really focused on UX, how can I use technology to make people’s experience better?

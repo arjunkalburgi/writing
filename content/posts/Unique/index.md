@@ -4,7 +4,7 @@ description: What makes me unique? Prompted by DevFacto application form
 date: '2017-10-15T08:45:02.197Z'
 categories: []
 keywords: []
-slug: /@askalburgi/unique-7a2c4109535c
+slug: /unique-7a2c4109535c
 ---
 
 > **What makes me unique?** Prompted by DevFacto application form

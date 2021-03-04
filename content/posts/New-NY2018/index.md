@@ -6,7 +6,7 @@ description: >-
 date: '2018-01-01T18:17:31.668Z'
 categories: []
 keywords: []
-slug: /@askalburgi/new-ny2018-50eb75d784b9
+slug: /new-ny2018-50eb75d784b9
 ---
 
 > “New.” is becoming the title of my trimester series lololol I’ll go with it. My life is split by trimester, and each one I try to focus on something else, something… New. This is New, new years 2018.

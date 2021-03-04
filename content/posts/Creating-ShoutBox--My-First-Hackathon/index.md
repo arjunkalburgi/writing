@@ -4,7 +4,7 @@ description: The beginning of becoming a maker.
 date: '2017-07-21T07:39:49.017Z'
 categories: []
 keywords: []
-slug: /@askalburgi/creating-shoutbox-my-first-hackathon-84dfac495c3a
+slug: /creating-shoutbox-my-first-hackathon-84dfac495c3a
 cover: "https://cdn-images-1.medium.com/max/800/1*ENGFDsKdRgxpl91gJC8a7w.png"
 ---
 
@@ -29,7 +29,7 @@ Harry and I after being awarded 3rd place![](https://cdn-images-1.medium.com/ma
 
 That summer I went back to our work to redo the project properly. I implemented the Node server better, creating a website as an additional user interface for the oauth with Twitter, and upgraded the design to be cleaner and more simple. Finally, I put the application onto a Heroku server and made the Extension available on the Chrome Web Store. It was a real and great experience creating something from start to finish.
 
-Not all the hackathons I attended went as well as this first one, but this experience definitely set the tone for my goals and expectations since. Looking back at this project two years later, I still have the drive to create for people and continue to implement it in my [recent projects](https://medium.com/@askalburgi/building-for-people-blindglasses-c6dbd9e6f9a7), I still reap the great benefits of being encouraged to hack by peers and I still have so much to learn.
+Not all the hackathons I attended went as well as this first one, but this experience definitely set the tone for my goals and expectations since. Looking back at this project two years later, I still have the drive to create for people and continue to implement it in my [recent projects](https://medium.com/building-for-people-blindglasses-c6dbd9e6f9a7), I still reap the great benefits of being encouraged to hack by peers and I still have so much to learn.
 
 > **Links:** [ShoutBox v1](https://github.com/HarryPahwa/Shoutbox.Finale), [ShoutBox v2](https://github.com/ShoutBoxExtension), [ShoutBox extension](https://chrome.google.com/webstore/detail/shoutbox/hbliaedcoikjfcdlebnmkhemofblkamc)
 

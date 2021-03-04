@@ -7,8 +7,7 @@ date: '2018-10-10T20:24:22.900Z'
 categories: []
 keywords: []
 cover: https://cdn-images-1.medium.com/max/800/1*OBm4tAGYdUiVVRzfYdsW5g.png
-slug: >-
-  /@askalburgi/redesigning-slackify-an-easy-custom-emoji-solution-for-slack-41c81b76e2be
+slug: /redesigning-slackify-an-easy-custom-emoji-solution-for-slack
 ---
 
 > When you see something fantastic in the real world, maybe you can make it better? Sometimes a small tool can make a big impact and tell a great story.
@@ -141,6 +140,6 @@ Install the expo app for [Android](https://play.google.com/store/apps/details?id
 
 #### Try on the web (Expo Snack):
 
-[Go to this link!](https://snack.expo.io/@askalburgi/github.com-askalburgi-slackify) You’ll see all the code and be able to try out the prototype.
+[Go to this link!](https://snack.expo.io/github.com-askalburgi-slackify) You’ll see all the code and be able to try out the prototype.
 
 Tell me how it is via [Twitter](http://twitter.com/askalburgi) or [Instagram](http://instagram.com/askalburgi)!

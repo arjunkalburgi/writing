@@ -9,7 +9,7 @@ date: '2018-09-21T22:15:33.815Z'
 categories: []
 keywords: []
 slug: >-
-  /@askalburgi/if-we-can-design-doors-that-make-us-feel-stupid-then-cant-we-design-the-world-to-make-us-feel-a8ebccfa00ec
+  /if-we-can-design-doors-that-make-us-feel-stupid-then-cant-we-design-the-world-to-make-us-feel-a8ebccfa00ec
 cover: https://cdn-images-1.medium.com/max/800/1*k3x4eNfGaG54H9skwyKeSA.png
 ---
 

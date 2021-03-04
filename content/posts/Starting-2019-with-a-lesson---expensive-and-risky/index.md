@@ -6,7 +6,7 @@ description: >-
 date: '2019-01-09T04:36:53.414Z'
 categories: []
 keywords: []
-slug: /@askalburgi/starting-2019-with-a-lesson-expensive-and-risky-41da468dde33
+slug: /starting-2019-with-a-lesson-expensive-and-risky-41da468dde33
 ---
 
 I bought my trusty domain arjunkalburgi.com, exactly 4 years ago from GoDaddy. No one taught me about DNS or Domain Registrars, I needed a domain so I got one. For 4 years _arjunkalburgi.com_ was my online home, and it worked great.

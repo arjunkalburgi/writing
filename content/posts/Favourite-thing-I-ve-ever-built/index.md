@@ -4,7 +4,7 @@ description: Question prompted by Granify job application
 date: '2017-10-04T18:18:40.961Z'
 categories: []
 keywords: []
-slug: /@askalburgi/favourite-thing-ive-ever-built-bde117c634e2
+slug: /favourite-thing-ive-ever-built-bde117c634e2
 cover: https://cdn-images-1.medium.com/max/800/1*3_pVQ9n_GCOr21L_hhVuJQ.png
 ---
 

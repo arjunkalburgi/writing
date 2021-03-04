@@ -7,7 +7,7 @@ date: '2019-03-09T14:23:35.248Z'
 categories: []
 keywords: []
 slug: >-
-  /@askalburgi/im-more-lazy-than-you-backends-with-google-spreadsheets-3eeac8d135c1
+  /im-more-lazy-than-you-backends-with-google-spreadsheets-3eeac8d135c1
 cover: https://cdn-images-1.medium.com/max/800/1*ppV1HxVjysDSUgBcaL3HbQ.png
 ---
 

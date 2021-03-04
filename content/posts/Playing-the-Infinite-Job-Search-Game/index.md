@@ -6,7 +6,7 @@ description: >-
 date: '2019-05-27T13:37:28.350Z'
 categories: []
 keywords: []
-slug: /@askalburgi/playing-the-infinite-job-search-game-4e4b4b406425
+slug: /playing-the-infinite-job-search-game-4e4b4b406425
 ---
 
 > Recently I got an email expressing concern for finding a job, in my reply I explain what I call ‘The Infinite Job Search Game’.

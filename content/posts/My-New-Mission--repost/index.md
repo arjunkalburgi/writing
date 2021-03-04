@@ -6,7 +6,7 @@ description: >-
 date: '2017-09-05T13:42:00.594Z'
 categories: []
 keywords: []
-slug: /@askalburgi/my-new-mission-repost-3aad5843fc2
+slug: /my-new-mission-repost-3aad5843fc2
 ---
 
 > This post was originally posted in July 2016 on my old blog. It’s something I’ve been thinking about lately as I’ve been working on the mission again. Good read :)

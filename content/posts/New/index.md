@@ -4,7 +4,7 @@ description: Today my friends Wayland and Harkit joined me for a photoshoot
 date: '2017-08-30T07:49:39.160Z'
 categories: []
 keywords: []
-slug: /@askalburgi/new-617ec226fc93
+slug: /new-617ec226fc93
 ---
 
 Today my friends [Wayland](https://www.instagram.com/big_bang_wayland/) and [Harkit](https://www.instagram.com/harkit18/) joined me for a photoshoot

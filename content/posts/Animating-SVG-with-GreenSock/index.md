@@ -4,7 +4,7 @@ description: The next chapter in my quest to learn more about animating SVG on t
 date: '2018-11-20T06:53:23.682Z'
 categories: []
 keywords: []
-slug: /@askalburgi/animating-svg-with-greensock-6aa01219ed3b
+slug: /animating-svg-with-greensock-6aa01219ed3b
 cover: "https://cdn-images-1.medium.com/max/800/1*GOG3jx9dVNpwbrq4TjvZAA.gif"
 ---
 

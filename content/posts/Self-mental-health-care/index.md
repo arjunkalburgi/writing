@@ -4,7 +4,7 @@ description: 'Hey pretty boy, time to check in <3'
 date: '2017-11-03T08:57:58.086Z'
 categories: []
 keywords: []
-slug: /@askalburgi/self-mental-health-care-59ca57332e22
+slug: /self-mental-health-care-59ca57332e22
 ---
 
 Self mental health care

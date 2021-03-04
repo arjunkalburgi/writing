@@ -4,7 +4,7 @@ description: 'I used to say “I’m not creative, I can’t do that”.'
 date: '2018-09-28T01:04:53.149Z'
 categories: []
 keywords: []
-slug: /@askalburgi/thinking-about-being-creative-a3bee574163
+slug: /thinking-about-being-creative-a3bee574163
 ---
 
 ![I’ve been thinking…](https://cdn-images-1.medium.com/max/1200/1*kdpV_vShTaIrDnKD_xNE2g.jpeg)

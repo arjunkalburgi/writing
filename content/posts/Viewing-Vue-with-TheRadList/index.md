@@ -6,7 +6,7 @@ description: >-
 date: '2019-04-16T21:12:50.815Z'
 categories: []
 keywords: []
-slug: /@askalburgi/viewing-vue-with-theradlist-8851502ab709
+slug: /viewing-vue-with-theradlist-8851502ab709
 ---
 
 > Learning Vue.js by updating one of my more simpler projects, TheRadList, the Edmonton restaurant webapp that restores the excitement of finding a place to grub.

@@ -4,7 +4,7 @@ description: My research paper exploring the experience of conversational educat
 date: '2018-05-28T04:48:30.222Z'
 categories: []
 keywords: []
-slug: /@askalburgi/conversations-with-wikipedia-research-paper-4b7717873087
+slug: /conversations-with-wikipedia-research-paper
 cover: 'https://cdn-images-1.medium.com/max/800/0*P4re_2qMolHcE0up.png'
 ---
 

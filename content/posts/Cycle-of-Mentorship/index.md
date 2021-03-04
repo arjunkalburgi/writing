@@ -4,7 +4,7 @@ description: Where would you be without mentors? I don’t even want to imagine 
 date: '2017-09-19T17:43:36.335Z'
 categories: []
 keywords: []
-slug: /@askalburgi/cycle-of-mentorship-7e184c107cf9
+slug: /cycle-of-mentorship-7e184c107cf9
 cover: https://cdn-images-1.medium.com/max/800/1*53lPEky3ithWRORA9eP8Ug.png
 ---
 

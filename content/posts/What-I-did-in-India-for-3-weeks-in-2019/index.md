@@ -6,7 +6,7 @@ description: >-
 date: '2019-03-19T17:37:52.979Z'
 categories: []
 keywords: []
-slug: /@askalburgi/what-i-did-in-india-for-3-weeks-in-2019-f0aa9671c021
+slug: /what-i-did-in-india-for-3-weeks-in-2019-f0aa9671c021
 ---
 
 > I need a professional response for questions regarding my trip. This is me trying to figure that out.

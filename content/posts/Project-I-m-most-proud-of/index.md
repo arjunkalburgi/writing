@@ -4,7 +4,7 @@ description: Question prompted by Electric City Hacks application
 date: '2017-10-10T21:21:15.968Z'
 categories: []
 keywords: []
-slug: /@askalburgi/project-im-most-proud-of-6c3dad1fbdb
+slug: /project-im-most-proud-of-6c3dad1fbdb
 ---
 
 > Question prompted by Electric City Hacks application

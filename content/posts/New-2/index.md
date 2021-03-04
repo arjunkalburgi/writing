@@ -6,7 +6,7 @@ description: >-
 date: '2017-08-31T06:57:23.740Z'
 categories: []
 keywords: []
-slug: /@askalburgi/new-2-8a36e61fc5a0
+slug: /new-2-8a36e61fc5a0
 ---
 
 The more I think I know about design, the more I know I don’t know. What a punch to the ego.

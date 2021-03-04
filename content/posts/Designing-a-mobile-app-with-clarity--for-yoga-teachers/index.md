@@ -7,7 +7,7 @@ date: '2018-09-13T13:45:56.771Z'
 categories: []
 keywords: []
 slug: >-
-  /@askalburgi/designing-a-mobile-app-with-clarity-for-yoga-teachers-913b4ac17b51
+  /designing-a-mobile-app-with-clarity-for-yoga-teachers
 cover: https://cdn-images-1.medium.com/max/800/1*uXfEfWpUTESENwaLXedg5g.jpeg
 ---
 

@@ -6,7 +6,7 @@ description: >-
 date: '2017-04-09T07:02:53.268Z'
 categories: []
 keywords: []
-slug: /@askalburgi/security-review-ux-of-canadian-banking-applications-53aa77dd2cf4
+slug: /security-review-ux-of-canadian-banking-applications-53aa77dd2cf4
 ---
 
 Security is an important and undervalued part of our tech industry, especially in design. This review seeks to analyse how Canadian banks convey the security of their software to users. In today’s world, and going forward, it is imperative that users are made aware of how the software they use protects them.

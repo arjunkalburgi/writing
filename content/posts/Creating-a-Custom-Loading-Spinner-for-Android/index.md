@@ -6,7 +6,7 @@ description: >-
 date: '2019-01-15T22:38:27.057Z'
 categories: []
 keywords: []
-slug: /@askalburgi/creating-a-custom-loading-spinner-for-android-1ce686396c68
+slug: /creating-a-custom-loading-spinner-for-android
 cover: 'https://cdn-images-1.medium.com/max/800/1*TOT7NQcg-4VcfbAynbk7vA.gif'
 ---
 

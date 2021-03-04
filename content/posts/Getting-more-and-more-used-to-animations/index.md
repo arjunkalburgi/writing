@@ -6,7 +6,7 @@ description: >-
 date: '2019-01-20T02:11:29.188Z'
 categories: []
 keywords: []
-slug: /@askalburgi/getting-more-and-more-used-to-animations-aa7349c82ee2
+slug: /getting-more-and-more-used-to-animations-aa7349c82ee2
 cover: https://cdn-images-1.medium.com/max/800/1*OXD9RfgmQzgVODT3_xj08A.gif
 ---
 

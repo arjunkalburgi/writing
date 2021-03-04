@@ -4,7 +4,7 @@ description: 'I posted to Instagram a while back,'
 date: '2017-12-14T16:27:37.318Z'
 categories: []
 keywords: []
-slug: /@askalburgi/confidence-and-anxiety-past-and-future-eb502f3c602b
+slug: /confidence-and-anxiety-past-and-future-eb502f3c602b
 cover: "https://cdn-images-1.medium.com/max/800/1*zXlkJ7ilo1m7CEeuRPUcLw.png"
 ---
 

@@ -6,7 +6,7 @@ description: >-
 date: '2018-11-06T06:55:05.151Z'
 categories: []
 keywords: []
-slug: /@askalburgi/do-animated-svgs-react-native-2c6f75149189
+slug: /do-animated-svgs-react-native-2c6f75149189
 cover: https://cdn-images-1.medium.com/max/800/1*MvBfM58ir8Y4S17gJyBzzw.gif
 ---
 

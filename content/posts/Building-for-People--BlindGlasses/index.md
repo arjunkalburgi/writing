@@ -4,7 +4,7 @@ description: Building for people requires Design as much as Development.
 date: '2017-07-19T06:24:19.638Z'
 categories: []
 keywords: []
-slug: /@askalburgi/building-for-people-blindglasses-c6dbd9e6f9a7
+slug: /building-for-people-blindglasses-c6dbd9e6f9a7
 cover: "https://cdn-images-1.medium.com/max/800/1*DiYYJ_KRAY1jDjIbgSmnaQ.jpeg"
 ---
 

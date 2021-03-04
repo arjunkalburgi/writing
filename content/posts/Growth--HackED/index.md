@@ -6,7 +6,7 @@ description: >-
 date: '2018-01-30T16:41:46.697Z'
 categories: []
 keywords: []
-slug: /@askalburgi/growth-hacked-393a8c942b0b
+slug: /growth-hacked-393a8c942b0b
 cover: https://cdn-images-1.medium.com/max/800/1*Bjt2NwoxVm5Y1RzdXhfTvw.png
 ---
 

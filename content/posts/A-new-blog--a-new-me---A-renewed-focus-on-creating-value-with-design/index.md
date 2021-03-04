@@ -7,7 +7,7 @@ date: '2016-09-01T02:33:25.417Z'
 categories: []
 keywords: []
 slug: >-
-  /@askalburgi/a-new-blog-a-new-me-a-renewed-focus-on-creating-value-with-design-588d746a2550
+  /a-new-blog-a-new-me-a-renewed-focus-on-creating-value-with-design-588d746a2550
 cover: "https://cdn-images-1.medium.com/max/600/1*tp1FxVDz7w7ouPS2kxly0Q.jpeg"
 ---
 

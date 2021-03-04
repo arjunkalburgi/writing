@@ -6,7 +6,7 @@ description: >-
 date: '2019-04-24T05:41:00.990Z'
 categories: []
 keywords: []
-slug: /@askalburgi/poem-about-home-84b4c640e485
+slug: /poem-about-home-84b4c640e485
 ---
 
 > I wrote this poem on the plane from Edmonton to Toronto in 2019. At the time I was upset about the concept of ‘Home’ and what it means.

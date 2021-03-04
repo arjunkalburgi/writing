@@ -6,7 +6,7 @@ description: >-
 date: '2017-09-21T06:01:55.878Z'
 categories: []
 keywords: []
-slug: /@askalburgi/my-learning-style-f0f9e54510f3
+slug: /my-learning-style-f0f9e54510f3
 ---
 
 Engineering is all about learning how to learn, especially in first year. I can’t believe it took me four years and one month to finally figure out my most preferred style. This is something I’ve strived to learn about myself for years, and finally learning it now means I’m going to run with it.

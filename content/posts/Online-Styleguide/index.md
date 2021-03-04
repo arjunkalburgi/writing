@@ -6,7 +6,7 @@ description: >-
 date: '2018-11-20T07:30:11.258Z'
 categories: []
 keywords: []
-slug: /@askalburgi/online-styleguide-e08e8998d305
+slug: /online-styleguide-e08e8998d305
 ---
 
 About a month ago I made a web version of my branding style guide at [askalburgi.github.io/styleguide](https://askalburgi.github.io/assets). With the express purpose of being able to easily Copy+Paste assets when I need them.

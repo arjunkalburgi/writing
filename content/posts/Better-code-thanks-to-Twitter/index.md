@@ -6,7 +6,7 @@ description: >-
 date: '2019-04-21T16:47:45.317Z'
 categories: []
 keywords: []
-slug: /@askalburgi/better-code-thanks-to-twitter-8fad5d307557
+slug: /better-code-thanks-to-twitter-8fad5d307557
 ---
 
 > Recently I sent a tweet to a stranger that I follow on Twitter asking for his help. The result? The coding culture on the Internet is great.

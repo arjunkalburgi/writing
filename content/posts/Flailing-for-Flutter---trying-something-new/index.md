@@ -6,7 +6,7 @@ description: >-
 date: '2019-05-15T18:59:17.106Z'
 categories: []
 keywords: []
-slug: /@askalburgi/flailing-for-flutter-trying-something-new-3d2de2b11bbe
+slug: /flailing-for-flutter-trying-something-new-3d2de2b11bbe
 cover: https://cdn-images-1.medium.com/max/800/1*EJS1ev59fgo2DpKWB6vnTg.png
 ---
 

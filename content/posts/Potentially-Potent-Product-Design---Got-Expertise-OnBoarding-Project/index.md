@@ -7,7 +7,7 @@ date: '2018-09-22T00:43:55.529Z'
 categories: []
 keywords: []
 slug: >-
-  /@askalburgi/potentially-potent-product-design-got-expertise-onboarding-project-6c3903a1ddff
+  /potentially-potent-product-design-got-expertise-on-boarding-project
 cover: https://cdn-images-1.medium.com/max/800/1*I4OV1G5iQLpi4Y8SgVqQXw.jpeg
 ---
 

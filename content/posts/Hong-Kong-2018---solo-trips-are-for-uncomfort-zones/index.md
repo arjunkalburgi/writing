@@ -6,7 +6,7 @@ description: >-
 date: '2018-06-10T02:45:55.991Z'
 categories: []
 keywords: []
-slug: /@askalburgi/hong-kong-2018-solo-trips-are-for-uncomfort-zones-89fa4a95dcaa
+slug: /hong-kong-2018-solo-trips-are-for-uncomfort-zones-89fa4a95dcaa
 cover: https://cdn-images-1.medium.com/max/800/0*WA3aX1Z8WbCbBniw
 ---
 

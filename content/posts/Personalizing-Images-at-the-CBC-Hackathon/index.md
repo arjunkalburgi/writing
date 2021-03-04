@@ -6,7 +6,7 @@ description: >-
 date: '2019-02-04T23:46:47.363Z'
 categories: []
 keywords: []
-slug: /@askalburgi/personalizing-images-at-the-cbc-hackathon-31618c16a87f
+slug: /personalizing-images-at-the-cbc-hackathon-31618c16a87f
 ---
 
 This weekend I teamed up with my friends Abid and Meg to participate in CBC Radio-Canada’s hackathon all about personalization.

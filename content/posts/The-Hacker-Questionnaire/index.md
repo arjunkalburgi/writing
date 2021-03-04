@@ -4,7 +4,7 @@ description: Filling out MLH’s Coaching Application Questionnaire
 date: '2018-08-14T02:42:45.888Z'
 categories: []
 keywords: []
-slug: /@askalburgi/the-hacker-questionnaire-870ff832ed4f
+slug: /the-hacker-questionnaire-870ff832ed4f
 ---
 
 > Filling out MLH’s Coaching Application Questionnaire

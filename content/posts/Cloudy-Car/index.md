@@ -4,7 +4,7 @@ description: Cloudy Car is an Uber-like application that enables users to become
 date: '2017-01-02T18:56:03.474Z'
 categories: []
 keywords: []
-slug: /@askalburgi/cloudy-car-db1f84bb1306
+slug: /cloudy-car-db1f84bb1306
 cover: "https://cdn-images-1.medium.com/max/600/1*LHrasX7joKQuMZarSWQnLg.png"
 ---
 

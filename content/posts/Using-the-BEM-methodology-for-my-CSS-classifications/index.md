@@ -6,7 +6,7 @@ description: >-
 date: '2018-10-25T02:45:35.697Z'
 categories: []
 keywords: []
-slug: /@askalburgi/using-the-bem-methodology-for-my-css-classifications-a35172f90a04
+slug: /using-the-bem-methodology-for-my-css-classifications-a35172f90a04
 ---
 
 I learned about CSS classification methodologies at the Web Unleashed conference I attended in early October (highly recommend attending if you’re a web developer). Using them is the same idea of using proper naming conventions for your property names, file names, and variable names.

@@ -4,7 +4,7 @@ description: Sitting at my desk. My laptop in front of me.
 date: '2018-01-21T04:07:19.892Z'
 categories: []
 keywords: []
-slug: /@askalburgi/the-feeling-of-focus-c39c88b330de
+slug: /the-feeling-of-focus-c39c88b330de
 ---
 
 Sitting at my desk. My laptop in front of me.

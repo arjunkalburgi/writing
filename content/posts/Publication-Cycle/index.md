@@ -6,7 +6,7 @@ description: >-
 date: '2016-12-18T09:36:24.261Z'
 categories: []
 keywords: []
-slug: /@askalburgi/publication-cycle-a776fd153b63
+slug: /publication-cycle-a776fd153b63
 ---
 
 New content will be published every late-December and late-April and will discuss my projects over the previous four months.

@@ -6,7 +6,7 @@ description: >-
 date: '2017-09-26T20:48:08.104Z'
 categories: []
 keywords: []
-slug: /@askalburgi/why-hackathons-f2709735ae3
+slug: /why-hackathons-f2709735ae3
 ---
 
 > In this trimester, I’m preparing to go to 5 hackathons. Including organizing [one](http://hackedbeta.compeclub.com), that’s 6 hackathons I’m involved with in a 4 month period. Why?!
