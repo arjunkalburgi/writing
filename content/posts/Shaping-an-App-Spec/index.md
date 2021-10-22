@@ -1,7 +1,7 @@
 ---
 title: Shaping an App Spec
 description: >-
-  I got a new job and negotiated my salary. I've always been interested in how to do this and wanted to share my experience.
+  I recently started a new project, giving me the chance to build some Product Management skills. I've known about Basecamp's Shaping Up process for a while now and finally can try it out for myself. I've mostly stuck to the book on this one, but had to change some things.
 date: '2020-06-19T11:20:33.815Z'
 slug: /shaping-an-app-spec
 ---
