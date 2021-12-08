@@ -4,6 +4,7 @@ description: >-
   Recently my team at Nylas wrapped up a 2 week hackathon and I was particularly impressed with the amount of things I was able to do.
 date: '2021-04-21T11:20:33.815Z'
 slug: /nylas-hackathon-reflection
+cover: https://www.nylas.com/wp-content/uploads/Blog-UX-Update.png
 ---
 
 Recently my team at Nylas wrapped up a 2 week hackathon where we could work on whatever we’d like with the caveat that it will improve UX. Between Dashboard and Components we managed to ship a ridiculous amount of new features and I was particularly impressed with the amount of things I was able to do.
